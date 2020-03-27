@@ -27,7 +27,15 @@ case class PackageJsonDeps(
     typings:          Option[String],
     types:            Option[String],
     files:            Option[IArray[String]],
-)
+) {
+  def allLibs: Set[String] = {
+    val set: Set[Map[String, String]] = IArray
+      .fromOptions(dependencies, devDependencies, peerDependencies)
+      .toSet
+    set
+      .flatMap(_.keys)
+  }
+}
 
 case class NotNeededPackage(
     libraryName:        String,

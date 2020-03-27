@@ -4,7 +4,6 @@ object Versions {
   val sbtVersion = "1.3.8"
 
   val runtime      = Dep.ScalaJs("com.olvind", "scalablytyped-runtime", "2.1.0")
-  val sbtBintray   = Dep.Java("org.foundweekends", "sbt-bintray", "0.5.4")
   val scalaJsDom   = Dep.ScalaJs("org.scala-js", "scalajs-dom", "1.0.0")
   val slinkyWeb    = Dep.ScalaJs("me.shadaj", "slinky-web", "0.6.4")
   val slinkyNative = Dep.ScalaJs("me.shadaj", "slinky-native", "0.6.4")

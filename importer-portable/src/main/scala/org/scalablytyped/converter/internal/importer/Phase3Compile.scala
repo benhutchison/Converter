@@ -22,19 +22,19 @@ import scala.util.Try
   * This phase goes from scala AST to compiled jar files on the local file system
   */
 class Phase3Compile(
-    resolve:                    LibraryResolver,
-    versions:                   Versions,
-    compiler:                   Compiler,
-    targetFolder:               os.Path,
-    projectName:                String,
-    organization:               String,
-    resolverRefOpt:             Option[ResolverRef],
-    publishLocalFolder:         os.Path,
-    metadataFetcher:            Npmjs,
-    softWrites:                 Boolean,
-    flavour:                    FlavourImpl,
-    generateScalaJsBundlerFile: Boolean,
-    ensureSourceFilesWritten:   Boolean,
+                     resolve:                    LibraryResolver,
+                     versions:                   Versions,
+                     compiler:                   Compiler,
+                     targetFolder:               os.Path,
+                     projectName:                String,
+                     organization:               String,
+                     resolverRefOpt:             Option[Publisher],
+                     publishLocalFolder:         os.Path,
+                     metadataFetcher:            Npmjs,
+                     softWrites:                 Boolean,
+                     flavour:                    FlavourImpl,
+                     generateScalaJsBundlerFile: Boolean,
+                     ensureSourceFilesWritten:   Boolean,
 ) extends Phase[Source, Phase2Res, PublishedSbtProject] {
 
   val ScalaFiles: PartialFunction[(os.RelPath, Array[Byte]), Array[Byte]] = {
@@ -95,7 +95,7 @@ class Phase3Compile(
             val externalDeps: Set[Dep] = buildJson.dependencies ++ flavour.dependencies
 
             val sbtLayout = ContentSbtProject(
-              v               = versions,
+              versions               = versions,
               comments        = NoComments,
               organization    = organization,
               name            = source.libName.value,
@@ -147,7 +147,7 @@ class Phase3Compile(
               else Map()
 
             val sbtLayout = ContentSbtProject(
-              v               = versions,
+              versions               = versions,
               comments        = lib.packageTree.comments,
               organization    = organization,
               name            = lib.libName,

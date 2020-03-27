@@ -11,17 +11,20 @@ import com.ning.http.client.listenable.AbstractListenableFuture
 import dispatch.{FunctionHandler, Http, StatusCode}
 import gigahorse.Status
 import io.circe.{Decoder, Encoder}
+import org.scalablytyped.converter.internal.scalajs.Dep
 import org.scalablytyped.converter.internal.stringUtils.quote
+import os.RelPath
 
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.control.NonFatal
 
 case class BinTrayPublisher(cachePath: Path, repoPublic: String, user: String, password: String, repoName: String)(
     implicit ec:                       ExecutionContext,
-) {
+) extends Publisher {
 
-  def ref: ResolverRef =
-    BinTrayPublisher.Ref(user, repoName)
+  override val sbtPublishTo = s"bintrayRepository := ${quote(repoName)}"
+  override val sbtResolver  = s"Resolver.bintrayRepo(${quote(user)}, ${quote(repoName)})"
+  override val sbtPlugin    = Dep.Java("org.foundweekends", "sbt-bintray", "0.5.4")
 
   private def builder =
     new AsyncHttpClientConfig.Builder()
@@ -81,25 +84,35 @@ case class BinTrayPublisher(cachePath: Path, repoPublic: String, user: String, p
       case NonFatal(_) if n > 0 => retry(n - 1)(thunk)
     }
 
-  def publish(p: SbtProject, layout: Layout[os.RelPath, os.Path]): Future[Unit] = {
-    def uploadFiles(pkg: repo.Package): Iterable[Future[Boolean]] =
-      layout.all.map {
-        case (relPath, src) =>
-          retry(2)(pkg.mvnUpload(relPath.toString(), src.toIO).exploded(true)(Handle.createOrConflict))
-      }
+  object isEnabled extends Publisher.Enabled {
+    override def publish(p: SbtProject, layout: Layout[os.RelPath, os.Path]): Future[Unit] = {
+      def uploadFiles(pkg: repo.Package): Iterable[Future[Boolean]] =
+        layout.all.map {
+          case (relPath, src) =>
+            retry(2)(pkg.mvnUpload(relPath.toString(), src.toIO).exploded(true)(Handle.createOrConflict))
+        }
 
-    for {
-      pkg <- retry(2)(ensurePackage(p.name, p.name, repoPublic, List("MIT"), Nil))
-      v <- retry(2)(ensureVersion(pkg, p.reference.version))
-      _ <- Future.sequence(uploadFiles(pkg))
-      _ <- retry(2)(v.publish(Handle.createOrConflict))
-    } yield ()
+      for {
+        pkg <- retry(2)(ensurePackage(p.name, p.name, repoPublic, List("MIT"), Nil))
+        v <- retry(2)(ensureVersion(pkg, p.reference.version))
+        _ <- Future.sequence(uploadFiles(pkg))
+        _ <- retry(2)(v.publish(Handle.createOrConflict))
+      } yield ()
+    }
   }
+  val enabled = Some(isEnabled)
 }
 
 object BinTrayPublisher {
-  case class Ref(user: String, repoName: String) extends ResolverRef {
-    override def asSbt = s"Resolver.bintrayRepo(${quote(user)}, ${quote(repoName)})"
+  /* we use this for consistent CI builds when we don't publish */
+  object Dummy extends Publisher {
+    val user     = "oyvindberg"
+    val repoName = "ScalablyTyped"
+
+    override val sbtPublishTo = s"bintrayRepository := ${quote(repoName)}"
+    override val sbtResolver  = s"Resolver.bintrayRepo(${quote(user)}, ${quote(repoName)})"
+    override val sbtPlugin    = Dep.Java("org.foundweekends", "sbt-bintray", "0.5.4")
+    override val enabled      = None
   }
 }
 

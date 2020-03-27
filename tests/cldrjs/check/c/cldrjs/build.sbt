@@ -1,11 +1,11 @@
 organization := "org.scalablytyped"
 name := "cldrjs"
-version := "0.4.4-7ceac8"
+version := "0.4.4-30dde9"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "org.scalablytyped" %%% "std" % "0.0-unknown-6a8632")
+  "org.scalablytyped" %%% "std" % "0.0-unknown-9b0273")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

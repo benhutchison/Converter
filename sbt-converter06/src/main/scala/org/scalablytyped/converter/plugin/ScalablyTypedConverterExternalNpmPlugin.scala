@@ -5,11 +5,12 @@ import java.time.Instant
 
 import com.olvind.logging
 import com.olvind.logging.{Formatter, LogLevel}
+import org.scalablytyped.converter.internal.importer.ConversionOptions
 import org.scalablytyped.converter.internal.importer.jsonCodecs.PackageJsonDepsDecoder
-import org.scalablytyped.converter.internal.importer.SharedInput
 import org.scalablytyped.converter.internal.scalajs.{Dep, Name, Versions}
 import org.scalablytyped.converter.internal.ts.{PackageJsonDeps, TsIdentLibrary}
 import org.scalablytyped.converter.internal.{
+  constants,
   BuildInfo,
   Deps,
   Digest,
@@ -60,19 +61,20 @@ object ScalablyTypedConverterExternalNpmPlugin extends AutoPlugin {
       ),
       Versions.ScalaJs(org.scalajs.sbtplugin.ScalaJSPlugin.autoImport.scalaJSVersion),
     )
+
     val compiler = ScalablyTypedPluginBase.stInternalZincCompiler.value
 
-    val shared = SharedInput(
-      shouldUseScalaJsDomTypes = stUseScalaJsDom.value,
-      wantedLibs               = wantedLibs,
-      flavour                  = stFlavour.value,
-      outputPackage            = outputPackage,
-      enableScalaJsDefined     = stEnableScalaJsDefined.value.map(TsIdentLibrary.apply),
-      stdLibs                  = IArray.fromTraversable(stStdlib.value),
-      expandTypeMappings       = stInternalExpandTypeMappings.value.map(TsIdentLibrary.apply),
-      ignoredLibs              = ignored.map(TsIdentLibrary.apply),
-      ignoredModulePrefixes    = ignored.map(_.split("/").toList),
-      versions                 = versions,
+    val options = ConversionOptions(
+      useScalaJsDomTypes    = stUseScalaJsDom.value,
+      flavour               = stFlavour.value,
+      outputPackage         = outputPackage,
+      enableScalaJsDefined  = stEnableScalaJsDefined.value.map(TsIdentLibrary.apply),
+      stdLibs               = IArray.fromTraversable(stStdlib.value),
+      expandTypeMappings    = stInternalExpandTypeMappings.value.map(TsIdentLibrary.apply),
+      ignoredLibs           = ignored.map(TsIdentLibrary.apply),
+      ignoredModulePrefixes = ignored.map(_.split("/").toList),
+      versions              = versions,
+      organization          = "org.scalablytyped",
     )
 
     val fromFolder = InFolder(folder / "node_modules")
@@ -80,9 +82,10 @@ object ScalablyTypedConverterExternalNpmPlugin extends AutoPlugin {
     val input = ImportTypings.Input(
       converterVersion = BuildInfo.version,
       packageJsonHash  = Digest.of(List(os.read.bytes(packageJsonFile))).hexString,
-      shared           = shared,
+      conversion       = options,
       fromFolder       = fromFolder,
       targetFolder     = outputDir / "sources",
+      wantedLibs       = wantedLibs,
     )
 
     val runCache = (cacheDir / "runs" / s"${input.hashCode}.json").toPath
@@ -100,7 +103,7 @@ object ScalablyTypedConverterExternalNpmPlugin extends AutoPlugin {
             logger             = stLogger,
             parseCacheDirOpt   = Some(cacheDir.toPath resolve "parse"),
             compiler           = compiler,
-            publishLocalFolder = os.home / ".ivy2" / "local",
+            publishLocalFolder = constants.defaultLocalPublishFolder,
           )
           ran match {
             case Right(output) =>

@@ -1,11 +1,11 @@
 organization := "org.scalablytyped"
 name := "chart_dot_js"
-version := "0.0-unknown-310afc"
+version := "0.0-unknown-a145c8"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "org.scalablytyped" %%% "std" % "0.0-unknown-7b8439")
+  "org.scalablytyped" %%% "std" % "0.0-unknown-20d19c")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

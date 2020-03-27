@@ -1,8 +1,8 @@
 package org.scalablytyped.converter
 
 import org.scalablytyped.converter.internal.constants.defaultCacheFolder
-import org.scalablytyped.converter.internal.files
 import org.scalablytyped.converter.internal.importer.{withZipFs, Ci}
+import org.scalablytyped.converter.internal.{constants, files}
 
 object Main {
   def main(args: Array[String]): Unit = {
@@ -10,7 +10,7 @@ object Main {
     /* I havent found a way to configure bloop to customize the global ExecutionContext, so this is it */
     System.setProperty("scala.concurrent.context.numThreads", config.parallelScalas.toString)
 
-    val publishFolder = os.home / ".ivy2" / "local"
+    val publishFolder = constants.defaultLocalPublishFolder
 
     withZipFs(files.existing(defaultCacheFolder) / "bintray.zip") { bintrayPath =>
       withZipFs(defaultCacheFolder / "npmjs.zip") { npmjsPath =>

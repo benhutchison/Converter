@@ -24,9 +24,10 @@ lazy val docs = project
 
 lazy val scalajs = project
   .dependsOn(utils, logging)
-  .configure(baseSettings, publicationSettings).settings(
-  libraryDependencies ++= Seq(Deps.scalaXml),
-)
+  .configure(baseSettings, publicationSettings)
+  .settings(
+    libraryDependencies ++= Seq(Deps.scalaXml),
+  )
 
 lazy val phases = project
   .dependsOn(utils, logging)
@@ -62,6 +63,20 @@ lazy val importer = project
       case other                                             => (assembly / assemblyMergeStrategy).value(other)
     },
     testOptions in Test += Tests.Argument("-P4"),
+  )
+
+lazy val cli = project
+  .dependsOn(importer)
+  .configure(baseSettings, publicationSettings)
+  .settings(
+    libraryDependencies += Deps.scopt,
+    test in assembly := {},
+    mainClass in assembly := Some("org.scalablytyped.converter.Cli"),
+    assemblyMergeStrategy in assembly := {
+      case foo if foo.contains("io/github/soc/directories/") => MergeStrategy.first
+      case foo if foo.endsWith("module-info.class")          => MergeStrategy.discard
+      case other                                             => (assembly / assemblyMergeStrategy).value(other)
+    },
   )
 
 lazy val `sbt-converter06` = project

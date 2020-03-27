@@ -22,7 +22,8 @@ object ImportTypings {
       targetFolder:     os.Path,
       converterVersion: String,
       packageJsonHash:  String,
-      shared:           SharedInput,
+      conversion:       ConversionOptions,
+      wantedLibs:       Set[ts.TsIdentLibrary],
   )
 
   object Input {
@@ -50,48 +51,48 @@ object ImportTypings {
       compiler:           Compiler,
   ): Either[Map[Source, Either[Throwable, String]], Output] = {
 
-    if (input.shared.expandTypeMappings =/= EnabledTypeMappingExpansion.DefaultSelection) {
+    if (input.conversion.expandTypeMappings =/= EnabledTypeMappingExpansion.DefaultSelection) {
       logger.warn("Changing stInternalExpandTypeMappings not encouraged. It might blow up")
     }
 
-    val fromNodeModules = Source.fromNodeModules(input.fromFolder, input.shared)
+    val fromNodeModules = Source.fromNodeModules(input.fromFolder, input.conversion, input.wantedLibs)
     logger.warn(s"Importing ${fromNodeModules.sources.map(_.libName.value).mkString(", ")}")
 
     val cachedParser = PersistingParser(parseCacheDirOpt, fromNodeModules.folders, logger)
 
-    val flavour = flavourImpl.fromInput(input.shared)
+    val flavour = flavourImpl.fromInput(input.conversion)
 
     val Phases: RecPhase[Source, PublishedSbtProject] = RecPhase[Source]
       .next(
         new Phase1ReadTypescript(
           resolve                 = fromNodeModules.libraryResolver,
           calculateLibraryVersion = CalculateLibraryVersion.PackageJsonOnly,
-          ignored                 = input.shared.ignoredLibs,
-          ignoredModulePrefixes   = input.shared.ignoredModulePrefixes,
+          ignored                 = input.conversion.ignoredLibs,
+          ignoredModulePrefixes   = input.conversion.ignoredModulePrefixes,
           stdlibSource            = fromNodeModules.stdLibSource,
           pedantic                = false,
           parser                  = cachedParser,
-          expandTypeMappings      = input.shared.expandTypeMappings,
+          expandTypeMappings      = input.conversion.expandTypeMappings,
         ),
         "typescript",
       )
       .next(
         new Phase2ToScalaJs(
           pedantic             = false,
-          enableScalaJsDefined = input.shared.enableScalaJsDefined,
-          outputPkg            = input.shared.outputPackage,
+          enableScalaJsDefined = input.conversion.enableScalaJsDefined,
+          outputPkg            = input.conversion.outputPackage,
         ),
         "scala.js",
       )
       .next(new PhaseFlavour(flavour), flavour.toString)
       .next(
         new Phase3Compile(
-          versions                   = input.shared.versions,
+          versions                   = input.conversion.versions,
           compiler                   = compiler,
           targetFolder               = input.targetFolder,
           publishLocalFolder         = publishLocalFolder,
           flavour                    = flavour,
-          organization               = "org.scalablytyped",
+          organization               = input.conversion.organization,
           projectName                = "ScalablyTyped",
           resolverRefOpt             = None,
           metadataFetcher            = Npmjs.No,

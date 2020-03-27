@@ -8,14 +8,14 @@ import org.scalablytyped.converter.internal.stringUtils.quote
 
 object GenerateSbtPlugin {
   def apply(
-      versions:       Versions,
-      organization:   String,
-      projectName:    String,
-      projectDir:     os.Path,
-      projects:       Set[PublishedSbtProject],
-      pluginVersion:  String,
-      resolverRefOpt: Option[ResolverRef],
-      action:         String,
+             versions:       Versions,
+             organization:   String,
+             projectName:    String,
+             projectDir:     os.Path,
+             projects:       Set[PublishedSbtProject],
+             pluginVersion:  String,
+             resolverRefOpt: Option[Publisher],
+             action:         String,
   ): Unit = {
     files.sync(
       contents(versions, organization, projectName, projects, pluginVersion, resolverRefOpt),
@@ -34,23 +34,22 @@ object GenerateSbtPlugin {
   }
 
   def contents(
-      v:              Versions,
-      organization:   String,
-      projectName:    String,
-      projects:       Set[PublishedSbtProject],
-      pluginVersion:  String,
-      resolverRefOpt: Option[ResolverRef],
+                v:              Versions,
+                organization:   String,
+                projectName:    String,
+                projects:       Set[PublishedSbtProject],
+                pluginVersion:  String,
+                resolverRefOpt: Option[Publisher],
   ): Map[os.RelPath, Array[Byte]] = {
 
     val buildSbt = s"""name := "sbt-$projectName"
       |organization := ${quote(organization)}
       |version := ${quote(pluginVersion)}
       |sbtPlugin := true
-      |bintrayRepository := ${quote(projectName)}
       |licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
       |publishMavenStyle := true
       |crossSbtVersions := Vector("0.13.16", ${quote(Versions.sbtVersion)})
-      |""".stripMargin
+      |""".stripMargin + resolverRefOpt.fold("")(_.sbtPublishTo + "\n")
 
     /* we have at least a `clone` and a `notify` library - of course */
     def fix(name: String): String =
@@ -79,7 +78,7 @@ object GenerateSbtPlugin {
         .mkString("\n")
 
     val resolvers = resolverRefOpt match {
-      case Some(r) => s"\n    resolvers += ${r.asSbt}"
+      case Some(r) => s"\n    resolvers += ${r.sbtResolver}"
       case None    => ""
     }
     val pluginSource = s"""
@@ -103,12 +102,15 @@ object GenerateSbtPlugin {
 
     val pluginSourcePath = os.RelPath("src") / 'main / 'scala / 'com / 'olvind / 'sbt / "ScalablytypedPlugin.scala"
 
+    val pluginsSbt = resolverRefOpt.map(_.sbtPlugin).map(dep => s"addSbtPlugin(${dep.asSbt})").mkString("\n")
+
     Map(
-      os.RelPath("build.sbt") -> buildSbt.getBytes(constants.Utf8),
-      os.RelPath("project") / "plugins.sbt" -> s"""addSbtPlugin(${Versions.sbtBintray.asSbt(v)})"""
-        .getBytes(constants.Utf8),
-      os.RelPath("project") / "build.properties" -> s"sbt.version=${Versions.sbtVersion}".getBytes(constants.Utf8),
-      pluginSourcePath -> pluginSource.getBytes(constants.Utf8),
-    )
+      os.RelPath("build.sbt") -> buildSbt,
+      os.RelPath("project") / "plugins.sbt" -> pluginsSbt,
+      os.RelPath("project") / "build.properties" -> s"sbt.version=${Versions.sbtVersion}",
+      pluginSourcePath -> pluginSource,
+    ).map {
+      case (relPath, str) => relPath -> str.getBytes(constants.Utf8)
+    }
   }
 }
