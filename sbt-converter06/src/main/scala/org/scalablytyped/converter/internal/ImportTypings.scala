@@ -43,11 +43,11 @@ object ImportTypings {
   }
 
   def apply(
-      input:            Input,
-      logger:           Logger[Unit],
-      parseCacheDirOpt: Option[Path],
-      publishFolder:    os.Path,
-      compiler:         Compiler,
+      input:              Input,
+      logger:             Logger[Unit],
+      parseCacheDirOpt:   Option[Path],
+      publishLocalFolder: os.Path,
+      compiler:           Compiler,
   ): Either[Map[Source, Either[Throwable, String]], Output] = {
 
     if (input.shared.expandTypeMappings =/= EnabledTypeMappingExpansion.DefaultSelection) {
@@ -89,11 +89,11 @@ object ImportTypings {
           versions                   = input.shared.versions,
           compiler                   = compiler,
           targetFolder               = input.targetFolder,
-          publishFolder              = publishFolder,
+          publishLocalFolder         = publishLocalFolder,
           flavour                    = flavour,
           organization               = "org.scalablytyped",
           projectName                = "ScalablyTyped",
-          publishUser                = "oyvindberg",
+          resolverRefOpt             = None,
           metadataFetcher            = Npmjs.No,
           resolve                    = fromNodeModules.libraryResolver,
           softWrites                 = true,

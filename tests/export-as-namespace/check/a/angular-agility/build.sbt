@@ -1,14 +1,13 @@
 organization := "org.scalablytyped"
 name := "angular-agility"
-version := "0.0-unknown-b38301"
+version := "0.0-unknown-2b9279"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "org.scalablytyped" %%% "angular" % "1.6-600247",
-  "org.scalablytyped" %%% "std" % "0.0-unknown-eec27d")
+  "org.scalablytyped" %%% "angular" % "1.6-90c00d",
+  "org.scalablytyped" %%% "std" % "0.0-unknown-1de945")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

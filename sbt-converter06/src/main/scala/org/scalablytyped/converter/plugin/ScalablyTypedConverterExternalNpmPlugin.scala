@@ -96,11 +96,11 @@ object ScalablyTypedConverterExternalNpmPlugin extends AutoPlugin {
           output.deps
         case _ =>
           val ran = ImportTypings(
-            input            = input,
-            logger           = stLogger,
-            parseCacheDirOpt = Some(cacheDir.toPath resolve "parse"),
-            compiler         = compiler,
-            publishFolder    = os.home / ".ivy2" / "local",
+            input              = input,
+            logger             = stLogger,
+            parseCacheDirOpt   = Some(cacheDir.toPath resolve "parse"),
+            compiler           = compiler,
+            publishLocalFolder = os.home / ".ivy2" / "local",
           )
           ran match {
             case Right(output) =>

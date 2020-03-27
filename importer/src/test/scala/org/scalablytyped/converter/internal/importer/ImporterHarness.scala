@@ -39,12 +39,12 @@ trait ImporterHarness extends AnyFunSuite {
   )
 
   private def runImport(
-      source:        InFolder,
-      targetFolder:  os.Path,
-      pedantic:      Boolean,
-      logRegistry:   LogRegistry[Source, TsIdentLibrary, StringWriter],
-      publishFolder: os.Path,
-      flavour:       FlavourImpl,
+      source:             InFolder,
+      targetFolder:       os.Path,
+      pedantic:           Boolean,
+      logRegistry:        LogRegistry[Source, TsIdentLibrary, StringWriter],
+      publishLocalFolder: os.Path,
+      flavour:            FlavourImpl,
   ): PhaseRes[Source, SortedMap[Source, PublishedSbtProject]] = {
     val stdLibSource: StdLibSource =
       StdLibSource(InFolder(source.path), IArray(InFile(source.path / "stdlib.d.ts")), TsIdentLibrarySimple("std"))
@@ -80,8 +80,8 @@ trait ImporterHarness extends AnyFunSuite {
             targetFolder               = targetFolder,
             projectName                = "ScalablyTyped",
             organization               = "org.scalablytyped",
-            publishUser                = "oyvindberg",
-            publishFolder              = publishFolder,
+            resolverRefOpt             = None,
+            publishLocalFolder         = publishLocalFolder,
             metadataFetcher            = Npmjs.No,
             softWrites                 = true,
             flavour                    = flavour,

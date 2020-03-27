@@ -20,13 +20,13 @@ import scala.concurrent.{Await, ExecutionContext, Future}
 
 object Dev {
   object paths {
-    val base          = files.existing(constants.defaultCacheFolder / 'dev)
-    val publishFolder = files.existing(base / 'publish)
-    val parseCache    = files.existing(base / 'parseCache)
-    val logs          = files.existing(base / 'logs)
-    val npm           = files.existing(base / 'typescript)
-    val node_modules  = files.existing(npm / 'node_modules)
-    val out           = files.existing(base / 'out)
+    val base               = files.existing(constants.defaultCacheFolder / 'dev)
+    val publishLocalFolder = files.existing(base / 'publish)
+    val parseCache         = files.existing(base / 'parseCache)
+    val logs               = files.existing(base / 'logs)
+    val npm                = files.existing(base / 'typescript)
+    val node_modules       = files.existing(npm / 'node_modules)
+    val out                = files.existing(base / 'out)
   }
 
   val parallelLibraries = 20
@@ -128,8 +128,8 @@ object Dev {
             targetFolder               = paths.out,
             projectName                = projectName,
             organization               = org,
-            publishUser                = "publishUser",
-            publishFolder              = paths.publishFolder,
+            resolverRefOpt             = None,
+            publishLocalFolder         = paths.publishLocalFolder,
             metadataFetcher            = Npmjs.No,
             softWrites                 = true,
             flavour                    = flavourImpl.fromInput(shared),

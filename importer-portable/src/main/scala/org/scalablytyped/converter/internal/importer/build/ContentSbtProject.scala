@@ -13,7 +13,7 @@ object ContentSbtProject {
       organization:    String,
       name:            String,
       version:         String,
-      publishUser:     String,
+      resolverRefOpt: Option[ResolverRef],
       localDeps:       IArray[PublishedSbtProject],
       deps:            Set[Dep],
       scalaFiles:      Map[os.RelPath, Array[Byte]],
@@ -27,6 +27,11 @@ object ContentSbtProject {
       val allDeps    = IArray.fromTraversable(deps) ++ IArray(Versions.runtime) ++ localDeps.map(d => d.project.reference)
       val depsString = allDeps.map(_.asSbt(v)).distinct.sorted.mkString("Seq(\n  ", ",\n  ", ")")
 
+      val resolvers = resolverRefOpt match {
+        case Some(r) => s"resolvers += ${r.asSbt}\n"
+        case None => ""
+      }
+
       s"""|organization := ${quote(organization)}
           |name := ${quote(name)}
           |version := ${quote(version)}
@@ -37,8 +42,7 @@ object ContentSbtProject {
           |scalacOptions ++= ${v.scalacOptions.map(quote).mkString("List(", ", ", ")")}
           |licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
           |bintrayRepository := ${quote(projectName)}
-          |resolvers += Resolver.bintrayRepo(${quote(publishUser)}, ${quote(projectName)})
-          |""".stripMargin
+          |""".stripMargin ++ resolvers
     }
 
     val pluginsSbt =

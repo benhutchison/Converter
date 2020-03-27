@@ -1,6 +1,7 @@
 package org.scalablytyped.converter.internal
 package importer
 
+import java.io
 import java.io.FileWriter
 import java.nio.file.Path
 import java.time.LocalDateTime
@@ -29,11 +30,11 @@ object Ci {
   case class TargetDirs(targetFolder: os.Path, facadeFolder: os.Path)
 
   case class Paths(
-      bintray:       Path,
-      npmjs:         Path,
-      parseCache:    Option[Path],
-      cacheFolder:   os.Path,
-      publishFolder: os.Path,
+      bintray:            Path,
+      npmjs:              Path,
+      parseCache:         Option[Path],
+      cacheFolder:        os.Path,
+      publishLocalFolder: os.Path,
   )
 
   case class Config(
@@ -282,8 +283,8 @@ class Ci(config: Ci.Config, paths: Ci.Paths) {
 
     val localCleaningF = Future {
       if (config.conserveSpace) {
-        interfaceLogger.warn(s"Cleaning old artifacts in ${paths.publishFolder}")
-        LocalCleanup(paths.publishFolder, config.organization, keepNum = 1)
+        interfaceLogger.warn(s"Cleaning old artifacts in ${paths.publishLocalFolder}")
+        LocalCleanup(paths.publishLocalFolder, config.organization, keepNum = 1)
       }
     }(ec)
 
@@ -311,9 +312,16 @@ class Ci(config: Ci.Config, paths: Ci.Paths) {
       )
     }
 
-    val bintray     = bintrayFor(config.projectName, config.repo, paths.bintray)
-    val publishUser = bintray.fold("oyvindberg")(_.user)
-    val flavour     = flavourImpl.fromInput(config.shared)
+    val bintray = bintrayFor(config.projectName, config.repo, paths.bintray)
+
+    /* for consistent builds this needs to be defaulted in CI */
+    val resolverRef: ResolverRef =
+      bintray match {
+        case Some(bt) => bt.ref
+        case None     => BinTrayPublisher.Ref("oyvindberg", config.projectName)
+      }
+
+    val flavour = flavourImpl.fromInput(config.shared)
 
     val Pipeline: RecPhase[Source, PublishedSbtProject] =
       RecPhase[Source]
@@ -347,8 +355,8 @@ class Ci(config: Ci.Config, paths: Ci.Paths) {
             targetFolder               = targetFolder,
             projectName                = config.projectName,
             organization               = config.organization,
-            publishUser                = publishUser,
-            publishFolder              = paths.publishFolder,
+            resolverRefOpt             = Some(resolverRef),
+            publishLocalFolder         = paths.publishLocalFolder,
             metadataFetcher            = NpmjsFetcher(paths.npmjs)(ec),
             softWrites                 = config.softWrites,
             flavour                    = flavour,
@@ -424,14 +432,14 @@ target/
       val sbtProjectDir = targetFolder / s"sbt-${config.projectName}"
 
       GenerateSbtPlugin(
-        versions      = config.shared.versions,
-        organization  = config.organization,
-        projectName   = config.projectName,
-        projectDir    = sbtProjectDir,
-        projects      = successes.values.to[Set],
-        pluginVersion = RunId,
-        publishUser   = publishUser,
-        action        = if (bintray.isDefined) "^publish" else "publishLocal",
+        versions       = config.shared.versions,
+        organization   = config.organization,
+        projectName    = config.projectName,
+        projectDir     = sbtProjectDir,
+        projects       = successes.values.to[Set],
+        pluginVersion  = RunId,
+        resolverRefOpt = Some(resolverRef),
+        action         = if (bintray.isDefined) "^publish" else "publishLocal",
       )
 
       CommitChanges(

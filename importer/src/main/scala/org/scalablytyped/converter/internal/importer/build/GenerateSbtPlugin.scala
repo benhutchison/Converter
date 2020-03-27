@@ -8,17 +8,17 @@ import org.scalablytyped.converter.internal.stringUtils.quote
 
 object GenerateSbtPlugin {
   def apply(
-      versions:      Versions,
-      organization:  String,
-      projectName:   String,
-      projectDir:    os.Path,
-      projects:      Set[PublishedSbtProject],
-      pluginVersion: String,
-      publishUser:   String,
-      action:        String,
+      versions:       Versions,
+      organization:   String,
+      projectName:    String,
+      projectDir:     os.Path,
+      projects:       Set[PublishedSbtProject],
+      pluginVersion:  String,
+      resolverRefOpt: Option[ResolverRef],
+      action:         String,
   ): Unit = {
     files.sync(
-      contents(versions, organization, projectName, projects, pluginVersion, publishUser),
+      contents(versions, organization, projectName, projects, pluginVersion, resolverRefOpt),
       projectDir,
       deleteUnknowns = true,
       soft           = true,
@@ -34,12 +34,12 @@ object GenerateSbtPlugin {
   }
 
   def contents(
-      v:             Versions,
-      organization:  String,
-      projectName:   String,
-      projects:      Set[PublishedSbtProject],
-      pluginVersion: String,
-      publishUser:   String,
+      v:              Versions,
+      organization:   String,
+      projectName:    String,
+      projects:       Set[PublishedSbtProject],
+      pluginVersion:  String,
+      resolverRefOpt: Option[ResolverRef],
   ): Map[os.RelPath, Array[Byte]] = {
 
     val buildSbt = s"""name := "sbt-$projectName"
@@ -78,6 +78,10 @@ object GenerateSbtPlugin {
         }
         .mkString("\n")
 
+    val resolvers = resolverRefOpt match {
+      case Some(r) => s"\n    resolvers += ${r.asSbt}"
+      case None    => ""
+    }
     val pluginSource = s"""
       |package $organization.sbt
       |
@@ -87,8 +91,7 @@ object GenerateSbtPlugin {
       |object ${projectName}Plugin extends AutoPlugin {
       |  override def trigger = allRequirements
       |  override def requires = sbt.plugins.JvmPlugin
-      |  override def globalSettings = List(
-      |    resolvers += Resolver.bintrayRepo(${quote(publishUser)}, ${quote(projectName)})
+      |  override def globalSettings = List($resolvers
       |  )
       |
       |  object autoImport {

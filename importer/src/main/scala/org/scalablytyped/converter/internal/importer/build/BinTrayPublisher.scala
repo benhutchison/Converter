@@ -11,6 +11,7 @@ import com.ning.http.client.listenable.AbstractListenableFuture
 import dispatch.{FunctionHandler, Http, StatusCode}
 import gigahorse.Status
 import io.circe.{Decoder, Encoder}
+import org.scalablytyped.converter.internal.stringUtils.quote
 
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.control.NonFatal
@@ -18,6 +19,9 @@ import scala.util.control.NonFatal
 case class BinTrayPublisher(cachePath: Path, repoPublic: String, user: String, password: String, repoName: String)(
     implicit ec:                       ExecutionContext,
 ) {
+
+  def ref: ResolverRef =
+    BinTrayPublisher.Ref(user, repoName)
 
   private def builder =
     new AsyncHttpClientConfig.Builder()
@@ -90,6 +94,12 @@ case class BinTrayPublisher(cachePath: Path, repoPublic: String, user: String, p
       _ <- Future.sequence(uploadFiles(pkg))
       _ <- retry(2)(v.publish(Handle.createOrConflict))
     } yield ()
+  }
+}
+
+object BinTrayPublisher {
+  case class Ref(user: String, repoName: String) extends ResolverRef {
+    override def asSbt = s"Resolver.bintrayRepo(${quote(user)}, ${quote(repoName)})"
   }
 }
 
