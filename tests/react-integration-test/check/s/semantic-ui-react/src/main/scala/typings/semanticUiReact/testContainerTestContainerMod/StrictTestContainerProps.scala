@@ -74,5 +74,99 @@ object StrictTestContainerProps {
     if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictTestContainerProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: StrictTestContainerProps) {
+    @scala.inline
+    def duplicate: StrictTestContainerProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): StrictTestContainerProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps with T]
+    @scala.inline
+    def withRequiredFn0Number(requiredFn0Number: () => Double): StrictTestContainerProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(requiredFn0Number = js.Any.fromFunction0(requiredFn0Number)), x).asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    @scala.inline
+    def withRequiredFn0Void(requiredFn0Void: () => Unit): StrictTestContainerProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(requiredFn0Void = js.Any.fromFunction0(requiredFn0Void)), x).asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    @scala.inline
+    def withRequiredFn1Number(requiredFn1Number: Double => Double): StrictTestContainerProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(requiredFn1Number = js.Any.fromFunction1(requiredFn1Number)), x).asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    @scala.inline
+    def withRequiredFn1Void(requiredFn1Void: Double => Unit): StrictTestContainerProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(requiredFn1Void = js.Any.fromFunction1(requiredFn1Void)), x).asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    @scala.inline
+    def withAs(as: js.Any): StrictTestContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (as != null) obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    }
+    @scala.inline
+    def withChildren(children: ReactNode): StrictTestContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (children != null) obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    }
+    @scala.inline
+    def withClassName(className: String): StrictTestContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (className != null) obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    }
+    @scala.inline
+    def withContent(content: SemanticShorthandContent): StrictTestContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (content != null) obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    }
+    @scala.inline
+    def withFluidUndefined: StrictTestContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "fluid")
+      obj.asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    }
+    @scala.inline
+    def withFluid(fluid: Boolean): StrictTestContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(fluid)) obj.updateDynamic("fluid")(fluid.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    }
+    @scala.inline
+    def withOptFn0Number(optFn0Number: () => Double): StrictTestContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (optFn0Number != null) obj.updateDynamic("optFn0Number")(js.Any.fromFunction0(optFn0Number))
+      obj.asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    }
+    @scala.inline
+    def withOptFn0Void(optFn0Void: () => Unit): StrictTestContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (optFn0Void != null) obj.updateDynamic("optFn0Void")(js.Any.fromFunction0(optFn0Void))
+      obj.asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    }
+    @scala.inline
+    def withOptFn1Number(optFn1Number: /* x */ Double => Double): StrictTestContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (optFn1Number != null) obj.updateDynamic("optFn1Number")(js.Any.fromFunction1(optFn1Number))
+      obj.asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    }
+    @scala.inline
+    def withOptFn1Void(optFn1Void: /* x */ Double => Unit): StrictTestContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (optFn1Void != null) obj.updateDynamic("optFn1Void")(js.Any.fromFunction1(optFn1Void))
+      obj.asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    }
+    @scala.inline
+    def withTextUndefined: StrictTestContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "text")
+      obj.asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    }
+    @scala.inline
+    def withText(text: Boolean): StrictTestContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(text)) obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    }
+    @scala.inline
+    def withTextAlign(textAlign: SemanticTEXTALIGNMENTS): StrictTestContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (textAlign != null) obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.testContainerTestContainerMod.StrictTestContainerProps]
+    }
+  }
+  
 }
 

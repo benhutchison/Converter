@@ -21,5 +21,17 @@ object EitherT {
   
     __obj.asInstanceOf[EitherT[F]]
   }
+  @scala.inline
+  implicit sealed class Sugar[F] (x: EitherT[F]) {
+    @scala.inline
+    def duplicate: EitherT[F] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.fpTs.eitherTMod.EitherT[F]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): EitherT[F] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.fpTs.eitherTMod.EitherT[F] with T]
+    @scala.inline
+    def withChain(
+      chain: (js.Function1[js.Any, HKT[F, Either[js.Any, js.Any]]], HKT[F, Either[js.Any, js.Any]]) => HKT[F, Either[js.Any, js.Any]]
+    ): EitherT[F] = js.Dynamic.global.Object.assign(js.Dynamic.literal(chain = js.Any.fromFunction2(chain)), x).asInstanceOf[typings.fpTs.eitherTMod.EitherT[F]]
+  }
+  
 }
 

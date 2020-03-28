@@ -26,5 +26,23 @@ object IConfigstore {
   
     __obj.asInstanceOf[IConfigstore]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: IConfigstore) {
+    @scala.inline
+    def duplicate: IConfigstore = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.insight.mod.insight.IConfigstore]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): IConfigstore with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.insight.mod.insight.IConfigstore with T]
+    @scala.inline
+    def withAll(all: js.Any): IConfigstore = js.Dynamic.global.Object.assign(js.Dynamic.literal(all = all.asInstanceOf[js.Any]), x).asInstanceOf[typings.insight.mod.insight.IConfigstore]
+    @scala.inline
+    def withDel(del: String => Unit): IConfigstore = js.Dynamic.global.Object.assign(js.Dynamic.literal(del = js.Any.fromFunction1(del)), x).asInstanceOf[typings.insight.mod.insight.IConfigstore]
+    @scala.inline
+    def withGet(get: String => js.Any): IConfigstore = js.Dynamic.global.Object.assign(js.Dynamic.literal(get = js.Any.fromFunction1(get)), x).asInstanceOf[typings.insight.mod.insight.IConfigstore]
+    @scala.inline
+    def withPath(path: String): IConfigstore = js.Dynamic.global.Object.assign(js.Dynamic.literal(path = path.asInstanceOf[js.Any]), x).asInstanceOf[typings.insight.mod.insight.IConfigstore]
+    @scala.inline
+    def withSet(set: (String, js.Any) => Unit): IConfigstore = js.Dynamic.global.Object.assign(js.Dynamic.literal(set = js.Any.fromFunction2(set)), x).asInstanceOf[typings.insight.mod.insight.IConfigstore]
+  }
+  
 }
 

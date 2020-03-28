@@ -19,5 +19,33 @@ object ComponentElement {
     if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComponentElement[P, T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[P, T <: ReactComponentClass[P]] (x: ComponentElement[P, T]) {
+    @scala.inline
+    def duplicate: ComponentElement[P, T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.react.mod.ComponentElement[P, T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): (ComponentElement[P, T]) with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.react.mod.ComponentElement[P, T] with T]
+    @scala.inline
+    def withProps(props: js.Any): ComponentElement[P, T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(props = props.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ComponentElement[P, T]]
+    @scala.inline
+    def withType(`type`: js.Any): ComponentElement[P, T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.ComponentElement[P, T]]
+    }
+    @scala.inline
+    def withKey(key: Key): ComponentElement[P, T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (key != null) obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.ComponentElement[P, T]]
+    }
+    @scala.inline
+    def withRef(ref: LegacyRef[T]): ComponentElement[P, T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (ref != null) obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.ComponentElement[P, T]]
+    }
+  }
+  
 }
 

@@ -39,5 +39,73 @@ object ButtonGroupProps {
     if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
     __obj.asInstanceOf[ButtonGroupProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: ButtonGroupProps) {
+    @scala.inline
+    def duplicate: ButtonGroupProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.reactBootstrap.buttonGroupMod.ButtonGroupProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ButtonGroupProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.reactBootstrap.buttonGroupMod.ButtonGroupProps with T]
+    @scala.inline
+    def withAllHTMLAttributes(AllHTMLAttributes: AllHTMLAttributes[ButtonGroup]): ButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(obj, AllHTMLAttributes)
+      obj.asInstanceOf[typingsSlinky.reactBootstrap.buttonGroupMod.ButtonGroupProps]
+    }
+    @scala.inline
+    def withClassAttributes(ClassAttributes: ClassAttributes[ButtonGroup]): ButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (ClassAttributes != null) js.Dynamic.global.Object.assign(obj, ClassAttributes)
+      obj.asInstanceOf[typingsSlinky.reactBootstrap.buttonGroupMod.ButtonGroupProps]
+    }
+    @scala.inline
+    def withBlockUndefined: ButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "block")
+      obj.asInstanceOf[typingsSlinky.reactBootstrap.buttonGroupMod.ButtonGroupProps]
+    }
+    @scala.inline
+    def withBlock(block: Boolean): ButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(block)) obj.updateDynamic("block")(block.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactBootstrap.buttonGroupMod.ButtonGroupProps]
+    }
+    @scala.inline
+    def withBsSize(bsSize: Sizes): ButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (bsSize != null) obj.updateDynamic("bsSize")(bsSize.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactBootstrap.buttonGroupMod.ButtonGroupProps]
+    }
+    @scala.inline
+    def withBsStyle(bsStyle: String): ButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (bsStyle != null) obj.updateDynamic("bsStyle")(bsStyle.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactBootstrap.buttonGroupMod.ButtonGroupProps]
+    }
+    @scala.inline
+    def withJustifiedUndefined: ButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "justified")
+      obj.asInstanceOf[typingsSlinky.reactBootstrap.buttonGroupMod.ButtonGroupProps]
+    }
+    @scala.inline
+    def withJustified(justified: Boolean): ButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(justified)) obj.updateDynamic("justified")(justified.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactBootstrap.buttonGroupMod.ButtonGroupProps]
+    }
+    @scala.inline
+    def withVerticalUndefined: ButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "vertical")
+      obj.asInstanceOf[typingsSlinky.reactBootstrap.buttonGroupMod.ButtonGroupProps]
+    }
+    @scala.inline
+    def withVertical(vertical: Boolean): ButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(vertical)) obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactBootstrap.buttonGroupMod.ButtonGroupProps]
+    }
+  }
+  
 }
 

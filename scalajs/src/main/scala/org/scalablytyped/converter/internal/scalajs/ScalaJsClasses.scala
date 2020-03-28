@@ -5,6 +5,7 @@ object ScalaJsClasses {
   // format: off
   val ScalaJsArray =
     ClassTree(
+      isImplicit = false,
       IArray(Annotation.JsNative, Annotation.JsGlobalScope),
       Name("Array"),
       IArray(TypeParamTree(Name("T"), None, NoComments)),
@@ -22,6 +23,7 @@ object ScalaJsClasses {
   // format: off
   val ScalaJsFunction =
     ClassTree(
+      isImplicit = false,
       IArray(Annotation.JsNative, Annotation.JsGlobalScope),
       Name("Function"),
       Empty,
@@ -75,6 +77,7 @@ object ScalaJsClasses {
       IArray(TypeParamTree(R.name, None, NoComments))
 
     ClassTree(
+      isImplicit = false,
       annotations = IArray(Annotation.JsNative),
       name        = codePath.parts.last,
       tparams     = ThisTParam ++ inputTParams ++ outputTParams,
@@ -90,6 +93,7 @@ object ScalaJsClasses {
 
   val StringDictionary =
     ClassTree(
+      isImplicit = false,
       IArray(Annotation.ScalaJSDefined, Annotation.JsGlobalScope),
       Name("StringDictionary"),
       IArray(TypeParamTree(Name("T"), None, NoComments)),
@@ -104,6 +108,7 @@ object ScalaJsClasses {
 
   val NumberDictionary =
     ClassTree(
+      isImplicit = false,
       IArray(Annotation.ScalaJSDefined, Annotation.JsGlobalScope),
       Name("NumberDictionary"),
       IArray(TypeParamTree(Name("T"), None, NoComments)),

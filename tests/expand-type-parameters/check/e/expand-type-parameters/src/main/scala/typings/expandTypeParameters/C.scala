@@ -16,5 +16,25 @@ object C {
     if (c != null) __obj.updateDynamic("c")(c.asInstanceOf[js.Any])
     __obj.asInstanceOf[C]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: C) {
+    @scala.inline
+    def duplicate: C = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.expandTypeParameters.C]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): C with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.expandTypeParameters.C with T]
+    @scala.inline
+    def withCInt(c: Int): C = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (c != null) obj.updateDynamic("c")(c.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.expandTypeParameters.C]
+    }
+    @scala.inline
+    def withCDouble(c: Double): C = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (c != null) obj.updateDynamic("c")(c.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.expandTypeParameters.C]
+    }
+  }
+  
 }
 

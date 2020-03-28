@@ -37,5 +37,31 @@ object Props {
     if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T] (x: Props[T]) {
+    @scala.inline
+    def duplicate: Props[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.Props[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): Props[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.Props[T] with T]
+    @scala.inline
+    def withChildren(children: ReactNode): Props[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (children != null) obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.Props[T]]
+    }
+    @scala.inline
+    def withKey(key: Key): Props[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (key != null) obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.Props[T]]
+    }
+    @scala.inline
+    def withRef(ref: LegacyRef[T]): Props[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (ref != null) obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.Props[T]]
+    }
+  }
+  
 }
 

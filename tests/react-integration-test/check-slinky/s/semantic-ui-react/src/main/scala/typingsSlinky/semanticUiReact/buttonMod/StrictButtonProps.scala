@@ -1,24 +1,25 @@
 package typingsSlinky.semanticUiReact.buttonMod
 
-import org.scalajs.dom.raw.Event
-import org.scalajs.dom.raw.EventTarget
-import slinky.core.SyntheticEvent
 import slinky.core.TagMod
-import slinky.web.SyntheticAnimationEvent
-import slinky.web.SyntheticClipboardEvent
-import slinky.web.SyntheticCompositionEvent
-import slinky.web.SyntheticFocusEvent
-import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
-import slinky.web.SyntheticPointerEvent
-import slinky.web.SyntheticTouchEvent
-import slinky.web.SyntheticTransitionEvent
-import slinky.web.SyntheticUIEvent
-import slinky.web.SyntheticWheelEvent
 import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.mod.AnimationEvent
 import typingsSlinky.react.mod.ButtonHTMLAttributes
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.ClipboardEvent
+import typingsSlinky.react.mod.CompositionEvent
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.FocusEvent
+import typingsSlinky.react.mod.FormEvent
+import typingsSlinky.react.mod.KeyboardEvent
+import typingsSlinky.react.mod.MouseEvent
+import typingsSlinky.react.mod.NativeMouseEvent
+import typingsSlinky.react.mod.PointerEvent
+import typingsSlinky.react.mod.SyntheticEvent
+import typingsSlinky.react.mod.TouchEvent
+import typingsSlinky.react.mod.TransitionEvent
+import typingsSlinky.react.mod.UIEvent
+import typingsSlinky.react.mod.WheelEvent
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -75,6 +76,7 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.twitter
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.vertical
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.vk
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.youtube
+import typingsSlinky.std.Event
 import typingsSlinky.std.HTMLButtonElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -262,24 +264,24 @@ object StrictButtonProps {
     loading: js.UndefOr[Boolean] = js.undefined,
     name: String = null,
     negative: js.UndefOr[Boolean] = js.undefined,
-    onAbort: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onAnimationEnd: SyntheticAnimationEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onAnimationIteration: SyntheticAnimationEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onAnimationStart: SyntheticAnimationEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onAuxClick: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
-    onBlur: SyntheticFocusEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onCanPlay: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onCanPlayThrough: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onChange: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onAbort: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onAnimationEnd: AnimationEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onAnimationIteration: AnimationEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onAnimationStart: AnimationEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onAuxClick: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit = null,
+    onBeforeInput: FormEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onBlur: FocusEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onCanPlay: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onCanPlayThrough: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onChange: FormEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
     onClick: (/* event */ SyntheticMouseEvent[org.scalajs.dom.raw.HTMLButtonElement], /* data */ ButtonProps) => Unit = null,
-    onCompositionEnd: SyntheticCompositionEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onCompositionStart: SyntheticCompositionEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onCompositionUpdate: SyntheticCompositionEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onContextMenu: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onCopy: SyntheticClipboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onCut: SyntheticClipboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onDoubleClick: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onCompositionEnd: CompositionEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onCompositionStart: CompositionEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onCompositionUpdate: CompositionEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onContextMenu: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit = null,
+    onCopy: ClipboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onCut: ClipboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onDoubleClick: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit = null,
     onDrag: DragEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
     onDragEnd: DragEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
     onDragEnter: DragEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
@@ -288,59 +290,59 @@ object StrictButtonProps {
     onDragOver: DragEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
     onDragStart: DragEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
     onDrop: DragEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onDurationChange: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onEmptied: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onEncrypted: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onEnded: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onError: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onFocus: SyntheticFocusEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onInput: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
-    onInvalid: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
-    onKeyDown: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onKeyPress: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onKeyUp: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onLoad: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onLoadStart: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onLoadedData: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onLoadedMetadata: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onMouseDown: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onMouseEnter: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onMouseLeave: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onMouseMove: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onMouseOut: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onMouseOver: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onMouseUp: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onPaste: SyntheticClipboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onPause: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onPlay: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onPlaying: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onPointerCancel: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onPointerDown: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onPointerEnter: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onPointerLeave: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onPointerMove: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onPointerOut: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onPointerOver: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onPointerUp: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onProgress: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onRateChange: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
-    onScroll: SyntheticUIEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onSeeked: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onSeeking: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onSelect: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onStalled: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onSubmit: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
-    onSuspend: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onTimeUpdate: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onTouchCancel: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onTouchEnd: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onTouchMove: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onTouchStart: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onTransitionEnd: SyntheticTransitionEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onVolumeChange: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onWaiting: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
-    onWheel: SyntheticWheelEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onDurationChange: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onEmptied: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onEncrypted: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onEnded: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onError: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onFocus: FocusEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onInput: FormEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onInvalid: FormEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onKeyDown: KeyboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onKeyPress: KeyboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onKeyUp: KeyboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onLoad: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onLoadStart: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onLoadedData: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onLoadedMetadata: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onMouseDown: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit = null,
+    onMouseEnter: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit = null,
+    onMouseLeave: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit = null,
+    onMouseMove: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit = null,
+    onMouseOut: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit = null,
+    onMouseOver: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit = null,
+    onMouseUp: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit = null,
+    onPaste: ClipboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onPause: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onPlay: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onPlaying: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onPointerCancel: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onPointerDown: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onPointerEnter: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onPointerLeave: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onPointerMove: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onPointerOut: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onPointerOver: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onPointerUp: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onProgress: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onRateChange: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onReset: FormEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onScroll: UIEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onSeeked: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onSeeking: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onSelect: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onStalled: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onSubmit: FormEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onSuspend: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onTimeUpdate: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onTouchCancel: TouchEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onTouchEnd: TouchEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onTouchMove: TouchEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onTouchStart: TouchEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onTransitionEnd: TransitionEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
+    onVolumeChange: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onWaiting: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit = null,
+    onWheel: WheelEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit = null,
     placeholder: String = null,
     positive: js.UndefOr[Boolean] = js.undefined,
     prefix: String = null,
@@ -574,5 +576,1859 @@ object StrictButtonProps {
     if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictButtonProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: StrictButtonProps) {
+    @scala.inline
+    def duplicate: StrictButtonProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): StrictButtonProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps with T]
+    @scala.inline
+    def withAbout(about: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (about != null) obj.updateDynamic("about")(about.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withAccessKey(accessKey: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (accessKey != null) obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withActiveUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "active")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withActive(active: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(active)) obj.updateDynamic("active")(active.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withAnimatedBoolean(animated: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (animated != null) obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withAnimatedFade(animated: fade): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (animated != null) obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withAnimatedVertical(animated: vertical): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (animated != null) obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-activedescendant`(`aria-activedescendant`: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-activedescendant` != null) obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-atomicUndefined`: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-atomic")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-atomic`(`aria-atomic`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-atomic`)) obj.updateDynamic("aria-atomic")(`aria-atomic`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-autocompleteBoth`(`aria-autocomplete`: both): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-autocomplete` != null) obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-autocompleteNone`(`aria-autocomplete`: none): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-autocomplete` != null) obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-autocompleteList`(`aria-autocomplete`: list): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-autocomplete` != null) obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-autocompleteInline`(`aria-autocomplete`: `inline`): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-autocomplete` != null) obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-busyUndefined`: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-busy")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-busy`(`aria-busy`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-busy`)) obj.updateDynamic("aria-busy")(`aria-busy`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-checkedMixed`(`aria-checked`: mixed): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-checked` != null) obj.updateDynamic("aria-checked")(`aria-checked`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-checkedBoolean`(`aria-checked`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-checked` != null) obj.updateDynamic("aria-checked")(`aria-checked`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-colcountInt`(`aria-colcount`: Int): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-colcount` != null) obj.updateDynamic("aria-colcount")(`aria-colcount`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-colcountDouble`(`aria-colcount`: Double): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-colcount` != null) obj.updateDynamic("aria-colcount")(`aria-colcount`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-colindexInt`(`aria-colindex`: Int): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-colindex` != null) obj.updateDynamic("aria-colindex")(`aria-colindex`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-colindexDouble`(`aria-colindex`: Double): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-colindex` != null) obj.updateDynamic("aria-colindex")(`aria-colindex`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-colspanInt`(`aria-colspan`: Int): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-colspan` != null) obj.updateDynamic("aria-colspan")(`aria-colspan`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-colspanDouble`(`aria-colspan`: Double): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-colspan` != null) obj.updateDynamic("aria-colspan")(`aria-colspan`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-controls`(`aria-controls`: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-controls` != null) obj.updateDynamic("aria-controls")(`aria-controls`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-currentStep`(`aria-current`: step): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-current` != null) obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-currentLocation`(`aria-current`: location): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-current` != null) obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-currentPage`(`aria-current`: page): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-current` != null) obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-currentBoolean`(`aria-current`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-current` != null) obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-currentDate`(`aria-current`: date): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-current` != null) obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-currentTime`(`aria-current`: time): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-current` != null) obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-describedby`(`aria-describedby`: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-describedby` != null) obj.updateDynamic("aria-describedby")(`aria-describedby`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-details`(`aria-details`: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-details` != null) obj.updateDynamic("aria-details")(`aria-details`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-disabledUndefined`: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-disabled")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-disabled`(`aria-disabled`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-disabled`)) obj.updateDynamic("aria-disabled")(`aria-disabled`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-dropeffectMove`(`aria-dropeffect`: move): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-dropeffect` != null) obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-dropeffectExecute`(`aria-dropeffect`: execute): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-dropeffect` != null) obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-dropeffectPopup`(`aria-dropeffect`: popup): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-dropeffect` != null) obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-dropeffectLink`(`aria-dropeffect`: link): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-dropeffect` != null) obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-dropeffectCopy`(`aria-dropeffect`: copy): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-dropeffect` != null) obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-dropeffectNone`(`aria-dropeffect`: none): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-dropeffect` != null) obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-errormessage`(`aria-errormessage`: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-errormessage` != null) obj.updateDynamic("aria-errormessage")(`aria-errormessage`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-expandedUndefined`: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-expanded")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-expanded`(`aria-expanded`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-expanded`)) obj.updateDynamic("aria-expanded")(`aria-expanded`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-flowto`(`aria-flowto`: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-flowto` != null) obj.updateDynamic("aria-flowto")(`aria-flowto`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-grabbedUndefined`: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-grabbed")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-grabbed`(`aria-grabbed`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-grabbed`)) obj.updateDynamic("aria-grabbed")(`aria-grabbed`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-haspopupMenu`(`aria-haspopup`: menu): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-haspopup` != null) obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-haspopupBoolean`(`aria-haspopup`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-haspopup` != null) obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-haspopupListbox`(`aria-haspopup`: listbox): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-haspopup` != null) obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-haspopupGrid`(`aria-haspopup`: grid): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-haspopup` != null) obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-haspopupTree`(`aria-haspopup`: tree): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-haspopup` != null) obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-haspopupDialog`(`aria-haspopup`: dialog): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-haspopup` != null) obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-hiddenUndefined`: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-hidden")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-hidden`(`aria-hidden`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-hidden`)) obj.updateDynamic("aria-hidden")(`aria-hidden`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-invalidSpelling`(`aria-invalid`: spelling): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-invalid` != null) obj.updateDynamic("aria-invalid")(`aria-invalid`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-invalidBoolean`(`aria-invalid`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-invalid` != null) obj.updateDynamic("aria-invalid")(`aria-invalid`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-invalidGrammar`(`aria-invalid`: grammar): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-invalid` != null) obj.updateDynamic("aria-invalid")(`aria-invalid`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-keyshortcuts`(`aria-keyshortcuts`: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-keyshortcuts` != null) obj.updateDynamic("aria-keyshortcuts")(`aria-keyshortcuts`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-label`(`aria-label`: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-label` != null) obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-labelledby`(`aria-labelledby`: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-labelledby` != null) obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-levelInt`(`aria-level`: Int): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-level` != null) obj.updateDynamic("aria-level")(`aria-level`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-levelDouble`(`aria-level`: Double): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-level` != null) obj.updateDynamic("aria-level")(`aria-level`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-livePolite`(`aria-live`: polite): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-live` != null) obj.updateDynamic("aria-live")(`aria-live`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-liveAssertive`(`aria-live`: assertive): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-live` != null) obj.updateDynamic("aria-live")(`aria-live`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-liveOff`(`aria-live`: off): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-live` != null) obj.updateDynamic("aria-live")(`aria-live`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-modalUndefined`: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-modal")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-modal`(`aria-modal`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-modal`)) obj.updateDynamic("aria-modal")(`aria-modal`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-multilineUndefined`: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-multiline")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-multiline`(`aria-multiline`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-multiline`)) obj.updateDynamic("aria-multiline")(`aria-multiline`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-multiselectableUndefined`: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-multiselectable")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-multiselectable`(`aria-multiselectable`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-multiselectable`)) obj.updateDynamic("aria-multiselectable")(`aria-multiselectable`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-orientationHorizontal`(`aria-orientation`: horizontal): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-orientation` != null) obj.updateDynamic("aria-orientation")(`aria-orientation`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-orientationVertical`(`aria-orientation`: typingsSlinky.react.reactStrings.vertical): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-orientation` != null) obj.updateDynamic("aria-orientation")(`aria-orientation`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-owns`(`aria-owns`: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-owns` != null) obj.updateDynamic("aria-owns")(`aria-owns`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-placeholder`(`aria-placeholder`: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-placeholder` != null) obj.updateDynamic("aria-placeholder")(`aria-placeholder`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-posinsetInt`(`aria-posinset`: Int): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-posinset` != null) obj.updateDynamic("aria-posinset")(`aria-posinset`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-posinsetDouble`(`aria-posinset`: Double): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-posinset` != null) obj.updateDynamic("aria-posinset")(`aria-posinset`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-pressedMixed`(`aria-pressed`: mixed): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-pressed` != null) obj.updateDynamic("aria-pressed")(`aria-pressed`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-pressedBoolean`(`aria-pressed`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-pressed` != null) obj.updateDynamic("aria-pressed")(`aria-pressed`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-readonlyUndefined`: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-readonly")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-readonly`(`aria-readonly`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-readonly`)) obj.updateDynamic("aria-readonly")(`aria-readonly`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-relevantAdditions`(`aria-relevant`: additions): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-relevant` != null) obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-relevantAll`(`aria-relevant`: all): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-relevant` != null) obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-relevantText`(`aria-relevant`: text): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-relevant` != null) obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-relevantAdditions text`(`aria-relevant`: `additions text`): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-relevant` != null) obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-relevantRemovals`(`aria-relevant`: removals): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-relevant` != null) obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-requiredUndefined`: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-required")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-required`(`aria-required`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-required`)) obj.updateDynamic("aria-required")(`aria-required`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-roledescription`(`aria-roledescription`: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-roledescription` != null) obj.updateDynamic("aria-roledescription")(`aria-roledescription`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-rowcountInt`(`aria-rowcount`: Int): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-rowcount` != null) obj.updateDynamic("aria-rowcount")(`aria-rowcount`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-rowcountDouble`(`aria-rowcount`: Double): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-rowcount` != null) obj.updateDynamic("aria-rowcount")(`aria-rowcount`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-rowindexInt`(`aria-rowindex`: Int): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-rowindex` != null) obj.updateDynamic("aria-rowindex")(`aria-rowindex`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-rowindexDouble`(`aria-rowindex`: Double): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-rowindex` != null) obj.updateDynamic("aria-rowindex")(`aria-rowindex`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-rowspanInt`(`aria-rowspan`: Int): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-rowspan` != null) obj.updateDynamic("aria-rowspan")(`aria-rowspan`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-rowspanDouble`(`aria-rowspan`: Double): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-rowspan` != null) obj.updateDynamic("aria-rowspan")(`aria-rowspan`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-selectedUndefined`: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-selected")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-selected`(`aria-selected`: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-selected`)) obj.updateDynamic("aria-selected")(`aria-selected`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-setsizeInt`(`aria-setsize`: Int): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-setsize` != null) obj.updateDynamic("aria-setsize")(`aria-setsize`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-setsizeDouble`(`aria-setsize`: Double): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-setsize` != null) obj.updateDynamic("aria-setsize")(`aria-setsize`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-sortNone`(`aria-sort`: none): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-sort` != null) obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-sortDescending`(`aria-sort`: descending): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-sort` != null) obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-sortAscending`(`aria-sort`: ascending): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-sort` != null) obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-sortOther`(`aria-sort`: other): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-sort` != null) obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-valuemaxInt`(`aria-valuemax`: Int): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-valuemax` != null) obj.updateDynamic("aria-valuemax")(`aria-valuemax`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-valuemaxDouble`(`aria-valuemax`: Double): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-valuemax` != null) obj.updateDynamic("aria-valuemax")(`aria-valuemax`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-valueminInt`(`aria-valuemin`: Int): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-valuemin` != null) obj.updateDynamic("aria-valuemin")(`aria-valuemin`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-valueminDouble`(`aria-valuemin`: Double): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-valuemin` != null) obj.updateDynamic("aria-valuemin")(`aria-valuemin`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-valuenowInt`(`aria-valuenow`: Int): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-valuenow` != null) obj.updateDynamic("aria-valuenow")(`aria-valuenow`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-valuenowDouble`(`aria-valuenow`: Double): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-valuenow` != null) obj.updateDynamic("aria-valuenow")(`aria-valuenow`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withAria-valuetext`(`aria-valuetext`: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-valuetext` != null) obj.updateDynamic("aria-valuetext")(`aria-valuetext`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withAs(as: js.Any): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (as != null) obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withAttachedBottom(attached: bottom): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (attached != null) obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withAttachedLeft(attached: left): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (attached != null) obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withAttachedBoolean(attached: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (attached != null) obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withAttachedTop(attached: top): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (attached != null) obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withAttachedRight(attached: right): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (attached != null) obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withAutoCapitalize(autoCapitalize: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (autoCapitalize != null) obj.updateDynamic("autoCapitalize")(autoCapitalize.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withAutoCorrect(autoCorrect: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (autoCorrect != null) obj.updateDynamic("autoCorrect")(autoCorrect.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withAutoFocusUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "autoFocus")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withAutoFocus(autoFocus: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(autoFocus)) obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withAutoSave(autoSave: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (autoSave != null) obj.updateDynamic("autoSave")(autoSave.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withBasicUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "basic")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withBasic(basic: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(basic)) obj.updateDynamic("basic")(basic.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withChildren(children: TagMod[Any]): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (children != null) obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withCircularUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "circular")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withCircular(circular: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(circular)) obj.updateDynamic("circular")(circular.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withClassName(className: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (className != null) obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withColorYoutube(color: youtube): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (color != null) obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withColorLinkedin(color: linkedin): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (color != null) obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withColorSemanticCOLORS(color: SemanticCOLORS): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (color != null) obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withColorFacebook(color: facebook): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (color != null) obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def `withColorGoogle plus`(color: `google plus`): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (color != null) obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withColorTwitter(color: twitter): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (color != null) obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withColorInstagram(color: instagram): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (color != null) obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withColorVk(color: vk): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (color != null) obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withCompactUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "compact")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withCompact(compact: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(compact)) obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withContent(content: SemanticShorthandContent): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (content != null) obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withContentEditableUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "contentEditable")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withContentEditable(contentEditable: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(contentEditable)) obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withContextMenu(contextMenu: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (contextMenu != null) obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withDangerouslySetInnerHTML(dangerouslySetInnerHTML: AnonHtml): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (dangerouslySetInnerHTML != null) obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withDatatype(datatype: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (datatype != null) obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withDefaultCheckedUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "defaultChecked")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withDefaultChecked(defaultChecked: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(defaultChecked)) obj.updateDynamic("defaultChecked")(defaultChecked.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withDefaultValueArray(defaultValue: js.Array[String]): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (defaultValue != null) obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withDefaultValueString(defaultValue: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (defaultValue != null) obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withDir(dir: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (dir != null) obj.updateDynamic("dir")(dir.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withDisabledUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "disabled")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withDisabled(disabled: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(disabled)) obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withDraggableUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "draggable")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withDraggable(draggable: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(draggable)) obj.updateDynamic("draggable")(draggable.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withFloated(floated: SemanticFLOATS): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (floated != null) obj.updateDynamic("floated")(floated.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withFluidUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "fluid")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withFluid(fluid: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(fluid)) obj.updateDynamic("fluid")(fluid.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withForm(form: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (form != null) obj.updateDynamic("form")(form.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withFormAction(formAction: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (formAction != null) obj.updateDynamic("formAction")(formAction.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withFormEncType(formEncType: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (formEncType != null) obj.updateDynamic("formEncType")(formEncType.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withFormMethod(formMethod: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (formMethod != null) obj.updateDynamic("formMethod")(formMethod.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withFormNoValidateUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "formNoValidate")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withFormNoValidate(formNoValidate: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(formNoValidate)) obj.updateDynamic("formNoValidate")(formNoValidate.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withFormTarget(formTarget: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (formTarget != null) obj.updateDynamic("formTarget")(formTarget.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withHiddenUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "hidden")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withHidden(hidden: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(hidden)) obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withIconBoolean(icon: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (icon != null) obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withIconSemanticShorthandItem(
+      icon: SemanticShorthandItem[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconProps */ _
+        ]
+    ): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (icon != null) obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withId(id: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (id != null) obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withInlist(inlist: js.Any): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (inlist != null) obj.updateDynamic("inlist")(inlist.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withInputMode(inputMode: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (inputMode != null) obj.updateDynamic("inputMode")(inputMode.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withInvertedUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "inverted")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withInverted(inverted: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(inverted)) obj.updateDynamic("inverted")(inverted.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withIs(is: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (is != null) obj.updateDynamic("is")(is.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withItemID(itemID: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (itemID != null) obj.updateDynamic("itemID")(itemID.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withItemProp(itemProp: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (itemProp != null) obj.updateDynamic("itemProp")(itemProp.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withItemRef(itemRef: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (itemRef != null) obj.updateDynamic("itemRef")(itemRef.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withItemScopeUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "itemScope")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withItemScope(itemScope: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(itemScope)) obj.updateDynamic("itemScope")(itemScope.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withItemType(itemType: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (itemType != null) obj.updateDynamic("itemType")(itemType.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withLabel(
+      label: SemanticShorthandItem[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify LabelProps */ _
+        ]
+    ): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (label != null) obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withLabelPositionLeft(labelPosition: left): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (labelPosition != null) obj.updateDynamic("labelPosition")(labelPosition.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withLabelPositionRight(labelPosition: right): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (labelPosition != null) obj.updateDynamic("labelPosition")(labelPosition.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withLang(lang: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (lang != null) obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withLoadingUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "loading")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withLoading(loading: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(loading)) obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withName(name: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (name != null) obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withNegativeUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "negative")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withNegative(negative: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(negative)) obj.updateDynamic("negative")(negative.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnAbort(onAbort: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onAbort != null) obj.updateDynamic("onAbort")(js.Any.fromFunction1(onAbort))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnAnimationEnd(onAnimationEnd: AnimationEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onAnimationEnd != null) obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnAnimationIteration(onAnimationIteration: AnimationEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onAnimationIteration != null) obj.updateDynamic("onAnimationIteration")(js.Any.fromFunction1(onAnimationIteration))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnAnimationStart(onAnimationStart: AnimationEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onAnimationStart != null) obj.updateDynamic("onAnimationStart")(js.Any.fromFunction1(onAnimationStart))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnAuxClick(onAuxClick: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onAuxClick != null) obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnBeforeInput(onBeforeInput: FormEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onBeforeInput != null) obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnBlur(onBlur: FocusEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onBlur != null) obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnCanPlay(onCanPlay: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onCanPlay != null) obj.updateDynamic("onCanPlay")(js.Any.fromFunction1(onCanPlay))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnCanPlayThrough(onCanPlayThrough: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onCanPlayThrough != null) obj.updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(onCanPlayThrough))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnChange(onChange: FormEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onChange != null) obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnClick(
+      onClick: (/* event */ SyntheticMouseEvent[org.scalajs.dom.raw.HTMLButtonElement], /* data */ ButtonProps) => Unit
+    ): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onClick != null) obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnCompositionEnd(onCompositionEnd: CompositionEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onCompositionEnd != null) obj.updateDynamic("onCompositionEnd")(js.Any.fromFunction1(onCompositionEnd))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnCompositionStart(onCompositionStart: CompositionEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onCompositionStart != null) obj.updateDynamic("onCompositionStart")(js.Any.fromFunction1(onCompositionStart))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnCompositionUpdate(onCompositionUpdate: CompositionEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onCompositionUpdate != null) obj.updateDynamic("onCompositionUpdate")(js.Any.fromFunction1(onCompositionUpdate))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnContextMenu(onContextMenu: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onContextMenu != null) obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnCopy(onCopy: ClipboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onCopy != null) obj.updateDynamic("onCopy")(js.Any.fromFunction1(onCopy))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnCut(onCut: ClipboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onCut != null) obj.updateDynamic("onCut")(js.Any.fromFunction1(onCut))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnDoubleClick(onDoubleClick: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDoubleClick != null) obj.updateDynamic("onDoubleClick")(js.Any.fromFunction1(onDoubleClick))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnDrag(onDrag: DragEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDrag != null) obj.updateDynamic("onDrag")(js.Any.fromFunction1(onDrag))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnDragEnd(onDragEnd: DragEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDragEnd != null) obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnDragEnter(onDragEnter: DragEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDragEnter != null) obj.updateDynamic("onDragEnter")(js.Any.fromFunction1(onDragEnter))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnDragExit(onDragExit: DragEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDragExit != null) obj.updateDynamic("onDragExit")(js.Any.fromFunction1(onDragExit))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnDragLeave(onDragLeave: DragEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDragLeave != null) obj.updateDynamic("onDragLeave")(js.Any.fromFunction1(onDragLeave))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnDragOver(onDragOver: DragEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDragOver != null) obj.updateDynamic("onDragOver")(js.Any.fromFunction1(onDragOver))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnDragStart(onDragStart: DragEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDragStart != null) obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnDrop(onDrop: DragEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDrop != null) obj.updateDynamic("onDrop")(js.Any.fromFunction1(onDrop))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnDurationChange(onDurationChange: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDurationChange != null) obj.updateDynamic("onDurationChange")(js.Any.fromFunction1(onDurationChange))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnEmptied(onEmptied: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onEmptied != null) obj.updateDynamic("onEmptied")(js.Any.fromFunction1(onEmptied))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnEncrypted(onEncrypted: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onEncrypted != null) obj.updateDynamic("onEncrypted")(js.Any.fromFunction1(onEncrypted))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnEnded(onEnded: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onEnded != null) obj.updateDynamic("onEnded")(js.Any.fromFunction1(onEnded))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnError(onError: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onError != null) obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnFocus(onFocus: FocusEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onFocus != null) obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnInput(onInput: FormEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onInput != null) obj.updateDynamic("onInput")(js.Any.fromFunction1(onInput))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnInvalid(onInvalid: FormEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onInvalid != null) obj.updateDynamic("onInvalid")(js.Any.fromFunction1(onInvalid))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnKeyDown(onKeyDown: KeyboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onKeyDown != null) obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnKeyPress(onKeyPress: KeyboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onKeyPress != null) obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnKeyUp(onKeyUp: KeyboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onKeyUp != null) obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnLoad(onLoad: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onLoad != null) obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnLoadStart(onLoadStart: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onLoadStart != null) obj.updateDynamic("onLoadStart")(js.Any.fromFunction1(onLoadStart))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnLoadedData(onLoadedData: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onLoadedData != null) obj.updateDynamic("onLoadedData")(js.Any.fromFunction1(onLoadedData))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnLoadedMetadata(onLoadedMetadata: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onLoadedMetadata != null) obj.updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(onLoadedMetadata))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnMouseDown(onMouseDown: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onMouseDown != null) obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnMouseEnter(onMouseEnter: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onMouseEnter != null) obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnMouseLeave(onMouseLeave: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onMouseLeave != null) obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnMouseMove(onMouseMove: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onMouseMove != null) obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnMouseOut(onMouseOut: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onMouseOut != null) obj.updateDynamic("onMouseOut")(js.Any.fromFunction1(onMouseOut))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnMouseOver(onMouseOver: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onMouseOver != null) obj.updateDynamic("onMouseOver")(js.Any.fromFunction1(onMouseOver))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnMouseUp(onMouseUp: MouseEvent[org.scalajs.dom.raw.HTMLButtonElement, NativeMouseEvent] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onMouseUp != null) obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnPaste(onPaste: ClipboardEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onPaste != null) obj.updateDynamic("onPaste")(js.Any.fromFunction1(onPaste))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnPause(onPause: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onPause != null) obj.updateDynamic("onPause")(js.Any.fromFunction1(onPause))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnPlay(onPlay: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onPlay != null) obj.updateDynamic("onPlay")(js.Any.fromFunction1(onPlay))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnPlaying(onPlaying: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onPlaying != null) obj.updateDynamic("onPlaying")(js.Any.fromFunction1(onPlaying))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnPointerCancel(onPointerCancel: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onPointerCancel != null) obj.updateDynamic("onPointerCancel")(js.Any.fromFunction1(onPointerCancel))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnPointerDown(onPointerDown: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onPointerDown != null) obj.updateDynamic("onPointerDown")(js.Any.fromFunction1(onPointerDown))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnPointerEnter(onPointerEnter: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onPointerEnter != null) obj.updateDynamic("onPointerEnter")(js.Any.fromFunction1(onPointerEnter))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnPointerLeave(onPointerLeave: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onPointerLeave != null) obj.updateDynamic("onPointerLeave")(js.Any.fromFunction1(onPointerLeave))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnPointerMove(onPointerMove: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onPointerMove != null) obj.updateDynamic("onPointerMove")(js.Any.fromFunction1(onPointerMove))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnPointerOut(onPointerOut: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onPointerOut != null) obj.updateDynamic("onPointerOut")(js.Any.fromFunction1(onPointerOut))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnPointerOver(onPointerOver: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onPointerOver != null) obj.updateDynamic("onPointerOver")(js.Any.fromFunction1(onPointerOver))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnPointerUp(onPointerUp: PointerEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onPointerUp != null) obj.updateDynamic("onPointerUp")(js.Any.fromFunction1(onPointerUp))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnProgress(onProgress: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onProgress != null) obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnRateChange(onRateChange: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onRateChange != null) obj.updateDynamic("onRateChange")(js.Any.fromFunction1(onRateChange))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnReset(onReset: FormEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onReset != null) obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnScroll(onScroll: UIEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onScroll != null) obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnSeeked(onSeeked: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onSeeked != null) obj.updateDynamic("onSeeked")(js.Any.fromFunction1(onSeeked))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnSeeking(onSeeking: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onSeeking != null) obj.updateDynamic("onSeeking")(js.Any.fromFunction1(onSeeking))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnSelect(onSelect: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onSelect != null) obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnStalled(onStalled: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onStalled != null) obj.updateDynamic("onStalled")(js.Any.fromFunction1(onStalled))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnSubmit(onSubmit: FormEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onSubmit != null) obj.updateDynamic("onSubmit")(js.Any.fromFunction1(onSubmit))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnSuspend(onSuspend: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onSuspend != null) obj.updateDynamic("onSuspend")(js.Any.fromFunction1(onSuspend))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnTimeUpdate(onTimeUpdate: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onTimeUpdate != null) obj.updateDynamic("onTimeUpdate")(js.Any.fromFunction1(onTimeUpdate))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnTouchCancel(onTouchCancel: TouchEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onTouchCancel != null) obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnTouchEnd(onTouchEnd: TouchEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onTouchEnd != null) obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnTouchMove(onTouchMove: TouchEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onTouchMove != null) obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnTouchStart(onTouchStart: TouchEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onTouchStart != null) obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnTransitionEnd(onTransitionEnd: TransitionEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onTransitionEnd != null) obj.updateDynamic("onTransitionEnd")(js.Any.fromFunction1(onTransitionEnd))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnVolumeChange(onVolumeChange: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onVolumeChange != null) obj.updateDynamic("onVolumeChange")(js.Any.fromFunction1(onVolumeChange))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnWaiting(onWaiting: SyntheticEvent[org.scalajs.dom.raw.HTMLButtonElement, Event] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onWaiting != null) obj.updateDynamic("onWaiting")(js.Any.fromFunction1(onWaiting))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withOnWheel(onWheel: WheelEvent[org.scalajs.dom.raw.HTMLButtonElement] => Unit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onWheel != null) obj.updateDynamic("onWheel")(js.Any.fromFunction1(onWheel))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withPlaceholder(placeholder: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (placeholder != null) obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withPositiveUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "positive")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withPositive(positive: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(positive)) obj.updateDynamic("positive")(positive.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withPrefix(prefix: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (prefix != null) obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withPrimaryUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "primary")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withPrimary(primary: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(primary)) obj.updateDynamic("primary")(primary.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withProperty(property: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (property != null) obj.updateDynamic("property")(property.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withRadioGroup(radioGroup: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (radioGroup != null) obj.updateDynamic("radioGroup")(radioGroup.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withResource(resource: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (resource != null) obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withResultsInt(results: Int): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (results != null) obj.updateDynamic("results")(results.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withResultsDouble(results: Double): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (results != null) obj.updateDynamic("results")(results.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withRole(role: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (role != null) obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withSecondaryUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "secondary")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withSecondary(secondary: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(secondary)) obj.updateDynamic("secondary")(secondary.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withSecurity(security: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (security != null) obj.updateDynamic("security")(security.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withSize(size: SemanticSIZES): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (size != null) obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withSlot(slot: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (slot != null) obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withSpellCheckUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "spellCheck")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withSpellCheck(spellCheck: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(spellCheck)) obj.updateDynamic("spellCheck")(spellCheck.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withStyle(style: CSSProperties): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (style != null) obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withSuppressContentEditableWarningUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "suppressContentEditableWarning")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withSuppressContentEditableWarning(suppressContentEditableWarning: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(suppressContentEditableWarning)) obj.updateDynamic("suppressContentEditableWarning")(suppressContentEditableWarning.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withSuppressHydrationWarningUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "suppressHydrationWarning")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withSuppressHydrationWarning(suppressHydrationWarning: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(suppressHydrationWarning)) obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withTabIndexString(tabIndex: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (tabIndex != null) obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withTabIndexDouble(tabIndex: Double): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (tabIndex != null) obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withTitle(title: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (title != null) obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withToggleUndefined: StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "toggle")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withToggle(toggle: Boolean): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(toggle)) obj.updateDynamic("toggle")(toggle.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withTypeButton(`type`: button): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`type` != null) obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withTypeReset(`type`: reset): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`type` != null) obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withTypeSubmit(`type`: submit): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`type` != null) obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withTypeof(typeof: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (typeof != null) obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withUnselectableOn(unselectable: on): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (unselectable != null) obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withUnselectableOff(unselectable: off): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (unselectable != null) obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withValueArray(value: js.Array[String]): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (value != null) obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withValueString(value: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (value != null) obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withValueDouble(value: Double): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (value != null) obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+    @scala.inline
+    def withVocab(vocab: String): StrictButtonProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vocab != null) obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonMod.StrictButtonProps]
+    }
+  }
+  
 }
 

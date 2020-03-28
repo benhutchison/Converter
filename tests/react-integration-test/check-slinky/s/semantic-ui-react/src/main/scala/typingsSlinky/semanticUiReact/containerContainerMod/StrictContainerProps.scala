@@ -46,5 +46,67 @@ object StrictContainerProps {
     if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictContainerProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: StrictContainerProps) {
+    @scala.inline
+    def duplicate: StrictContainerProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.semanticUiReact.containerContainerMod.StrictContainerProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): StrictContainerProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.semanticUiReact.containerContainerMod.StrictContainerProps with T]
+    @scala.inline
+    def withAs(as: js.Any): StrictContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (as != null) obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.containerContainerMod.StrictContainerProps]
+    }
+    @scala.inline
+    def withChildren(children: TagMod[Any]): StrictContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (children != null) obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.containerContainerMod.StrictContainerProps]
+    }
+    @scala.inline
+    def withClassName(className: String): StrictContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (className != null) obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.containerContainerMod.StrictContainerProps]
+    }
+    @scala.inline
+    def withContent(content: SemanticShorthandContent): StrictContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (content != null) obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.containerContainerMod.StrictContainerProps]
+    }
+    @scala.inline
+    def withFluidUndefined: StrictContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "fluid")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.containerContainerMod.StrictContainerProps]
+    }
+    @scala.inline
+    def withFluid(fluid: Boolean): StrictContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(fluid)) obj.updateDynamic("fluid")(fluid.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.containerContainerMod.StrictContainerProps]
+    }
+    @scala.inline
+    def withTextUndefined: StrictContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "text")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.containerContainerMod.StrictContainerProps]
+    }
+    @scala.inline
+    def withText(text: Boolean): StrictContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(text)) obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.containerContainerMod.StrictContainerProps]
+    }
+    @scala.inline
+    def withTextAlign(textAlign: SemanticTEXTALIGNMENTS): StrictContainerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (textAlign != null) obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.containerContainerMod.StrictContainerProps]
+    }
+  }
+  
 }
 

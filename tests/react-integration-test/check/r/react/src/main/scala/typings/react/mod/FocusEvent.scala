@@ -36,5 +36,49 @@ object FocusEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FocusEvent[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T] (x: FocusEvent[T]) {
+    @scala.inline
+    def duplicate: FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): FocusEvent[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.FocusEvent[T] with T]
+    @scala.inline
+    def withBubbles(bubbles: Boolean): FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(bubbles = bubbles.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def withCancelable(cancelable: Boolean): FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(cancelable = cancelable.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def withCurrentTarget(currentTarget: EventTarget with T): FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(currentTarget = currentTarget.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def withDefaultPrevented(defaultPrevented: Boolean): FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(defaultPrevented = defaultPrevented.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def withEventPhase(eventPhase: Double): FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(eventPhase = eventPhase.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def withIsDefaultPrevented(isDefaultPrevented: () => Boolean): FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented)), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def withIsPropagationStopped(isPropagationStopped: () => Boolean): FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(isPropagationStopped = js.Any.fromFunction0(isPropagationStopped)), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def withIsTrusted(isTrusted: Boolean): FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(isTrusted = isTrusted.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def withNativeEvent(nativeEvent: NativeFocusEvent): FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(nativeEvent = nativeEvent.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def withPersist(persist: () => Unit): FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(persist = js.Any.fromFunction0(persist)), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def withPreventDefault(preventDefault: () => Unit): FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(preventDefault = js.Any.fromFunction0(preventDefault)), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def withRelatedTarget(relatedTarget: EventTarget): FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(relatedTarget = relatedTarget.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def withStopPropagation(stopPropagation: () => Unit): FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(stopPropagation = js.Any.fromFunction0(stopPropagation)), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def withTarget(target: EventTarget with T): FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(target = target.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def withTimeStamp(timeStamp: Double): FocusEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(timeStamp = timeStamp.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.FocusEvent[T]]
+    @scala.inline
+    def withType(`type`: String): FocusEvent[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.FocusEvent[T]]
+    }
+  }
+  
 }
 

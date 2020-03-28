@@ -115,5 +115,241 @@ object StrictButtonGroupProps {
     if (widths != null) __obj.updateDynamic("widths")(widths.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictButtonGroupProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: StrictButtonGroupProps) {
+    @scala.inline
+    def duplicate: StrictButtonGroupProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): StrictButtonGroupProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps with T]
+    @scala.inline
+    def withAs(as: js.Any): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (as != null) obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withAttachedBottom(attached: bottom): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (attached != null) obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withAttachedLeft(attached: left): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (attached != null) obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withAttachedBoolean(attached: Boolean): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (attached != null) obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withAttachedTop(attached: top): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (attached != null) obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withAttachedRight(attached: right): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (attached != null) obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withBasicUndefined: StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "basic")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withBasic(basic: Boolean): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(basic)) obj.updateDynamic("basic")(basic.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withButtons(buttons: SemanticShorthandCollection[ButtonProps]): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (buttons != null) obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withChildren(children: TagMod[Any]): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (children != null) obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withClassName(className: String): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (className != null) obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withColor(color: SemanticCOLORS): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (color != null) obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withCompactUndefined: StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "compact")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withCompact(compact: Boolean): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(compact)) obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withContent(content: SemanticShorthandContent): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (content != null) obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withFloated(floated: SemanticFLOATS): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (floated != null) obj.updateDynamic("floated")(floated.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withFluidUndefined: StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "fluid")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withFluid(fluid: Boolean): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(fluid)) obj.updateDynamic("fluid")(fluid.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withIconUndefined: StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "icon")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withIcon(icon: Boolean): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(icon)) obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withInvertedUndefined: StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "inverted")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withInverted(inverted: Boolean): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(inverted)) obj.updateDynamic("inverted")(inverted.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withLabeledUndefined: StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "labeled")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withLabeled(labeled: Boolean): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(labeled)) obj.updateDynamic("labeled")(labeled.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withNegativeUndefined: StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "negative")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withNegative(negative: Boolean): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(negative)) obj.updateDynamic("negative")(negative.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withPositiveUndefined: StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "positive")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withPositive(positive: Boolean): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(positive)) obj.updateDynamic("positive")(positive.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withPrimaryUndefined: StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "primary")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withPrimary(primary: Boolean): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(primary)) obj.updateDynamic("primary")(primary.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withSecondaryUndefined: StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "secondary")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withSecondary(secondary: Boolean): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(secondary)) obj.updateDynamic("secondary")(secondary.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withSize(size: SemanticSIZES): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (size != null) obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withToggleUndefined: StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "toggle")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withToggle(toggle: Boolean): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(toggle)) obj.updateDynamic("toggle")(toggle.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withVerticalUndefined: StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "vertical")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withVertical(vertical: Boolean): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(vertical)) obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+    @scala.inline
+    def withWidths(widths: SemanticWIDTHS): StrictButtonGroupProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (widths != null) obj.updateDynamic("widths")(widths.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonGroupMod.StrictButtonGroupProps]
+    }
+  }
+  
 }
 

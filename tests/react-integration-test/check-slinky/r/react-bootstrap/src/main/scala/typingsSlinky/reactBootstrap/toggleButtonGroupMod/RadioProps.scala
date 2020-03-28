@@ -21,5 +21,27 @@ object RadioProps {
     if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     __obj.asInstanceOf[RadioProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: RadioProps) {
+    @scala.inline
+    def duplicate: RadioProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.reactBootstrap.toggleButtonGroupMod.RadioProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): RadioProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.reactBootstrap.toggleButtonGroupMod.RadioProps with T]
+    @scala.inline
+    def withName(name: String): RadioProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(name = name.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.reactBootstrap.toggleButtonGroupMod.RadioProps]
+    @scala.inline
+    def withType(`type`: radio): RadioProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactBootstrap.toggleButtonGroupMod.RadioProps]
+    }
+    @scala.inline
+    def withOnChange(onChange: /* value */ js.Any => Unit): RadioProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onChange != null) obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+      obj.asInstanceOf[typingsSlinky.reactBootstrap.toggleButtonGroupMod.RadioProps]
+    }
+  }
+  
 }
 

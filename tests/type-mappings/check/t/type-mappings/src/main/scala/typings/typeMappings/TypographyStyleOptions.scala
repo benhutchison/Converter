@@ -37,5 +37,55 @@ object TypographyStyleOptions {
     if (textTransform != null) __obj.updateDynamic("textTransform")(textTransform.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypographyStyleOptions]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: TypographyStyleOptions) {
+    @scala.inline
+    def duplicate: TypographyStyleOptions = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.typeMappings.TypographyStyleOptions]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): TypographyStyleOptions with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.typeMappings.TypographyStyleOptions with T]
+    @scala.inline
+    def withColor(color: String): TypographyStyleOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (color != null) obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.typeMappings.TypographyStyleOptions]
+    }
+    @scala.inline
+    def withFontFamily(fontFamily: String): TypographyStyleOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontFamily != null) obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.typeMappings.TypographyStyleOptions]
+    }
+    @scala.inline
+    def withFontSize(fontSize: String): TypographyStyleOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontSize != null) obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.typeMappings.TypographyStyleOptions]
+    }
+    @scala.inline
+    def withFontWeight(fontWeight: String): TypographyStyleOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontWeight != null) obj.updateDynamic("fontWeight")(fontWeight.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.typeMappings.TypographyStyleOptions]
+    }
+    @scala.inline
+    def withLetterSpacing(letterSpacing: String): TypographyStyleOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (letterSpacing != null) obj.updateDynamic("letterSpacing")(letterSpacing.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.typeMappings.TypographyStyleOptions]
+    }
+    @scala.inline
+    def withLineHeight(lineHeight: String): TypographyStyleOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (lineHeight != null) obj.updateDynamic("lineHeight")(lineHeight.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.typeMappings.TypographyStyleOptions]
+    }
+    @scala.inline
+    def withTextTransform(textTransform: String): TypographyStyleOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (textTransform != null) obj.updateDynamic("textTransform")(textTransform.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.typeMappings.TypographyStyleOptions]
+    }
+  }
+  
 }
 

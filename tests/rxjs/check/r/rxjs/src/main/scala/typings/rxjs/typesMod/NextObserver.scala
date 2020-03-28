@@ -26,5 +26,39 @@ object NextObserver {
     if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction1(error))
     __obj.asInstanceOf[NextObserver[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T] (x: NextObserver[T]) {
+    @scala.inline
+    def duplicate: NextObserver[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.rxjs.typesMod.NextObserver[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): NextObserver[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.rxjs.typesMod.NextObserver[T] with T]
+    @scala.inline
+    def withNext(next: T => Unit): NextObserver[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(next = js.Any.fromFunction1(next)), x).asInstanceOf[typings.rxjs.typesMod.NextObserver[T]]
+    @scala.inline
+    def withClosedUndefined: NextObserver[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "closed")
+      obj.asInstanceOf[typings.rxjs.typesMod.NextObserver[T]]
+    }
+    @scala.inline
+    def withClosed(closed: Boolean): NextObserver[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(closed)) obj.updateDynamic("closed")(closed.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.rxjs.typesMod.NextObserver[T]]
+    }
+    @scala.inline
+    def withComplete(complete: () => Unit): NextObserver[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (complete != null) obj.updateDynamic("complete")(js.Any.fromFunction0(complete))
+      obj.asInstanceOf[typings.rxjs.typesMod.NextObserver[T]]
+    }
+    @scala.inline
+    def withError(error: /* err */ js.Any => Unit): NextObserver[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (error != null) obj.updateDynamic("error")(js.Any.fromFunction1(error))
+      obj.asInstanceOf[typings.rxjs.typesMod.NextObserver[T]]
+    }
+  }
+  
 }
 

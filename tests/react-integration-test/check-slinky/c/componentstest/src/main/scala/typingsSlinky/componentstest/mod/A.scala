@@ -17,5 +17,17 @@ object A {
   
     __obj.asInstanceOf[A]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: A) {
+    @scala.inline
+    def duplicate: A = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.componentstest.mod.A]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): A with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.componentstest.mod.A with T]
+    @scala.inline
+    def withACallback(aCallback: () => Double): A = js.Dynamic.global.Object.assign(js.Dynamic.literal(aCallback = js.Any.fromFunction0(aCallback)), x).asInstanceOf[typingsSlinky.componentstest.mod.A]
+    @scala.inline
+    def withAMember(aMember: Double): A = js.Dynamic.global.Object.assign(js.Dynamic.literal(aMember = aMember.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.componentstest.mod.A]
+  }
+  
 }
 

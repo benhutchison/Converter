@@ -24,5 +24,21 @@ object CldrFactory {
   
     __obj.asInstanceOf[CldrFactory]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: CldrFactory) {
+    @scala.inline
+    def duplicate: CldrFactory = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.cldrjs.mod.CldrFactory]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): CldrFactory with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.cldrjs.mod.CldrFactory with T]
+    @scala.inline
+    def withLoad(load: (js.Any, /* repeated */ js.Any) => Unit): CldrFactory = js.Dynamic.global.Object.assign(js.Dynamic.literal(load = js.Any.fromFunction2(load)), x).asInstanceOf[typings.cldrjs.mod.CldrFactory]
+    @scala.inline
+    def withOff(off: (String, js.Function2[/* path */ String, /* value */ js.Any, Unit]) => Unit): CldrFactory = js.Dynamic.global.Object.assign(js.Dynamic.literal(off = js.Any.fromFunction2(off)), x).asInstanceOf[typings.cldrjs.mod.CldrFactory]
+    @scala.inline
+    def withOn(on: (String, js.Function2[/* path */ String, /* value */ js.Any, Unit]) => Unit): CldrFactory = js.Dynamic.global.Object.assign(js.Dynamic.literal(on = js.Any.fromFunction2(on)), x).asInstanceOf[typings.cldrjs.mod.CldrFactory]
+    @scala.inline
+    def withOnce(once: (String, js.Function2[/* path */ String, /* value */ js.Any, Unit]) => Unit): CldrFactory = js.Dynamic.global.Object.assign(js.Dynamic.literal(once = js.Any.fromFunction2(once)), x).asInstanceOf[typings.cldrjs.mod.CldrFactory]
+  }
+  
 }
 

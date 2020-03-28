@@ -17,5 +17,17 @@ object WeekDataStatic {
   
     __obj.asInstanceOf[WeekDataStatic]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: WeekDataStatic) {
+    @scala.inline
+    def duplicate: WeekDataStatic = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.cldrjs.mod.WeekDataStatic]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): WeekDataStatic with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.cldrjs.mod.WeekDataStatic with T]
+    @scala.inline
+    def withFirstDay(firstDay: () => String): WeekDataStatic = js.Dynamic.global.Object.assign(js.Dynamic.literal(firstDay = js.Any.fromFunction0(firstDay)), x).asInstanceOf[typings.cldrjs.mod.WeekDataStatic]
+    @scala.inline
+    def withMinDays(minDays: () => Double): WeekDataStatic = js.Dynamic.global.Object.assign(js.Dynamic.literal(minDays = js.Any.fromFunction0(minDays)), x).asInstanceOf[typings.cldrjs.mod.WeekDataStatic]
+  }
+  
 }
 

@@ -120,6 +120,7 @@ object ImportEnum {
               )
             case None =>
               ClassTree(
+                isImplicit = false,
                 annotations = IArray(Annotation.JsNative),
                 name        = enumName,
                 tparams     = Empty,
@@ -161,6 +162,7 @@ object ImportEnum {
                   else
                     Some(
                       ClassTree(
+                        isImplicit = false,
                         annotations = IArray(Annotation.JsNative),
                         name        = memberName,
                         tparams     = Empty,

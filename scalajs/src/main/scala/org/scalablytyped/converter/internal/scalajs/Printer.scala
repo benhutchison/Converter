@@ -168,21 +168,27 @@ object Printer {
       case tree: PackageTree =>
         apply(scope, reg, packageNames :+ tree.name, folder / os.RelPath(tree.name.value), tree)
 
-      case cls @ ClassTree(anns, name, tparams, parents, ctors, members, classType, isSealed, comments, _) =>
+      case c @ ClassTree(isImplicit, anns, name, tparams, parents, ctors, members, classType, isSealed, comments, _) =>
         print(Comments.format(comments))
         print(formatAnns(anns))
 
         val (defaultCtor, restCtors) = ctors.sortBy(_.params.length).toList match {
-          case Nil                                                    => (CtorTree.defaultPublic, Nil)
-          case head :: tail if (head.params.isEmpty || !cls.isNative) => (head, tail)
-          case all                                                    => (CtorTree.defaultProtected, all)
+          case Nil                                                  => (CtorTree.defaultPublic, Nil)
+          case head :: tail if (head.params.isEmpty || !c.isNative) => (head, tail)
+          case all                                                  => (CtorTree.defaultProtected, all)
         }
 
         print(Comments.format(defaultCtor.comments))
-        print(if (isSealed) "sealed " else "", classType.asString, " ", formatName(name))
+        print(
+          if (isImplicit) "implicit " else "",
+          if (isSealed) "sealed " else "",
+          classType.asString,
+          " ",
+          formatName(name),
+        )
 
         if (tparams.nonEmpty)
-          print("[", tparams map formatTypeParamTree(cls.isNative, indent) mkString ", ", "]")
+          print("[", tparams map formatTypeParamTree(c.isNative, indent) mkString ", ", "]")
 
         if (classType =/= ClassType.Trait) {
           print(" ")
@@ -190,7 +196,7 @@ object Printer {
           print(formatParams(indent + 2)(defaultCtor.params))
         }
 
-        print(extendsClause(parents, isNative = cls.isNative, indent))
+        print(extendsClause(parents, isNative = c.isNative, indent))
 
         if (members.nonEmpty || restCtors.nonEmpty) {
           println(" {")

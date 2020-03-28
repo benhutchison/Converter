@@ -30,5 +30,37 @@ object ConverterOptions {
     if (!js.isUndefined(wrapNumbers)) __obj.updateDynamic("wrapNumbers")(wrapNumbers.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConverterOptions]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: ConverterOptions) {
+    @scala.inline
+    def duplicate: ConverterOptions = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.awsSdk.documentClientMod.DocumentClient.ConverterOptions]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ConverterOptions with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.awsSdk.documentClientMod.DocumentClient.ConverterOptions with T]
+    @scala.inline
+    def withConvertEmptyValuesUndefined: ConverterOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "convertEmptyValues")
+      obj.asInstanceOf[typings.awsSdk.documentClientMod.DocumentClient.ConverterOptions]
+    }
+    @scala.inline
+    def withConvertEmptyValues(convertEmptyValues: Boolean): ConverterOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(convertEmptyValues)) obj.updateDynamic("convertEmptyValues")(convertEmptyValues.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.awsSdk.documentClientMod.DocumentClient.ConverterOptions]
+    }
+    @scala.inline
+    def withWrapNumbersUndefined: ConverterOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "wrapNumbers")
+      obj.asInstanceOf[typings.awsSdk.documentClientMod.DocumentClient.ConverterOptions]
+    }
+    @scala.inline
+    def withWrapNumbers(wrapNumbers: Boolean): ConverterOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(wrapNumbers)) obj.updateDynamic("wrapNumbers")(wrapNumbers.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.awsSdk.documentClientMod.DocumentClient.ConverterOptions]
+    }
+  }
+  
 }
 

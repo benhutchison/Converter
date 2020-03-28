@@ -48,5 +48,79 @@ object ReactPropTypes {
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactPropTypes]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: ReactPropTypes) {
+    @scala.inline
+    def duplicate: ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ReactPropTypes with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes with T]
+    @scala.inline
+    def withAny(any: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.any */ js.Any): ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(any = any.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    @scala.inline
+    def withArray(
+      array: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.array */ js.Any
+    ): ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(array = array.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    @scala.inline
+    def withArrayOf(
+      arrayOf: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.arrayOf */ js.Any
+    ): ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(arrayOf = arrayOf.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    @scala.inline
+    def withBool(
+      bool: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.bool */ js.Any
+    ): ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(bool = bool.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    @scala.inline
+    def withElement(
+      element: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.element */ js.Any
+    ): ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(element = element.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    @scala.inline
+    def withExact(
+      exact: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.exact */ js.Any
+    ): ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(exact = exact.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    @scala.inline
+    def withFunc(
+      func: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.func */ js.Any
+    ): ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(func = func.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    @scala.inline
+    def withInstanceOf(
+      instanceOf: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.instanceOf */ js.Any
+    ): ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(instanceOf = instanceOf.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    @scala.inline
+    def withNode(
+      node: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.node */ js.Any
+    ): ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(node = node.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    @scala.inline
+    def withNumber(
+      number: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.number */ js.Any
+    ): ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(number = number.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    @scala.inline
+    def withObject(
+      `object`: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.object */ js.Any
+    ): ReactPropTypes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    }
+    @scala.inline
+    def withObjectOf(
+      objectOf: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.objectOf */ js.Any
+    ): ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(objectOf = objectOf.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    @scala.inline
+    def withOneOf(
+      oneOf: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.oneOf */ js.Any
+    ): ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(oneOf = oneOf.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    @scala.inline
+    def withOneOfType(
+      oneOfType: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.oneOfType */ js.Any
+    ): ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(oneOfType = oneOfType.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    @scala.inline
+    def withShape(
+      shape: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.shape */ js.Any
+    ): ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(shape = shape.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+    @scala.inline
+    def withString(
+      string: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PropTypes.string */ js.Any
+    ): ReactPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(string = string.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ReactPropTypes]
+  }
+  
 }
 

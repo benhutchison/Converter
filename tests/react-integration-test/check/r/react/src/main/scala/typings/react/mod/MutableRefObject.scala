@@ -16,5 +16,15 @@ object MutableRefObject {
   
     __obj.asInstanceOf[MutableRefObject[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T] (x: MutableRefObject[T]) {
+    @scala.inline
+    def duplicate: MutableRefObject[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.MutableRefObject[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): MutableRefObject[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.MutableRefObject[T] with T]
+    @scala.inline
+    def withCurrent(current: T): MutableRefObject[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(current = current.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.MutableRefObject[T]]
+  }
+  
 }
 

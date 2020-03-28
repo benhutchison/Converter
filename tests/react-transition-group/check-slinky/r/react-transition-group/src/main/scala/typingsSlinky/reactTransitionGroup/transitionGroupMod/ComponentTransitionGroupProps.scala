@@ -17,5 +17,15 @@ object ComponentTransitionGroupProps {
   
     __obj.asInstanceOf[ComponentTransitionGroupProps[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T <: ReactComponentClass[_]] (x: ComponentTransitionGroupProps[T]) {
+    @scala.inline
+    def duplicate: ComponentTransitionGroupProps[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.reactTransitionGroup.transitionGroupMod.ComponentTransitionGroupProps[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ComponentTransitionGroupProps[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.reactTransitionGroup.transitionGroupMod.ComponentTransitionGroupProps[T] with T]
+    @scala.inline
+    def withComponent(component: T): ComponentTransitionGroupProps[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(component = component.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.reactTransitionGroup.transitionGroupMod.ComponentTransitionGroupProps[T]]
+  }
+  
 }
 

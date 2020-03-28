@@ -19,5 +19,15 @@ object Either {
   
     __obj.asInstanceOf[Either[L, R]]
   }
+  @scala.inline
+  implicit sealed class Sugar[L, R] (x: Either[L, R]) {
+    @scala.inline
+    def duplicate: Either[L, R] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.unionToInheritance.Either[L, R]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): (Either[L, R]) with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.unionToInheritance.Either[L, R] with T]
+    @scala.inline
+    def withValue(value: R): Either[L, R] = js.Dynamic.global.Object.assign(js.Dynamic.literal(value = value.asInstanceOf[js.Any]), x).asInstanceOf[typings.unionToInheritance.Either[L, R]]
+  }
+  
 }
 

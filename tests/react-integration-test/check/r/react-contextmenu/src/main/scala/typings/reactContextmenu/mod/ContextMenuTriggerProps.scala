@@ -34,5 +34,57 @@ object ContextMenuTriggerProps {
     if (renderTag != null) __obj.updateDynamic("renderTag")(renderTag.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContextMenuTriggerProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: ContextMenuTriggerProps) {
+    @scala.inline
+    def duplicate: ContextMenuTriggerProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.reactContextmenu.mod.ContextMenuTriggerProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ContextMenuTriggerProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.reactContextmenu.mod.ContextMenuTriggerProps with T]
+    @scala.inline
+    def withId(id: String): ContextMenuTriggerProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(id = id.asInstanceOf[js.Any]), x).asInstanceOf[typings.reactContextmenu.mod.ContextMenuTriggerProps]
+    @scala.inline
+    def withAttributes(attributes: HTMLAttributes[_]): ContextMenuTriggerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (attributes != null) obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuTriggerProps]
+    }
+    @scala.inline
+    def withCollect(collect: /* data */ js.Any => _): ContextMenuTriggerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (collect != null) obj.updateDynamic("collect")(js.Any.fromFunction1(collect))
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuTriggerProps]
+    }
+    @scala.inline
+    def withDisableUndefined: ContextMenuTriggerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "disable")
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuTriggerProps]
+    }
+    @scala.inline
+    def withDisable(disable: Boolean): ContextMenuTriggerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(disable)) obj.updateDynamic("disable")(disable.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuTriggerProps]
+    }
+    @scala.inline
+    def withHoldToDisplayInt(holdToDisplay: Int): ContextMenuTriggerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (holdToDisplay != null) obj.updateDynamic("holdToDisplay")(holdToDisplay.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuTriggerProps]
+    }
+    @scala.inline
+    def withHoldToDisplayDouble(holdToDisplay: Double): ContextMenuTriggerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (holdToDisplay != null) obj.updateDynamic("holdToDisplay")(holdToDisplay.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuTriggerProps]
+    }
+    @scala.inline
+    def withRenderTag(renderTag: ReactType[_]): ContextMenuTriggerProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (renderTag != null) obj.updateDynamic("renderTag")(renderTag.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuTriggerProps]
+    }
+  }
+  
 }
 

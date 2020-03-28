@@ -17,5 +17,25 @@ object SVGProps {
     if (SVGAttributes != null) js.Dynamic.global.Object.assign(__obj, SVGAttributes)
     __obj.asInstanceOf[SVGProps[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T] (x: SVGProps[T]) {
+    @scala.inline
+    def duplicate: SVGProps[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.SVGProps[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): SVGProps[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.SVGProps[T] with T]
+    @scala.inline
+    def withClassAttributes(ClassAttributes: ClassAttributes[T]): SVGProps[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (ClassAttributes != null) js.Dynamic.global.Object.assign(obj, ClassAttributes)
+      obj.asInstanceOf[typings.react.mod.SVGProps[T]]
+    }
+    @scala.inline
+    def withSVGAttributes(SVGAttributes: SVGAttributes[T]): SVGProps[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (SVGAttributes != null) js.Dynamic.global.Object.assign(obj, SVGAttributes)
+      obj.asInstanceOf[typings.react.mod.SVGProps[T]]
+    }
+  }
+  
 }
 

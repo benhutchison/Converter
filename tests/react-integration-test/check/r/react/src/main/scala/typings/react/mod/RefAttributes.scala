@@ -17,5 +17,25 @@ object RefAttributes {
     if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     __obj.asInstanceOf[RefAttributes[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T] (x: RefAttributes[T]) {
+    @scala.inline
+    def duplicate: RefAttributes[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.RefAttributes[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): RefAttributes[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.RefAttributes[T] with T]
+    @scala.inline
+    def withKey(key: Key): RefAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (key != null) obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.RefAttributes[T]]
+    }
+    @scala.inline
+    def withRef(ref: Ref[T]): RefAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (ref != null) obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.RefAttributes[T]]
+    }
+  }
+  
 }
 

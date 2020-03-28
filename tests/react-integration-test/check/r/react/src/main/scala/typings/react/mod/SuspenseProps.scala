@@ -22,5 +22,27 @@ object SuspenseProps {
     if (fallback != null) __obj.updateDynamic("fallback")(fallback.asInstanceOf[js.Any])
     __obj.asInstanceOf[SuspenseProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: SuspenseProps) {
+    @scala.inline
+    def duplicate: SuspenseProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.SuspenseProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): SuspenseProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.SuspenseProps with T]
+    @scala.inline
+    def withChildren(children: ReactNode): SuspenseProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (children != null) obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SuspenseProps]
+    }
+    @scala.inline
+    def withFallback(
+      fallback: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NonNullable<ReactNode> */ js.Any
+    ): SuspenseProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fallback != null) obj.updateDynamic("fallback")(fallback.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SuspenseProps]
+    }
+  }
+  
 }
 

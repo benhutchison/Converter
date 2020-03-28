@@ -17,5 +17,15 @@ object Response {
   
     __obj.asInstanceOf[Response]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: Response) {
+    @scala.inline
+    def duplicate: Response = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.expressServeStaticCore.mod.Response]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): Response with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.expressServeStaticCore.mod.Response with T]
+    @scala.inline
+    def withLocation(location: String => Response): Response = js.Dynamic.global.Object.assign(js.Dynamic.literal(location = js.Any.fromFunction1(location)), x).asInstanceOf[typings.expressServeStaticCore.mod.Response]
+  }
+  
 }
 

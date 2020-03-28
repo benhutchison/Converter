@@ -17,5 +17,15 @@ object AnonResult {
   
     __obj.asInstanceOf[AnonResult[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T <: ReactComponentClass[_]] (x: AnonResult[T]) {
+    @scala.inline
+    def duplicate: AnonResult[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.react.AnonResult[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): AnonResult[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.react.AnonResult[T] with T]
+    @scala.inline
+    def with_result(_result: T): AnonResult[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(_result = _result.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.AnonResult[T]]
+  }
+  
 }
 

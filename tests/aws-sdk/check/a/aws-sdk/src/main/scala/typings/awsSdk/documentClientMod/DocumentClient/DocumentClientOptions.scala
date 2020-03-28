@@ -33,5 +33,49 @@ object DocumentClientOptions {
     if (!js.isUndefined(wrapNumbers)) __obj.updateDynamic("wrapNumbers")(wrapNumbers.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentClientOptions]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: DocumentClientOptions) {
+    @scala.inline
+    def duplicate: DocumentClientOptions = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.awsSdk.documentClientMod.DocumentClient.DocumentClientOptions]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): DocumentClientOptions with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.awsSdk.documentClientMod.DocumentClient.DocumentClientOptions with T]
+    @scala.inline
+    def withConvertEmptyValuesUndefined: DocumentClientOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "convertEmptyValues")
+      obj.asInstanceOf[typings.awsSdk.documentClientMod.DocumentClient.DocumentClientOptions]
+    }
+    @scala.inline
+    def withConvertEmptyValues(convertEmptyValues: Boolean): DocumentClientOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(convertEmptyValues)) obj.updateDynamic("convertEmptyValues")(convertEmptyValues.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.awsSdk.documentClientMod.DocumentClient.DocumentClientOptions]
+    }
+    @scala.inline
+    def withParams(params: StringDictionary[js.Any]): DocumentClientOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (params != null) obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.awsSdk.documentClientMod.DocumentClient.DocumentClientOptions]
+    }
+    @scala.inline
+    def withService(service: ^): DocumentClientOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (service != null) obj.updateDynamic("service")(service.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.awsSdk.documentClientMod.DocumentClient.DocumentClientOptions]
+    }
+    @scala.inline
+    def withWrapNumbersUndefined: DocumentClientOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "wrapNumbers")
+      obj.asInstanceOf[typings.awsSdk.documentClientMod.DocumentClient.DocumentClientOptions]
+    }
+    @scala.inline
+    def withWrapNumbers(wrapNumbers: Boolean): DocumentClientOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(wrapNumbers)) obj.updateDynamic("wrapNumbers")(wrapNumbers.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.awsSdk.documentClientMod.DocumentClient.DocumentClientOptions]
+    }
+  }
+  
 }
 

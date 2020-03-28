@@ -183,6 +183,7 @@ class ImportTree(
 
         val classType = if (isAbstract) ClassType.AbstractClass else ClassType.Class
         val cls = ClassTree(
+          isImplicit = false,
           annotations = anns,
           name        = newCodePath.parts.last,
           tparams     = tparams map typeParam(scope, importName),
@@ -228,6 +229,7 @@ class ImportTree(
 
         IArray(
           ClassTree(
+            isImplicit = false,
             annotations = anns,
             name        = newCodePath.parts.last,
             tparams     = tparams map typeParam(scope, importName),

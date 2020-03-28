@@ -19,5 +19,15 @@ object Foo {
   
     __obj.asInstanceOf[Foo[U]]
   }
+  @scala.inline
+  implicit sealed class Sugar[U] (x: Foo[U]) {
+    @scala.inline
+    def duplicate: Foo[U] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.unionToInheritance.Foo[U]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): Foo[U] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.unionToInheritance.Foo[U] with T]
+    @scala.inline
+    def withValue(value: U): Foo[U] = js.Dynamic.global.Object.assign(js.Dynamic.literal(value = value.asInstanceOf[js.Any]), x).asInstanceOf[typings.unionToInheritance.Foo[U]]
+  }
+  
 }
 

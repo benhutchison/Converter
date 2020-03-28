@@ -126,5 +126,123 @@ object ReactSVG {
   
     __obj.asInstanceOf[ReactSVG]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: ReactSVG) {
+    @scala.inline
+    def duplicate: ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ReactSVG with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.ReactSVG with T]
+    @scala.inline
+    def withAnimate(animate: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(animate = animate.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withCircle(circle: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(circle = circle.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withClipPath(clipPath: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(clipPath = clipPath.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withDefs(defs: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(defs = defs.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withDesc(desc: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(desc = desc.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withEllipse(ellipse: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(ellipse = ellipse.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeBlend(feBlend: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feBlend = feBlend.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeColorMatrix(feColorMatrix: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feColorMatrix = feColorMatrix.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeComponentTransfer(feComponentTransfer: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feComponentTransfer = feComponentTransfer.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeComposite(feComposite: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feComposite = feComposite.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeConvolveMatrix(feConvolveMatrix: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feConvolveMatrix = feConvolveMatrix.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeDiffuseLighting(feDiffuseLighting: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feDiffuseLighting = feDiffuseLighting.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeDisplacementMap(feDisplacementMap: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feDisplacementMap = feDisplacementMap.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeDistantLight(feDistantLight: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feDistantLight = feDistantLight.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeDropShadow(feDropShadow: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feDropShadow = feDropShadow.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeFlood(feFlood: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feFlood = feFlood.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeFuncA(feFuncA: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feFuncA = feFuncA.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeFuncB(feFuncB: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feFuncB = feFuncB.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeFuncG(feFuncG: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feFuncG = feFuncG.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeFuncR(feFuncR: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feFuncR = feFuncR.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeGaussianBlur(feGaussianBlur: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feGaussianBlur = feGaussianBlur.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeImage(feImage: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feImage = feImage.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeMerge(feMerge: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feMerge = feMerge.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeMergeNode(feMergeNode: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feMergeNode = feMergeNode.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeMorphology(feMorphology: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feMorphology = feMorphology.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeOffset(feOffset: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feOffset = feOffset.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFePointLight(fePointLight: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(fePointLight = fePointLight.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeSpecularLighting(feSpecularLighting: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feSpecularLighting = feSpecularLighting.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeSpotLight(feSpotLight: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feSpotLight = feSpotLight.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeTile(feTile: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feTile = feTile.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFeTurbulence(feTurbulence: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(feTurbulence = feTurbulence.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withFilter(filter: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(filter = filter.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withForeignObject(foreignObject: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(foreignObject = foreignObject.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withG(g: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(g = g.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withImage(image: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(image = image.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withLine(line: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(line = line.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withLinearGradient(linearGradient: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(linearGradient = linearGradient.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withMarker(marker: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(marker = marker.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withMask(mask: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(mask = mask.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withMetadata(metadata: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(metadata = metadata.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withPath(path: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(path = path.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withPattern(pattern: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(pattern = pattern.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withPolygon(polygon: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(polygon = polygon.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withPolyline(polyline: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(polyline = polyline.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withRadialGradient(radialGradient: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(radialGradient = radialGradient.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withRect(rect: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(rect = rect.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withStop(stop: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(stop = stop.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withSvg(svg: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(svg = svg.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withSwitch(switch: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(switch = switch.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withSymbol(symbol: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(symbol = symbol.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withText(text: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(text = text.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withTextPath(textPath: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(textPath = textPath.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withTspan(tspan: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(tspan = tspan.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withUse(use: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(use = use.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+    @scala.inline
+    def withView(view: SVGFactory): ReactSVG = js.Dynamic.global.Object.assign(js.Dynamic.literal(view = view.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVG]
+  }
+  
 }
 

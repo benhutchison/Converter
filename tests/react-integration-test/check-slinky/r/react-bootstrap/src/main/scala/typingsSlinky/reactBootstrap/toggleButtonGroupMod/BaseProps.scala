@@ -26,5 +26,25 @@ object BaseProps {
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: BaseProps) {
+    @scala.inline
+    def duplicate: BaseProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.reactBootstrap.toggleButtonGroupMod.BaseProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): BaseProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.reactBootstrap.toggleButtonGroupMod.BaseProps with T]
+    @scala.inline
+    def withDefaultValue(defaultValue: js.Any): BaseProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (defaultValue != null) obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactBootstrap.toggleButtonGroupMod.BaseProps]
+    }
+    @scala.inline
+    def withValue(value: js.Any): BaseProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (value != null) obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactBootstrap.toggleButtonGroupMod.BaseProps]
+    }
+  }
+  
 }
 

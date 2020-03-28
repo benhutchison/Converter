@@ -37,5 +37,55 @@ object HttpHeaders {
     if (put != null) __obj.updateDynamic("put")(put.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpHeaders]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: HttpHeaders) {
+    @scala.inline
+    def duplicate: HttpHeaders = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.vueResource.vuejs.HttpHeaders]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): HttpHeaders with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.vueResource.vuejs.HttpHeaders with T]
+    @scala.inline
+    def withStringDictionary(StringDictionary: /* key */ StringDictionary[js.Any]): HttpHeaders = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (StringDictionary != null) js.Dynamic.global.Object.assign(obj, StringDictionary)
+      obj.asInstanceOf[typings.vueResource.vuejs.HttpHeaders]
+    }
+    @scala.inline
+    def withCommon(common: StringDictionary[String]): HttpHeaders = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (common != null) obj.updateDynamic("common")(common.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueResource.vuejs.HttpHeaders]
+    }
+    @scala.inline
+    def withCustom(custom: StringDictionary[String]): HttpHeaders = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (custom != null) obj.updateDynamic("custom")(custom.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueResource.vuejs.HttpHeaders]
+    }
+    @scala.inline
+    def withDelete(delete: StringDictionary[String]): HttpHeaders = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (delete != null) obj.updateDynamic("delete")(delete.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueResource.vuejs.HttpHeaders]
+    }
+    @scala.inline
+    def withPatch(patch: StringDictionary[String]): HttpHeaders = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (patch != null) obj.updateDynamic("patch")(patch.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueResource.vuejs.HttpHeaders]
+    }
+    @scala.inline
+    def withPost(post: StringDictionary[String]): HttpHeaders = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (post != null) obj.updateDynamic("post")(post.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueResource.vuejs.HttpHeaders]
+    }
+    @scala.inline
+    def withPut(put: StringDictionary[String]): HttpHeaders = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (put != null) obj.updateDynamic("put")(put.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueResource.vuejs.HttpHeaders]
+    }
+  }
+  
 }
 

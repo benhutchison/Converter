@@ -21,5 +21,29 @@ object DOMElement {
     if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
     __obj.asInstanceOf[DOMElement[P, T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[P <: HTMLAttributes[T] | SVGAttributes[T], T <: Element] (x: DOMElement[P, T]) {
+    @scala.inline
+    def duplicate: DOMElement[P, T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.DOMElement[P, T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): (DOMElement[P, T]) with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.DOMElement[P, T] with T]
+    @scala.inline
+    def withProps(props: js.Any): DOMElement[P, T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(props = props.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.DOMElement[P, T]]
+    @scala.inline
+    def withRef(ref: Ref[T]): DOMElement[P, T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(ref = ref.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.DOMElement[P, T]]
+    @scala.inline
+    def withType(`type`: String): DOMElement[P, T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.DOMElement[P, T]]
+    }
+    @scala.inline
+    def withKey(key: Key): DOMElement[P, T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (key != null) obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.DOMElement[P, T]]
+    }
+  }
+  
 }
 

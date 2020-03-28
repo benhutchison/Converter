@@ -24,5 +24,17 @@ object JQuery {
   
     __obj.asInstanceOf[JQuery]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: JQuery) {
+    @scala.inline
+    def duplicate: JQuery = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.angular.JQuery]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): JQuery with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.angular.JQuery with T]
+    @scala.inline
+    def withAddClass(addClass: String => JQuery): JQuery = js.Dynamic.global.Object.assign(js.Dynamic.literal(addClass = js.Any.fromFunction1(addClass)), x).asInstanceOf[typings.angular.JQuery]
+    @scala.inline
+    def withInjector(injector: () => IInjectorService): JQuery = js.Dynamic.global.Object.assign(js.Dynamic.literal(injector = js.Any.fromFunction0(injector)), x).asInstanceOf[typings.angular.JQuery]
+  }
+  
 }
 

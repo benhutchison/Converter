@@ -33,5 +33,53 @@ object DirectiveOptions {
     if (update != null) __obj.updateDynamic("update")(js.Any.fromFunction4(update))
     __obj.asInstanceOf[DirectiveOptions]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: DirectiveOptions) {
+    @scala.inline
+    def duplicate: DirectiveOptions = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.vue.optionsMod.DirectiveOptions]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): DirectiveOptions with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.vue.optionsMod.DirectiveOptions with T]
+    @scala.inline
+    def withBind(
+      bind: (/* el */ HTMLElement, /* binding */ VNodeDirective, /* vnode */ VNode, /* oldVnode */ VNode) => Unit
+    ): DirectiveOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (bind != null) obj.updateDynamic("bind")(js.Any.fromFunction4(bind))
+      obj.asInstanceOf[typings.vue.optionsMod.DirectiveOptions]
+    }
+    @scala.inline
+    def withComponentUpdated(
+      componentUpdated: (/* el */ HTMLElement, /* binding */ VNodeDirective, /* vnode */ VNode, /* oldVnode */ VNode) => Unit
+    ): DirectiveOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (componentUpdated != null) obj.updateDynamic("componentUpdated")(js.Any.fromFunction4(componentUpdated))
+      obj.asInstanceOf[typings.vue.optionsMod.DirectiveOptions]
+    }
+    @scala.inline
+    def withInserted(
+      inserted: (/* el */ HTMLElement, /* binding */ VNodeDirective, /* vnode */ VNode, /* oldVnode */ VNode) => Unit
+    ): DirectiveOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (inserted != null) obj.updateDynamic("inserted")(js.Any.fromFunction4(inserted))
+      obj.asInstanceOf[typings.vue.optionsMod.DirectiveOptions]
+    }
+    @scala.inline
+    def withUnbind(
+      unbind: (/* el */ HTMLElement, /* binding */ VNodeDirective, /* vnode */ VNode, /* oldVnode */ VNode) => Unit
+    ): DirectiveOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (unbind != null) obj.updateDynamic("unbind")(js.Any.fromFunction4(unbind))
+      obj.asInstanceOf[typings.vue.optionsMod.DirectiveOptions]
+    }
+    @scala.inline
+    def withUpdate(
+      update: (/* el */ HTMLElement, /* binding */ VNodeDirective, /* vnode */ VNode, /* oldVnode */ VNode) => Unit
+    ): DirectiveOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (update != null) obj.updateDynamic("update")(js.Any.fromFunction4(update))
+      obj.asInstanceOf[typings.vue.optionsMod.DirectiveOptions]
+    }
+  }
+  
 }
 

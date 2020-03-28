@@ -17,5 +17,17 @@ object ndarray {
   
     __obj.asInstanceOf[ndarray[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T] (x: ndarray[T]) {
+    @scala.inline
+    def duplicate: ndarray[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.ndarray.mod.ndarray[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ndarray[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.ndarray.mod.ndarray[T] with T]
+    @scala.inline
+    def withT(T: ndarray[T]): ndarray[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(T = T.asInstanceOf[js.Any]), x).asInstanceOf[typings.ndarray.mod.ndarray[T]]
+    @scala.inline
+    def withData(data: Data[T]): ndarray[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(data = data.asInstanceOf[js.Any]), x).asInstanceOf[typings.ndarray.mod.ndarray[T]]
+  }
+  
 }
 

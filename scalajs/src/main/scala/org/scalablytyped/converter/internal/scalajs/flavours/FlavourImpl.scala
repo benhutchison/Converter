@@ -38,22 +38,22 @@ object FlavourImpl {
       new GenCompanions(MemberToProp.Default, findProps)
 
     final override def rewrittenTree(scope: TreeScope, tree: PackageTree): PackageTree = {
-      val withCompanions = genCompanions.visitPackageTree(scope)(tree)
-
       val withComponents: PackageTree =
         genComponentsOpt match {
           case Some(genComponents) if involvesReact(scope) =>
             val components: IArray[Component] =
-              identifyComponents.oneOfEach(scope / withCompanions, withCompanions)
+              identifyComponents.oneOfEach(scope / tree, tree)
 
-            Adapter(scope)((t, s) => genComponents(s, t, components))(withCompanions)
-          case _ => withCompanions
+            Adapter(scope)((t, s) => genComponents(s, t, components))(tree)
+          case _ => tree
         }
 
-      conversions match {
+      val withRewrittenTypes = conversions match {
         case Some(conversions) => TypeRewriterCast(conversions).visitPackageTree(scope)(withComponents)
         case _                 => withComponents
       }
+
+      genCompanions.visitPackageTree(scope)(withRewrittenTypes)
     }
   }
 
@@ -71,47 +71,35 @@ object FlavourImpl {
 
     val gen = new GenSlinkyComponents(GenSlinkyComponents.Native(()), ToSlinkyTypes, memberToProp, findProps)
 
-    val genCompanions: GenCompanions =
-      new GenCompanions(memberToProp, findProps)
-
     final override def rewrittenTree(scope: TreeScope, tree: PackageTree): PackageTree = {
-      val withCompanions = genCompanions.visitPackageTree(scope)(tree)
-
       val withComponents: PackageTree =
         if (involvesReact(scope)) {
           val components: IArray[Component] =
-            identifyComponents.oneOfEach(scope / withCompanions, withCompanions)
-          Adapter(scope)((t, s) => gen(s, t, components))(withCompanions)
-        } else withCompanions
+            identifyComponents.oneOfEach(scope / tree, tree)
+          Adapter(scope)((t, s) => gen(s, t, components))(tree)
+        } else tree
 
-      ToSlinkyTypes.visitPackageTree(scope)(withComponents)
+      val withRewrittenTypes = ToSlinkyTypes.visitPackageTree(scope)(withComponents)
+      new GenCompanions(memberToProp, findProps).visitPackageTree(scope)(withRewrittenTypes)
     }
   }
 
   case class Japgolly(outputPkg: Name) extends ReactFlavourImpl {
     val gen = new GenJapgollyComponents(reactNames, scalaJsDomNames, findProps)
 
-    val conversions: Option[IArray[CastConversion]] =
-      Some(gen.conversions)
     override val dependencies: Set[Dep] =
       Set(Versions.runtime, Versions.scalajsReact)
-    val genCompanions: GenCompanions =
-      new GenCompanions(gen.memberToProp, findProps)
 
     final override def rewrittenTree(scope: TreeScope, tree: PackageTree): PackageTree = {
-      val withCompanions = genCompanions.visitPackageTree(scope)(tree)
-
       val withComponents: PackageTree =
         if (involvesReact(scope)) {
           val components: IArray[Component] =
-            identifyComponents.oneOfEach(scope / withCompanions, withCompanions)
-          Adapter(scope)((t, s) => gen(s, t, components))(withCompanions)
-        } else withCompanions
+            identifyComponents.oneOfEach(scope / tree, tree)
+          Adapter(scope)((t, s) => gen(s, t, components))(tree)
+        } else tree
 
-      conversions match {
-        case Some(conversions) => TypeRewriterCast(conversions).visitPackageTree(scope)(withComponents)
-        case _                 => withComponents
-      }
+      val withRewrittenTypes = TypeRewriterCast(gen.conversions).visitPackageTree(scope)(withComponents)
+      new GenCompanions(gen.memberToProp, findProps).visitPackageTree(scope)(withRewrittenTypes)
     }
   }
 }

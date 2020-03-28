@@ -20,5 +20,21 @@ object AnonChildren {
   
     __obj.asInstanceOf[AnonChildren]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: AnonChildren) {
+    @scala.inline
+    def duplicate: AnonChildren = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.stardustUiReactComponentRef.AnonChildren]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): AnonChildren with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.stardustUiReactComponentRef.AnonChildren with T]
+    @scala.inline
+    def withChildren(
+      children: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PropTypes.Validator<PropTypes.ReactElementLike> */ js.Any
+    ): AnonChildren = js.Dynamic.global.Object.assign(js.Dynamic.literal(children = children.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.stardustUiReactComponentRef.AnonChildren]
+    @scala.inline
+    def withInnerRef(
+      innerRef: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PropTypes.Validator<React.Ref<any>> */ js.Any
+    ): AnonChildren = js.Dynamic.global.Object.assign(js.Dynamic.literal(innerRef = innerRef.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.stardustUiReactComponentRef.AnonChildren]
+  }
+  
 }
 

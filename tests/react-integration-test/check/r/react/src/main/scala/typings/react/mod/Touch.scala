@@ -33,5 +33,29 @@ object Touch {
   
     __obj.asInstanceOf[Touch]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: Touch) {
+    @scala.inline
+    def duplicate: Touch = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.Touch]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): Touch with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.Touch with T]
+    @scala.inline
+    def withClientX(clientX: Double): Touch = js.Dynamic.global.Object.assign(js.Dynamic.literal(clientX = clientX.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.Touch]
+    @scala.inline
+    def withClientY(clientY: Double): Touch = js.Dynamic.global.Object.assign(js.Dynamic.literal(clientY = clientY.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.Touch]
+    @scala.inline
+    def withIdentifier(identifier: Double): Touch = js.Dynamic.global.Object.assign(js.Dynamic.literal(identifier = identifier.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.Touch]
+    @scala.inline
+    def withPageX(pageX: Double): Touch = js.Dynamic.global.Object.assign(js.Dynamic.literal(pageX = pageX.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.Touch]
+    @scala.inline
+    def withPageY(pageY: Double): Touch = js.Dynamic.global.Object.assign(js.Dynamic.literal(pageY = pageY.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.Touch]
+    @scala.inline
+    def withScreenX(screenX: Double): Touch = js.Dynamic.global.Object.assign(js.Dynamic.literal(screenX = screenX.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.Touch]
+    @scala.inline
+    def withScreenY(screenY: Double): Touch = js.Dynamic.global.Object.assign(js.Dynamic.literal(screenY = screenY.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.Touch]
+    @scala.inline
+    def withTarget(target: EventTarget): Touch = js.Dynamic.global.Object.assign(js.Dynamic.literal(target = target.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.Touch]
+  }
+  
 }
 

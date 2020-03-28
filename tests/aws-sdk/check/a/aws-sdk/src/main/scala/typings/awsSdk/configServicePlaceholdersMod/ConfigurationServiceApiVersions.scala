@@ -17,5 +17,19 @@ object ConfigurationServiceApiVersions {
     if (dynamodb != null) __obj.updateDynamic("dynamodb")(dynamodb.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationServiceApiVersions]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: ConfigurationServiceApiVersions) {
+    @scala.inline
+    def duplicate: ConfigurationServiceApiVersions = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.awsSdk.configServicePlaceholdersMod.ConfigurationServiceApiVersions]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ConfigurationServiceApiVersions with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.awsSdk.configServicePlaceholdersMod.ConfigurationServiceApiVersions with T]
+    @scala.inline
+    def withDynamodb(dynamodb: apiVersion): ConfigurationServiceApiVersions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (dynamodb != null) obj.updateDynamic("dynamodb")(dynamodb.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.awsSdk.configServicePlaceholdersMod.ConfigurationServiceApiVersions]
+    }
+  }
+  
 }
 

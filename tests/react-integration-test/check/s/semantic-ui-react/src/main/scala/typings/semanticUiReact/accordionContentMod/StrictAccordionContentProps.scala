@@ -37,5 +37,49 @@ object StrictAccordionContentProps {
     if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictAccordionContentProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: StrictAccordionContentProps) {
+    @scala.inline
+    def duplicate: StrictAccordionContentProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.semanticUiReact.accordionContentMod.StrictAccordionContentProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): StrictAccordionContentProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.semanticUiReact.accordionContentMod.StrictAccordionContentProps with T]
+    @scala.inline
+    def withActiveUndefined: StrictAccordionContentProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "active")
+      obj.asInstanceOf[typings.semanticUiReact.accordionContentMod.StrictAccordionContentProps]
+    }
+    @scala.inline
+    def withActive(active: Boolean): StrictAccordionContentProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(active)) obj.updateDynamic("active")(active.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.accordionContentMod.StrictAccordionContentProps]
+    }
+    @scala.inline
+    def withAs(as: js.Any): StrictAccordionContentProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (as != null) obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.accordionContentMod.StrictAccordionContentProps]
+    }
+    @scala.inline
+    def withChildren(children: ReactNode): StrictAccordionContentProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (children != null) obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.accordionContentMod.StrictAccordionContentProps]
+    }
+    @scala.inline
+    def withClassName(className: String): StrictAccordionContentProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (className != null) obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.accordionContentMod.StrictAccordionContentProps]
+    }
+    @scala.inline
+    def withContent(content: SemanticShorthandContent): StrictAccordionContentProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (content != null) obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.accordionContentMod.StrictAccordionContentProps]
+    }
+  }
+  
 }
 

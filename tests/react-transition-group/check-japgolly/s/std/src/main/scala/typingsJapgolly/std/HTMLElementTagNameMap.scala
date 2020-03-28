@@ -30,5 +30,27 @@ object HTMLElementTagNameMap {
   
     __obj.asInstanceOf[HTMLElementTagNameMap]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: HTMLElementTagNameMap) {
+    @scala.inline
+    def duplicate: HTMLElementTagNameMap = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsJapgolly.std.HTMLElementTagNameMap]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): HTMLElementTagNameMap with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsJapgolly.std.HTMLElementTagNameMap with T]
+    @scala.inline
+    def withA(a: org.scalajs.dom.raw.HTMLAnchorElement): HTMLElementTagNameMap = js.Dynamic.global.Object.assign(js.Dynamic.literal(a = a.asInstanceOf[js.Any]), x).asInstanceOf[typingsJapgolly.std.HTMLElementTagNameMap]
+    @scala.inline
+    def withAbbr(abbr: org.scalajs.dom.raw.HTMLElement): HTMLElementTagNameMap = js.Dynamic.global.Object.assign(js.Dynamic.literal(abbr = abbr.asInstanceOf[js.Any]), x).asInstanceOf[typingsJapgolly.std.HTMLElementTagNameMap]
+    @scala.inline
+    def withAddress(address: org.scalajs.dom.raw.HTMLElement): HTMLElementTagNameMap = js.Dynamic.global.Object.assign(js.Dynamic.literal(address = address.asInstanceOf[js.Any]), x).asInstanceOf[typingsJapgolly.std.HTMLElementTagNameMap]
+    @scala.inline
+    def withArea(area: org.scalajs.dom.raw.HTMLAreaElement): HTMLElementTagNameMap = js.Dynamic.global.Object.assign(js.Dynamic.literal(area = area.asInstanceOf[js.Any]), x).asInstanceOf[typingsJapgolly.std.HTMLElementTagNameMap]
+    @scala.inline
+    def withArticle(article: org.scalajs.dom.raw.HTMLElement): HTMLElementTagNameMap = js.Dynamic.global.Object.assign(js.Dynamic.literal(article = article.asInstanceOf[js.Any]), x).asInstanceOf[typingsJapgolly.std.HTMLElementTagNameMap]
+    @scala.inline
+    def withAside(aside: org.scalajs.dom.raw.HTMLElement): HTMLElementTagNameMap = js.Dynamic.global.Object.assign(js.Dynamic.literal(aside = aside.asInstanceOf[js.Any]), x).asInstanceOf[typingsJapgolly.std.HTMLElementTagNameMap]
+    @scala.inline
+    def withAudio(audio: org.scalajs.dom.raw.HTMLAudioElement): HTMLElementTagNameMap = js.Dynamic.global.Object.assign(js.Dynamic.literal(audio = audio.asInstanceOf[js.Any]), x).asInstanceOf[typingsJapgolly.std.HTMLElementTagNameMap]
+  }
+  
 }
 

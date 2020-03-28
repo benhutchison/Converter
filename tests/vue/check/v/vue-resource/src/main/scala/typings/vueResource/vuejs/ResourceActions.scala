@@ -29,5 +29,25 @@ object ResourceActions {
   
     __obj.asInstanceOf[ResourceActions]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: ResourceActions) {
+    @scala.inline
+    def duplicate: ResourceActions = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.vueResource.vuejs.ResourceActions]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ResourceActions with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.vueResource.vuejs.ResourceActions with T]
+    @scala.inline
+    def withDelete(delete: AnonMethod): ResourceActions = js.Dynamic.global.Object.assign(js.Dynamic.literal(delete = delete.asInstanceOf[js.Any]), x).asInstanceOf[typings.vueResource.vuejs.ResourceActions]
+    @scala.inline
+    def withGet(get: AnonMethod): ResourceActions = js.Dynamic.global.Object.assign(js.Dynamic.literal(get = get.asInstanceOf[js.Any]), x).asInstanceOf[typings.vueResource.vuejs.ResourceActions]
+    @scala.inline
+    def withQuery(query: AnonMethod): ResourceActions = js.Dynamic.global.Object.assign(js.Dynamic.literal(query = query.asInstanceOf[js.Any]), x).asInstanceOf[typings.vueResource.vuejs.ResourceActions]
+    @scala.inline
+    def withRemove(remove: AnonMethod): ResourceActions = js.Dynamic.global.Object.assign(js.Dynamic.literal(remove = remove.asInstanceOf[js.Any]), x).asInstanceOf[typings.vueResource.vuejs.ResourceActions]
+    @scala.inline
+    def withSave(save: AnonMethod): ResourceActions = js.Dynamic.global.Object.assign(js.Dynamic.literal(save = save.asInstanceOf[js.Any]), x).asInstanceOf[typings.vueResource.vuejs.ResourceActions]
+    @scala.inline
+    def withUpdate(update: AnonMethod): ResourceActions = js.Dynamic.global.Object.assign(js.Dynamic.literal(update = update.asInstanceOf[js.Any]), x).asInstanceOf[typings.vueResource.vuejs.ResourceActions]
+  }
+  
 }
 

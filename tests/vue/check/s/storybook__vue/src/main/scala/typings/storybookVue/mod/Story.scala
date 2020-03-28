@@ -18,5 +18,19 @@ object Story {
   
     __obj.asInstanceOf[Story]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: Story) {
+    @scala.inline
+    def duplicate: Story = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.storybookVue.mod.Story]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): Story with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.storybookVue.mod.Story with T]
+    @scala.inline
+    def withAdd(add: (String, StoryFunction) => Story): Story = js.Dynamic.global.Object.assign(js.Dynamic.literal(add = js.Any.fromFunction2(add)), x).asInstanceOf[typings.storybookVue.mod.Story]
+    @scala.inline
+    def withAddDecorator(addDecorator: StoryDecorator => Story): Story = js.Dynamic.global.Object.assign(js.Dynamic.literal(addDecorator = js.Any.fromFunction1(addDecorator)), x).asInstanceOf[typings.storybookVue.mod.Story]
+    @scala.inline
+    def withKind(kind: String): Story = js.Dynamic.global.Object.assign(js.Dynamic.literal(kind = kind.asInstanceOf[js.Any]), x).asInstanceOf[typings.storybookVue.mod.Story]
+  }
+  
 }
 

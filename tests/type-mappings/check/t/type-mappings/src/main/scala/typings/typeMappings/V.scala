@@ -17,5 +17,15 @@ object V {
   
     __obj.asInstanceOf[V]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: V) {
+    @scala.inline
+    def duplicate: V = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.typeMappings.V]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): V with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.typeMappings.V with T]
+    @scala.inline
+    def withAge(age: Double): V = js.Dynamic.global.Object.assign(js.Dynamic.literal(age = age.asInstanceOf[js.Any]), x).asInstanceOf[typings.typeMappings.V]
+  }
+  
 }
 

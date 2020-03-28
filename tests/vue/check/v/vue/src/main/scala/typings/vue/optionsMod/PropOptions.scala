@@ -27,5 +27,55 @@ object PropOptions {
     if (validator != null) __obj.updateDynamic("validator")(js.Any.fromFunction1(validator))
     __obj.asInstanceOf[PropOptions[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T] (x: PropOptions[T]) {
+    @scala.inline
+    def duplicate: PropOptions[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.vue.optionsMod.PropOptions[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): PropOptions[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.vue.optionsMod.PropOptions[T] with T]
+    @scala.inline
+    def withDefaultFunction0(default: js.Function0[js.Object]): PropOptions[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (default != null) obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.optionsMod.PropOptions[T]]
+    }
+    @scala.inline
+    def withDefaultT(default: T): PropOptions[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (default != null) obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.optionsMod.PropOptions[T]]
+    }
+    @scala.inline
+    def withRequiredUndefined: PropOptions[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "required")
+      obj.asInstanceOf[typings.vue.optionsMod.PropOptions[T]]
+    }
+    @scala.inline
+    def withRequired(required: Boolean): PropOptions[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(required)) obj.updateDynamic("required")(required.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.optionsMod.PropOptions[T]]
+    }
+    @scala.inline
+    def withTypeProp(`type`: Prop[T]): PropOptions[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`type` != null) obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.optionsMod.PropOptions[T]]
+    }
+    @scala.inline
+    def withTypeArray(`type`: js.Array[Prop[T]]): PropOptions[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`type` != null) obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.optionsMod.PropOptions[T]]
+    }
+    @scala.inline
+    def withValidator(validator: /* value */ T => Boolean): PropOptions[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (validator != null) obj.updateDynamic("validator")(js.Any.fromFunction1(validator))
+      obj.asInstanceOf[typings.vue.optionsMod.PropOptions[T]]
+    }
+  }
+  
 }
 

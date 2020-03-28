@@ -53,5 +53,82 @@ object ContextMenuProps {
     if (!js.isUndefined(rtl)) __obj.updateDynamic("rtl")(rtl.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContextMenuProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: ContextMenuProps) {
+    @scala.inline
+    def duplicate: ContextMenuProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.reactContextmenu.mod.ContextMenuProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ContextMenuProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.reactContextmenu.mod.ContextMenuProps with T]
+    @scala.inline
+    def withId(id: String): ContextMenuProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(id = id.asInstanceOf[js.Any]), x).asInstanceOf[typings.reactContextmenu.mod.ContextMenuProps]
+    @scala.inline
+    def withClassName(className: String): ContextMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (className != null) obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuProps]
+    }
+    @scala.inline
+    def withData(data: js.Any): ContextMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (data != null) obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuProps]
+    }
+    @scala.inline
+    def withHideOnLeaveUndefined: ContextMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "hideOnLeave")
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuProps]
+    }
+    @scala.inline
+    def withHideOnLeave(hideOnLeave: Boolean): ContextMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(hideOnLeave)) obj.updateDynamic("hideOnLeave")(hideOnLeave.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuProps]
+    }
+    @scala.inline
+    def withOnHide(onHide: /* event */ js.Any => Unit): ContextMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onHide != null) obj.updateDynamic("onHide")(js.Any.fromFunction1(onHide))
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuProps]
+    }
+    @scala.inline
+    def withOnMouseLeaveFunction3(
+      onMouseLeave: js.Function3[
+          /* event */ MouseEvent[HTMLElement, NativeMouseEvent], 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Object */ /* data */ js.Any, 
+          /* target */ HTMLElement, 
+          Unit
+        ]
+    ): ContextMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onMouseLeave != null) obj.updateDynamic("onMouseLeave")(onMouseLeave.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuProps]
+    }
+    @scala.inline
+    def withOnMouseLeaveFunction(onMouseLeave: js.Function): ContextMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onMouseLeave != null) obj.updateDynamic("onMouseLeave")(onMouseLeave.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuProps]
+    }
+    @scala.inline
+    def withOnShow(onShow: /* event */ js.Any => Unit): ContextMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onShow != null) obj.updateDynamic("onShow")(js.Any.fromFunction1(onShow))
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuProps]
+    }
+    @scala.inline
+    def withRtlUndefined: ContextMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "rtl")
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuProps]
+    }
+    @scala.inline
+    def withRtl(rtl: Boolean): ContextMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(rtl)) obj.updateDynamic("rtl")(rtl.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.ContextMenuProps]
+    }
+  }
+  
 }
 

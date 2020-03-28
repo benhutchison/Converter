@@ -20,5 +20,21 @@ object Insight_ {
   
     __obj.asInstanceOf[Insight_]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: Insight_) {
+    @scala.inline
+    def duplicate: Insight_ = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.insight.mod.Insight_]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): Insight_ with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.insight.mod.Insight_ with T]
+    @scala.inline
+    def withClientId(clientId: String): Insight_ = js.Dynamic.global.Object.assign(js.Dynamic.literal(clientId = clientId.asInstanceOf[js.Any]), x).asInstanceOf[typings.insight.mod.Insight_]
+    @scala.inline
+    def withConfig(config: IConfigstore): Insight_ = js.Dynamic.global.Object.assign(js.Dynamic.literal(config = config.asInstanceOf[js.Any]), x).asInstanceOf[typings.insight.mod.Insight_]
+    @scala.inline
+    def withOptOut(optOut: Boolean): Insight_ = js.Dynamic.global.Object.assign(js.Dynamic.literal(optOut = optOut.asInstanceOf[js.Any]), x).asInstanceOf[typings.insight.mod.Insight_]
+    @scala.inline
+    def withTrack(track: /* repeated */ String => Unit): Insight_ = js.Dynamic.global.Object.assign(js.Dynamic.literal(track = js.Any.fromFunction1(track)), x).asInstanceOf[typings.insight.mod.Insight_]
+  }
+  
 }
 

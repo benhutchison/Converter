@@ -21,5 +21,25 @@ object HttpInterceptor {
     if (response != null) __obj.updateDynamic("response")(js.Any.fromFunction1(response))
     __obj.asInstanceOf[HttpInterceptor]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: HttpInterceptor) {
+    @scala.inline
+    def duplicate: HttpInterceptor = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.vueResource.vuejs.HttpInterceptor]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): HttpInterceptor with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.vueResource.vuejs.HttpInterceptor with T]
+    @scala.inline
+    def withRequest(request: /* request */ HttpOptions => HttpOptions): HttpInterceptor = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (request != null) obj.updateDynamic("request")(js.Any.fromFunction1(request))
+      obj.asInstanceOf[typings.vueResource.vuejs.HttpInterceptor]
+    }
+    @scala.inline
+    def withResponse(response: /* response */ HttpResponse => HttpResponse): HttpInterceptor = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (response != null) obj.updateDynamic("response")(js.Any.fromFunction1(response))
+      obj.asInstanceOf[typings.vueResource.vuejs.HttpInterceptor]
+    }
+  }
+  
 }
 

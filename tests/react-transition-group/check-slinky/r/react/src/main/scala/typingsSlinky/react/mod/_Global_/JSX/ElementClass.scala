@@ -19,5 +19,15 @@ object ElementClass {
   
     __obj.asInstanceOf[ElementClass]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: ElementClass) {
+    @scala.inline
+    def duplicate: ElementClass = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.ElementClass]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ElementClass with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.ElementClass with T]
+    @scala.inline
+    def withRender(render: () => TagMod[Any]): ElementClass = js.Dynamic.global.Object.assign(js.Dynamic.literal(render = js.Any.fromFunction0(render)), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.ElementClass]
+  }
+  
 }
 

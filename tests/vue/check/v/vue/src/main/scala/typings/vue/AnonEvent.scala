@@ -18,5 +18,25 @@ object AnonEvent {
     if (prop != null) __obj.updateDynamic("prop")(prop.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonEvent]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: AnonEvent) {
+    @scala.inline
+    def duplicate: AnonEvent = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.vue.AnonEvent]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): AnonEvent with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.vue.AnonEvent with T]
+    @scala.inline
+    def withEvent(event: String): AnonEvent = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (event != null) obj.updateDynamic("event")(event.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.AnonEvent]
+    }
+    @scala.inline
+    def withProp(prop: String): AnonEvent = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (prop != null) obj.updateDynamic("prop")(prop.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.AnonEvent]
+    }
+  }
+  
 }
 

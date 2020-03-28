@@ -16,5 +16,15 @@ object AnonPropTypes {
   
     __obj.asInstanceOf[AnonPropTypes]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: AnonPropTypes) {
+    @scala.inline
+    def duplicate: AnonPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.AnonPropTypes]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): AnonPropTypes with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.AnonPropTypes with T]
+    @scala.inline
+    def withPropTypes(propTypes: /* import warning: importer.ImportType#apply Failed type conversion: infer T */ js.Any): AnonPropTypes = js.Dynamic.global.Object.assign(js.Dynamic.literal(propTypes = propTypes.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.AnonPropTypes]
+  }
+  
 }
 

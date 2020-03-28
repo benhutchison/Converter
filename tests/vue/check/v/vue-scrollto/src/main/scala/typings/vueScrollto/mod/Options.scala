@@ -61,5 +61,139 @@ object Options {
     if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: Options) {
+    @scala.inline
+    def duplicate: Options = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.vueScrollto.mod.Options]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): Options with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.vueScrollto.mod.Options with T]
+    @scala.inline
+    def withCancelableUndefined: Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "cancelable")
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withCancelable(cancelable: Boolean): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(cancelable)) obj.updateDynamic("cancelable")(cancelable.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withContainerElement(container: Element): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (container != null) obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withContainerString(container: String): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (container != null) obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withDurationInt(duration: Int): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (duration != null) obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withDurationDouble(duration: Double): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (duration != null) obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withEasing(easing: String): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (easing != null) obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withElElement(el: Element): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (el != null) obj.updateDynamic("el")(el.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withElString(el: String): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (el != null) obj.updateDynamic("el")(el.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withElementElement(element: Element): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (element != null) obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withElementString(element: String): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (element != null) obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withOffsetInt(offset: Int): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (offset != null) obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withOffsetDouble(offset: Double): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (offset != null) obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withOnCancelFalse(onCancel: `false`): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onCancel != null) obj.updateDynamic("onCancel")(onCancel.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withOnCancelFunction0(onCancel: js.Function0[Unit]): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onCancel != null) obj.updateDynamic("onCancel")(onCancel.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withOnDoneFalse(onDone: `false`): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDone != null) obj.updateDynamic("onDone")(onDone.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withOnDoneFunction0(onDone: js.Function0[Unit]): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDone != null) obj.updateDynamic("onDone")(onDone.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withXUndefined: Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "x")
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withX(x: Boolean): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(x)) obj.updateDynamic("x")(x.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withYUndefined: Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "y")
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+    @scala.inline
+    def withY(y: Boolean): Options = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(y)) obj.updateDynamic("y")(y.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vueScrollto.mod.Options]
+    }
+  }
+  
 }
 

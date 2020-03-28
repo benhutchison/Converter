@@ -27,5 +27,61 @@ object AnonListener {
     if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonListener]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: AnonListener) {
+    @scala.inline
+    def duplicate: AnonListener = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.stardustUiReactComponentEventListener.AnonListener]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): AnonListener with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.stardustUiReactComponentEventListener.AnonListener with T]
+    @scala.inline
+    def withCaptureUndefined: AnonListener = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "capture")
+      obj.asInstanceOf[typings.stardustUiReactComponentEventListener.AnonListener]
+    }
+    @scala.inline
+    def withCapture(capture: scala.Nothing): AnonListener = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(capture)) obj.updateDynamic("capture")(capture.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.stardustUiReactComponentEventListener.AnonListener]
+    }
+    @scala.inline
+    def withListenerUndefined: AnonListener = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "listener")
+      obj.asInstanceOf[typings.stardustUiReactComponentEventListener.AnonListener]
+    }
+    @scala.inline
+    def withListener(listener: scala.Nothing): AnonListener = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(listener)) obj.updateDynamic("listener")(listener.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.stardustUiReactComponentEventListener.AnonListener]
+    }
+    @scala.inline
+    def withTargetRefUndefined: AnonListener = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "targetRef")
+      obj.asInstanceOf[typings.stardustUiReactComponentEventListener.AnonListener]
+    }
+    @scala.inline
+    def withTargetRef(targetRef: scala.Nothing): AnonListener = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(targetRef)) obj.updateDynamic("targetRef")(targetRef.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.stardustUiReactComponentEventListener.AnonListener]
+    }
+    @scala.inline
+    def withTypeUndefined: AnonListener = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "type")
+      obj.asInstanceOf[typings.stardustUiReactComponentEventListener.AnonListener]
+    }
+    @scala.inline
+    def withType(`type`: scala.Nothing): AnonListener = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`type`)) obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.stardustUiReactComponentEventListener.AnonListener]
+    }
+  }
+  
 }
 

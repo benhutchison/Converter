@@ -41,5 +41,61 @@ object StrictButtonContentProps {
     if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictButtonContentProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: StrictButtonContentProps) {
+    @scala.inline
+    def duplicate: StrictButtonContentProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.semanticUiReact.buttonContentMod.StrictButtonContentProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): StrictButtonContentProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.semanticUiReact.buttonContentMod.StrictButtonContentProps with T]
+    @scala.inline
+    def withAs(as: js.Any): StrictButtonContentProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (as != null) obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonContentMod.StrictButtonContentProps]
+    }
+    @scala.inline
+    def withChildren(children: TagMod[Any]): StrictButtonContentProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (children != null) obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonContentMod.StrictButtonContentProps]
+    }
+    @scala.inline
+    def withClassName(className: String): StrictButtonContentProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (className != null) obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonContentMod.StrictButtonContentProps]
+    }
+    @scala.inline
+    def withContent(content: SemanticShorthandContent): StrictButtonContentProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (content != null) obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonContentMod.StrictButtonContentProps]
+    }
+    @scala.inline
+    def withHiddenUndefined: StrictButtonContentProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "hidden")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonContentMod.StrictButtonContentProps]
+    }
+    @scala.inline
+    def withHidden(hidden: Boolean): StrictButtonContentProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(hidden)) obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonContentMod.StrictButtonContentProps]
+    }
+    @scala.inline
+    def withVisibleUndefined: StrictButtonContentProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "visible")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonContentMod.StrictButtonContentProps]
+    }
+    @scala.inline
+    def withVisible(visible: Boolean): StrictButtonContentProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(visible)) obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.buttonContentMod.StrictButtonContentProps]
+    }
+  }
+  
 }
 

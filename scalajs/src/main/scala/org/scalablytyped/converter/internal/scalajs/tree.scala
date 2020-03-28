@@ -59,6 +59,7 @@ object PackageTree {
 }
 
 final case class ClassTree(
+    isImplicit:  Boolean,
     annotations: IArray[ClassAnnotation],
     name:        Name,
     tparams:     IArray[TypeParamTree],

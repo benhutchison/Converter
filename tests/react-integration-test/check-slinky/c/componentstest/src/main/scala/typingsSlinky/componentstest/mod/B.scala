@@ -17,5 +17,21 @@ object B {
     if (bCallback != null) __obj.updateDynamic("bCallback")(js.Any.fromFunction0(bCallback))
     __obj.asInstanceOf[B]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: B) {
+    @scala.inline
+    def duplicate: B = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.componentstest.mod.B]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): B with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.componentstest.mod.B with T]
+    @scala.inline
+    def withBMember(bMember: String): B = js.Dynamic.global.Object.assign(js.Dynamic.literal(bMember = bMember.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.componentstest.mod.B]
+    @scala.inline
+    def withBCallback(bCallback: () => String): B = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (bCallback != null) obj.updateDynamic("bCallback")(js.Any.fromFunction0(bCallback))
+      obj.asInstanceOf[typingsSlinky.componentstest.mod.B]
+    }
+  }
+  
 }
 

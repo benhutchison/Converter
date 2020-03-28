@@ -23,5 +23,17 @@ object IntrinsicElements {
   
     __obj.asInstanceOf[IntrinsicElements]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: IntrinsicElements) {
+    @scala.inline
+    def duplicate: IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsJapgolly.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): IntrinsicElements with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsJapgolly.react.mod._Global_.JSX.IntrinsicElements with T]
+    @scala.inline
+    def withAbbr(abbr: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(abbr = abbr.asInstanceOf[js.Any]), x).asInstanceOf[typingsJapgolly.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withAnimate(animate: SVGProps[SVGElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(animate = animate.asInstanceOf[js.Any]), x).asInstanceOf[typingsJapgolly.react.mod._Global_.JSX.IntrinsicElements]
+  }
+  
 }
 

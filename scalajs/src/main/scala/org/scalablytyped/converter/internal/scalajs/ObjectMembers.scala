@@ -5,6 +5,7 @@ object ObjectMembers {
   // format: off
   val ScalaObject =
     ClassTree(
+      isImplicit = false,
       Empty,
       Name.Object,
       Empty,
@@ -33,7 +34,7 @@ object ObjectMembers {
 
   val ScalaJsObject =
     ClassTree(
-      Empty,
+      isImplicit = false,Empty,
       Name.Object,
       Empty,
       Empty,

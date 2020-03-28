@@ -379,6 +379,7 @@ final class GenJapgollyComponents(reactNames: ReactNames, scalaJsDomNames: Scala
       IArray.fromOption(knownRefRewritten.map(_ => TypeParamTree(names.ComponentRef, None, NoComments)))
 
     ClassTree(
+      isImplicit = false,
       annotations = Empty,
       name        = classCp.parts.last,
       tparams     = refInTParams,

@@ -331,5 +331,637 @@ object AriaAttributes {
     if (`aria-valuetext` != null) __obj.updateDynamic("aria-valuetext")(`aria-valuetext`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AriaAttributes]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: AriaAttributes) {
+    @scala.inline
+    def duplicate: AriaAttributes = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): AriaAttributes with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.react.mod.AriaAttributes with T]
+    @scala.inline
+    def `withAria-activedescendant`(`aria-activedescendant`: String): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-activedescendant` != null) obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-atomicUndefined`: AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-atomic")
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-atomic`(`aria-atomic`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-atomic`)) obj.updateDynamic("aria-atomic")(`aria-atomic`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-autocompleteBoth`(`aria-autocomplete`: both): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-autocomplete` != null) obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-autocompleteNone`(`aria-autocomplete`: none): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-autocomplete` != null) obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-autocompleteList`(`aria-autocomplete`: list): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-autocomplete` != null) obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-autocompleteInline`(`aria-autocomplete`: `inline`): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-autocomplete` != null) obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-busyUndefined`: AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-busy")
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-busy`(`aria-busy`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-busy`)) obj.updateDynamic("aria-busy")(`aria-busy`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-checkedMixed`(`aria-checked`: mixed): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-checked` != null) obj.updateDynamic("aria-checked")(`aria-checked`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-checkedBoolean`(`aria-checked`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-checked` != null) obj.updateDynamic("aria-checked")(`aria-checked`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-colcountInt`(`aria-colcount`: Int): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-colcount` != null) obj.updateDynamic("aria-colcount")(`aria-colcount`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-colcountDouble`(`aria-colcount`: Double): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-colcount` != null) obj.updateDynamic("aria-colcount")(`aria-colcount`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-colindexInt`(`aria-colindex`: Int): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-colindex` != null) obj.updateDynamic("aria-colindex")(`aria-colindex`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-colindexDouble`(`aria-colindex`: Double): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-colindex` != null) obj.updateDynamic("aria-colindex")(`aria-colindex`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-colspanInt`(`aria-colspan`: Int): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-colspan` != null) obj.updateDynamic("aria-colspan")(`aria-colspan`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-colspanDouble`(`aria-colspan`: Double): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-colspan` != null) obj.updateDynamic("aria-colspan")(`aria-colspan`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-controls`(`aria-controls`: String): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-controls` != null) obj.updateDynamic("aria-controls")(`aria-controls`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-currentStep`(`aria-current`: step): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-current` != null) obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-currentLocation`(`aria-current`: location): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-current` != null) obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-currentPage`(`aria-current`: page): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-current` != null) obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-currentBoolean`(`aria-current`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-current` != null) obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-currentDate`(`aria-current`: date): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-current` != null) obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-currentTime`(`aria-current`: time): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-current` != null) obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-describedby`(`aria-describedby`: String): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-describedby` != null) obj.updateDynamic("aria-describedby")(`aria-describedby`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-details`(`aria-details`: String): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-details` != null) obj.updateDynamic("aria-details")(`aria-details`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-disabledUndefined`: AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-disabled")
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-disabled`(`aria-disabled`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-disabled`)) obj.updateDynamic("aria-disabled")(`aria-disabled`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-dropeffectMove`(`aria-dropeffect`: move): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-dropeffect` != null) obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-dropeffectExecute`(`aria-dropeffect`: execute): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-dropeffect` != null) obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-dropeffectPopup`(`aria-dropeffect`: popup): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-dropeffect` != null) obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-dropeffectLink`(`aria-dropeffect`: link): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-dropeffect` != null) obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-dropeffectCopy`(`aria-dropeffect`: copy): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-dropeffect` != null) obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-dropeffectNone`(`aria-dropeffect`: none): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-dropeffect` != null) obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-errormessage`(`aria-errormessage`: String): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-errormessage` != null) obj.updateDynamic("aria-errormessage")(`aria-errormessage`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-expandedUndefined`: AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-expanded")
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-expanded`(`aria-expanded`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-expanded`)) obj.updateDynamic("aria-expanded")(`aria-expanded`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-flowto`(`aria-flowto`: String): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-flowto` != null) obj.updateDynamic("aria-flowto")(`aria-flowto`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-grabbedUndefined`: AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-grabbed")
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-grabbed`(`aria-grabbed`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-grabbed`)) obj.updateDynamic("aria-grabbed")(`aria-grabbed`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-haspopupMenu`(`aria-haspopup`: menu): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-haspopup` != null) obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-haspopupBoolean`(`aria-haspopup`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-haspopup` != null) obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-haspopupListbox`(`aria-haspopup`: listbox): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-haspopup` != null) obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-haspopupGrid`(`aria-haspopup`: grid): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-haspopup` != null) obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-haspopupTree`(`aria-haspopup`: tree): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-haspopup` != null) obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-haspopupDialog`(`aria-haspopup`: dialog): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-haspopup` != null) obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-hiddenUndefined`: AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-hidden")
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-hidden`(`aria-hidden`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-hidden`)) obj.updateDynamic("aria-hidden")(`aria-hidden`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-invalidSpelling`(`aria-invalid`: spelling): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-invalid` != null) obj.updateDynamic("aria-invalid")(`aria-invalid`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-invalidBoolean`(`aria-invalid`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-invalid` != null) obj.updateDynamic("aria-invalid")(`aria-invalid`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-invalidGrammar`(`aria-invalid`: grammar): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-invalid` != null) obj.updateDynamic("aria-invalid")(`aria-invalid`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-keyshortcuts`(`aria-keyshortcuts`: String): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-keyshortcuts` != null) obj.updateDynamic("aria-keyshortcuts")(`aria-keyshortcuts`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-label`(`aria-label`: String): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-label` != null) obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-labelledby`(`aria-labelledby`: String): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-labelledby` != null) obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-levelInt`(`aria-level`: Int): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-level` != null) obj.updateDynamic("aria-level")(`aria-level`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-levelDouble`(`aria-level`: Double): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-level` != null) obj.updateDynamic("aria-level")(`aria-level`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-livePolite`(`aria-live`: polite): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-live` != null) obj.updateDynamic("aria-live")(`aria-live`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-liveAssertive`(`aria-live`: assertive): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-live` != null) obj.updateDynamic("aria-live")(`aria-live`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-liveOff`(`aria-live`: off): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-live` != null) obj.updateDynamic("aria-live")(`aria-live`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-modalUndefined`: AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-modal")
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-modal`(`aria-modal`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-modal`)) obj.updateDynamic("aria-modal")(`aria-modal`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-multilineUndefined`: AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-multiline")
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-multiline`(`aria-multiline`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-multiline`)) obj.updateDynamic("aria-multiline")(`aria-multiline`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-multiselectableUndefined`: AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-multiselectable")
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-multiselectable`(`aria-multiselectable`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-multiselectable`)) obj.updateDynamic("aria-multiselectable")(`aria-multiselectable`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-orientationHorizontal`(`aria-orientation`: horizontal): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-orientation` != null) obj.updateDynamic("aria-orientation")(`aria-orientation`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-orientationVertical`(`aria-orientation`: vertical): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-orientation` != null) obj.updateDynamic("aria-orientation")(`aria-orientation`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-owns`(`aria-owns`: String): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-owns` != null) obj.updateDynamic("aria-owns")(`aria-owns`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-placeholder`(`aria-placeholder`: String): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-placeholder` != null) obj.updateDynamic("aria-placeholder")(`aria-placeholder`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-posinsetInt`(`aria-posinset`: Int): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-posinset` != null) obj.updateDynamic("aria-posinset")(`aria-posinset`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-posinsetDouble`(`aria-posinset`: Double): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-posinset` != null) obj.updateDynamic("aria-posinset")(`aria-posinset`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-pressedMixed`(`aria-pressed`: mixed): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-pressed` != null) obj.updateDynamic("aria-pressed")(`aria-pressed`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-pressedBoolean`(`aria-pressed`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-pressed` != null) obj.updateDynamic("aria-pressed")(`aria-pressed`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-readonlyUndefined`: AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-readonly")
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-readonly`(`aria-readonly`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-readonly`)) obj.updateDynamic("aria-readonly")(`aria-readonly`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-relevantAdditions`(`aria-relevant`: additions): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-relevant` != null) obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-relevantAll`(`aria-relevant`: all): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-relevant` != null) obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-relevantText`(`aria-relevant`: text): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-relevant` != null) obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-relevantAdditions text`(`aria-relevant`: `additions text`): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-relevant` != null) obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-relevantRemovals`(`aria-relevant`: removals): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-relevant` != null) obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-requiredUndefined`: AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-required")
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-required`(`aria-required`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-required`)) obj.updateDynamic("aria-required")(`aria-required`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-roledescription`(`aria-roledescription`: String): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-roledescription` != null) obj.updateDynamic("aria-roledescription")(`aria-roledescription`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-rowcountInt`(`aria-rowcount`: Int): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-rowcount` != null) obj.updateDynamic("aria-rowcount")(`aria-rowcount`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-rowcountDouble`(`aria-rowcount`: Double): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-rowcount` != null) obj.updateDynamic("aria-rowcount")(`aria-rowcount`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-rowindexInt`(`aria-rowindex`: Int): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-rowindex` != null) obj.updateDynamic("aria-rowindex")(`aria-rowindex`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-rowindexDouble`(`aria-rowindex`: Double): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-rowindex` != null) obj.updateDynamic("aria-rowindex")(`aria-rowindex`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-rowspanInt`(`aria-rowspan`: Int): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-rowspan` != null) obj.updateDynamic("aria-rowspan")(`aria-rowspan`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-rowspanDouble`(`aria-rowspan`: Double): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-rowspan` != null) obj.updateDynamic("aria-rowspan")(`aria-rowspan`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-selectedUndefined`: AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "aria-selected")
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-selected`(`aria-selected`: Boolean): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(`aria-selected`)) obj.updateDynamic("aria-selected")(`aria-selected`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-setsizeInt`(`aria-setsize`: Int): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-setsize` != null) obj.updateDynamic("aria-setsize")(`aria-setsize`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-setsizeDouble`(`aria-setsize`: Double): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-setsize` != null) obj.updateDynamic("aria-setsize")(`aria-setsize`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-sortNone`(`aria-sort`: none): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-sort` != null) obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-sortDescending`(`aria-sort`: descending): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-sort` != null) obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-sortAscending`(`aria-sort`: ascending): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-sort` != null) obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-sortOther`(`aria-sort`: other): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-sort` != null) obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-valuemaxInt`(`aria-valuemax`: Int): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-valuemax` != null) obj.updateDynamic("aria-valuemax")(`aria-valuemax`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-valuemaxDouble`(`aria-valuemax`: Double): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-valuemax` != null) obj.updateDynamic("aria-valuemax")(`aria-valuemax`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-valueminInt`(`aria-valuemin`: Int): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-valuemin` != null) obj.updateDynamic("aria-valuemin")(`aria-valuemin`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-valueminDouble`(`aria-valuemin`: Double): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-valuemin` != null) obj.updateDynamic("aria-valuemin")(`aria-valuemin`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-valuenowInt`(`aria-valuenow`: Int): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-valuenow` != null) obj.updateDynamic("aria-valuenow")(`aria-valuenow`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-valuenowDouble`(`aria-valuenow`: Double): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-valuenow` != null) obj.updateDynamic("aria-valuenow")(`aria-valuenow`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+    @scala.inline
+    def `withAria-valuetext`(`aria-valuetext`: String): AriaAttributes = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`aria-valuetext` != null) obj.updateDynamic("aria-valuetext")(`aria-valuetext`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AriaAttributes]
+    }
+  }
+  
 }
 

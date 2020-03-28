@@ -37,5 +37,25 @@ object NewLifecycle {
     if (getSnapshotBeforeUpdate != null) __obj.updateDynamic("getSnapshotBeforeUpdate")(js.Any.fromFunction2(getSnapshotBeforeUpdate))
     __obj.asInstanceOf[NewLifecycle[P, S, SS]]
   }
+  @scala.inline
+  implicit sealed class Sugar[P, S, SS] (x: NewLifecycle[P, S, SS]) {
+    @scala.inline
+    def duplicate: NewLifecycle[P, S, SS] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.NewLifecycle[P, S, SS]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): (NewLifecycle[P, S, SS]) with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.NewLifecycle[P, S, SS] with T]
+    @scala.inline
+    def withComponentDidUpdate(componentDidUpdate: (/* prevProps */ P, /* prevState */ S, /* snapshot */ js.UndefOr[SS]) => Unit): NewLifecycle[P, S, SS] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (componentDidUpdate != null) obj.updateDynamic("componentDidUpdate")(js.Any.fromFunction3(componentDidUpdate))
+      obj.asInstanceOf[typings.react.mod.NewLifecycle[P, S, SS]]
+    }
+    @scala.inline
+    def withGetSnapshotBeforeUpdate(getSnapshotBeforeUpdate: (/* prevProps */ P, /* prevState */ S) => SS | Null): NewLifecycle[P, S, SS] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (getSnapshotBeforeUpdate != null) obj.updateDynamic("getSnapshotBeforeUpdate")(js.Any.fromFunction2(getSnapshotBeforeUpdate))
+      obj.asInstanceOf[typings.react.mod.NewLifecycle[P, S, SS]]
+    }
+  }
+  
 }
 

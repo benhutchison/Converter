@@ -20,5 +20,37 @@ object ComputedOptions {
     if (set != null) __obj.updateDynamic("set")(js.Any.fromFunction1(set))
     __obj.asInstanceOf[ComputedOptions[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T] (x: ComputedOptions[T]) {
+    @scala.inline
+    def duplicate: ComputedOptions[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.vue.optionsMod.ComputedOptions[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ComputedOptions[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.vue.optionsMod.ComputedOptions[T] with T]
+    @scala.inline
+    def withCacheUndefined: ComputedOptions[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "cache")
+      obj.asInstanceOf[typings.vue.optionsMod.ComputedOptions[T]]
+    }
+    @scala.inline
+    def withCache(cache: Boolean): ComputedOptions[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(cache)) obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.optionsMod.ComputedOptions[T]]
+    }
+    @scala.inline
+    def withGet(get: () => T): ComputedOptions[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (get != null) obj.updateDynamic("get")(js.Any.fromFunction0(get))
+      obj.asInstanceOf[typings.vue.optionsMod.ComputedOptions[T]]
+    }
+    @scala.inline
+    def withSet(set: /* value */ T => Unit): ComputedOptions[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (set != null) obj.updateDynamic("set")(js.Any.fromFunction1(set))
+      obj.asInstanceOf[typings.vue.optionsMod.ComputedOptions[T]]
+    }
+  }
+  
 }
 

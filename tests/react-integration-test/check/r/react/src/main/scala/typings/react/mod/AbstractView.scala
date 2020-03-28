@@ -23,5 +23,17 @@ object AbstractView {
   
     __obj.asInstanceOf[AbstractView]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: AbstractView) {
+    @scala.inline
+    def duplicate: AbstractView = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.AbstractView]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): AbstractView with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.AbstractView with T]
+    @scala.inline
+    def withDocument(document: Document): AbstractView = js.Dynamic.global.Object.assign(js.Dynamic.literal(document = document.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.AbstractView]
+    @scala.inline
+    def withStyleMedia(styleMedia: StyleMedia): AbstractView = js.Dynamic.global.Object.assign(js.Dynamic.literal(styleMedia = styleMedia.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.AbstractView]
+  }
+  
 }
 

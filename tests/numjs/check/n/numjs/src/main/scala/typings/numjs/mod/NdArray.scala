@@ -21,5 +21,21 @@ object NdArray {
   
     __obj.asInstanceOf[NdArray[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T] (x: NdArray[T]) {
+    @scala.inline
+    def duplicate: NdArray[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.numjs.mod.NdArray[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): NdArray[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.numjs.mod.NdArray[T] with T]
+    @scala.inline
+    def withT(T: NdArray[T]): NdArray[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(T = T.asInstanceOf[js.Any]), x).asInstanceOf[typings.numjs.mod.NdArray[T]]
+    @scala.inline
+    def withData(data: Data[T]): NdArray[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(data = data.asInstanceOf[js.Any]), x).asInstanceOf[typings.numjs.mod.NdArray[T]]
+    @scala.inline
+    def withNdim(ndim: Double): NdArray[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(ndim = ndim.asInstanceOf[js.Any]), x).asInstanceOf[typings.numjs.mod.NdArray[T]]
+    @scala.inline
+    def withSlice(slice: /* repeated */ Double => NdArray[T]): NdArray[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(slice = js.Any.fromFunction1(slice)), x).asInstanceOf[typings.numjs.mod.NdArray[T]]
+  }
+  
 }
 

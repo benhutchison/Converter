@@ -23,5 +23,41 @@ object ReactSVGElement {
     if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactSVGElement]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: ReactSVGElement) {
+    @scala.inline
+    def duplicate: ReactSVGElement = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.ReactSVGElement]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ReactSVGElement with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.ReactSVGElement with T]
+    @scala.inline
+    def withProps(props: js.Any): ReactSVGElement = js.Dynamic.global.Object.assign(js.Dynamic.literal(props = props.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVGElement]
+    @scala.inline
+    def withRef(ref: Ref[SVGElement]): ReactSVGElement = js.Dynamic.global.Object.assign(js.Dynamic.literal(ref = ref.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactSVGElement]
+    @scala.inline
+    def withTypeCircle(`type`: circle): ReactSVGElement = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.ReactSVGElement]
+    }
+    @scala.inline
+    def withTypeClipPath(`type`: clipPath): ReactSVGElement = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.ReactSVGElement]
+    }
+    @scala.inline
+    def withTypeAnimate(`type`: animate): ReactSVGElement = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.ReactSVGElement]
+    }
+    @scala.inline
+    def withKey(key: Key): ReactSVGElement = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (key != null) obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.ReactSVGElement]
+    }
+  }
+  
 }
 

@@ -117,5 +117,51 @@ object DeprecatedLifecycle {
     if (componentWillUpdate != null) __obj.updateDynamic("componentWillUpdate")(js.Any.fromFunction3(componentWillUpdate))
     __obj.asInstanceOf[DeprecatedLifecycle[P, S]]
   }
+  @scala.inline
+  implicit sealed class Sugar[P, S] (x: DeprecatedLifecycle[P, S]) {
+    @scala.inline
+    def duplicate: DeprecatedLifecycle[P, S] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.DeprecatedLifecycle[P, S]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): (DeprecatedLifecycle[P, S]) with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.DeprecatedLifecycle[P, S] with T]
+    @scala.inline
+    def withUNSAFE_componentWillMount(UNSAFE_componentWillMount: () => Unit): DeprecatedLifecycle[P, S] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (UNSAFE_componentWillMount != null) obj.updateDynamic("UNSAFE_componentWillMount")(js.Any.fromFunction0(UNSAFE_componentWillMount))
+      obj.asInstanceOf[typings.react.mod.DeprecatedLifecycle[P, S]]
+    }
+    @scala.inline
+    def withUNSAFE_componentWillReceiveProps(UNSAFE_componentWillReceiveProps: (/* nextProps */ P, /* nextContext */ js.Any) => Unit): DeprecatedLifecycle[P, S] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (UNSAFE_componentWillReceiveProps != null) obj.updateDynamic("UNSAFE_componentWillReceiveProps")(js.Any.fromFunction2(UNSAFE_componentWillReceiveProps))
+      obj.asInstanceOf[typings.react.mod.DeprecatedLifecycle[P, S]]
+    }
+    @scala.inline
+    def withUNSAFE_componentWillUpdate(
+      UNSAFE_componentWillUpdate: (/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any) => Unit
+    ): DeprecatedLifecycle[P, S] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (UNSAFE_componentWillUpdate != null) obj.updateDynamic("UNSAFE_componentWillUpdate")(js.Any.fromFunction3(UNSAFE_componentWillUpdate))
+      obj.asInstanceOf[typings.react.mod.DeprecatedLifecycle[P, S]]
+    }
+    @scala.inline
+    def withComponentWillMount(componentWillMount: () => Unit): DeprecatedLifecycle[P, S] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (componentWillMount != null) obj.updateDynamic("componentWillMount")(js.Any.fromFunction0(componentWillMount))
+      obj.asInstanceOf[typings.react.mod.DeprecatedLifecycle[P, S]]
+    }
+    @scala.inline
+    def withComponentWillReceiveProps(componentWillReceiveProps: (/* nextProps */ P, /* nextContext */ js.Any) => Unit): DeprecatedLifecycle[P, S] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (componentWillReceiveProps != null) obj.updateDynamic("componentWillReceiveProps")(js.Any.fromFunction2(componentWillReceiveProps))
+      obj.asInstanceOf[typings.react.mod.DeprecatedLifecycle[P, S]]
+    }
+    @scala.inline
+    def withComponentWillUpdate(componentWillUpdate: (/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any) => Unit): DeprecatedLifecycle[P, S] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (componentWillUpdate != null) obj.updateDynamic("componentWillUpdate")(js.Any.fromFunction3(componentWillUpdate))
+      obj.asInstanceOf[typings.react.mod.DeprecatedLifecycle[P, S]]
+    }
+  }
+  
 }
 

@@ -26,5 +26,31 @@ object APIVersions {
     if (apiVersions != null) __obj.updateDynamic("apiVersions")(apiVersions.asInstanceOf[js.Any])
     __obj.asInstanceOf[APIVersions]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: APIVersions) {
+    @scala.inline
+    def duplicate: APIVersions = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.awsSdk.configMod.APIVersions]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): APIVersions with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.awsSdk.configMod.APIVersions with T]
+    @scala.inline
+    def withApiVersionLatest(apiVersion: latest): APIVersions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (apiVersion != null) obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.awsSdk.configMod.APIVersions]
+    }
+    @scala.inline
+    def withApiVersionString(apiVersion: String): APIVersions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (apiVersion != null) obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.awsSdk.configMod.APIVersions]
+    }
+    @scala.inline
+    def withApiVersions(apiVersions: ConfigurationServiceApiVersions): APIVersions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (apiVersions != null) obj.updateDynamic("apiVersions")(apiVersions.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.awsSdk.configMod.APIVersions]
+    }
+  }
+  
 }
 

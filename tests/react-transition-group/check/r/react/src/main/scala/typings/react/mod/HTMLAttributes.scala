@@ -23,5 +23,37 @@ object HTMLAttributes {
     if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTMLAttributes[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T] (x: HTMLAttributes[T]) {
+    @scala.inline
+    def duplicate: HTMLAttributes[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.HTMLAttributes[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): HTMLAttributes[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.HTMLAttributes[T] with T]
+    @scala.inline
+    def withChildren(children: ReactNode): HTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (children != null) obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.HTMLAttributes[T]]
+    }
+    @scala.inline
+    def withDangerouslySetInnerHTML(dangerouslySetInnerHTML: AnonHtml): HTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (dangerouslySetInnerHTML != null) obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.HTMLAttributes[T]]
+    }
+    @scala.inline
+    def withDefaultCheckedUndefined: HTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "defaultChecked")
+      obj.asInstanceOf[typings.react.mod.HTMLAttributes[T]]
+    }
+    @scala.inline
+    def withDefaultChecked(defaultChecked: Boolean): HTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(defaultChecked)) obj.updateDynamic("defaultChecked")(defaultChecked.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.HTMLAttributes[T]]
+    }
+  }
+  
 }
 

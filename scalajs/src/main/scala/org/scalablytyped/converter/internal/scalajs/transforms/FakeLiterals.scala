@@ -56,6 +56,7 @@ object FakeLiterals {
               val codePath = tree.codePath + moduleName + name
               val `trait` =
                 ClassTree(
+                  isImplicit = false,
                   IArray(Annotation.JsNative),
                   name,
                   Empty,

@@ -18,5 +18,17 @@ object ProxiedPerson {
   
     __obj.asInstanceOf[ProxiedPerson]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: ProxiedPerson) {
+    @scala.inline
+    def duplicate: ProxiedPerson = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.typeMappings.ProxiedPerson]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ProxiedPerson with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.typeMappings.ProxiedPerson with T]
+    @scala.inline
+    def withAge(age: AnonGet): ProxiedPerson = js.Dynamic.global.Object.assign(js.Dynamic.literal(age = age.asInstanceOf[js.Any]), x).asInstanceOf[typings.typeMappings.ProxiedPerson]
+    @scala.inline
+    def withName(name: AnonSet): ProxiedPerson = js.Dynamic.global.Object.assign(js.Dynamic.literal(name = name.asInstanceOf[js.Any]), x).asInstanceOf[typings.typeMappings.ProxiedPerson]
+  }
+  
 }
 

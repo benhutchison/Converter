@@ -526,5 +526,377 @@ object IntrinsicElements {
     __obj.updateDynamic("var")(`var`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrinsicElements]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: IntrinsicElements) {
+    @scala.inline
+    def duplicate: IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): IntrinsicElements with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements with T]
+    @scala.inline
+    def withA(a: DetailedHTMLProps[AnchorHTMLAttributes[HTMLAnchorElement], HTMLAnchorElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(a = a.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withAbbr(abbr: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(abbr = abbr.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withAddress(address: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(address = address.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withAnimate(animate: SVGProps[SVGElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(animate = animate.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withAnimateMotion(animateMotion: SVGProps[SVGElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(animateMotion = animateMotion.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withAnimateTransform(animateTransform: SVGProps[SVGElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(animateTransform = animateTransform.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withArea(area: DetailedHTMLProps[AreaHTMLAttributes[HTMLAreaElement], HTMLAreaElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(area = area.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withArticle(article: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(article = article.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withAside(aside: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(aside = aside.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withAudio(audio: DetailedHTMLProps[AudioHTMLAttributes[HTMLAudioElement], HTMLAudioElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(audio = audio.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withB(b: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(b = b.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withBase(base: DetailedHTMLProps[BaseHTMLAttributes[HTMLBaseElement], HTMLBaseElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(base = base.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withBdi(bdi: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(bdi = bdi.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withBdo(bdo: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(bdo = bdo.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withBig(big: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(big = big.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withBlockquote(blockquote: DetailedHTMLProps[BlockquoteHTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(blockquote = blockquote.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withBody(body: DetailedHTMLProps[HTMLAttributes[HTMLBodyElement], HTMLBodyElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(body = body.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withBr(br: DetailedHTMLProps[HTMLAttributes[HTMLBRElement], HTMLBRElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(br = br.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withButton(button: DetailedHTMLProps[ButtonHTMLAttributes[HTMLButtonElement], HTMLButtonElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(button = button.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withCanvas(canvas: DetailedHTMLProps[CanvasHTMLAttributes[HTMLCanvasElement], HTMLCanvasElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(canvas = canvas.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withCaption(caption: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(caption = caption.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withCircle(circle: SVGProps[SVGCircleElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(circle = circle.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withCite(cite: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(cite = cite.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withClipPath(clipPath: SVGProps[SVGClipPathElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(clipPath = clipPath.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withCode(code: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(code = code.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withCol(col: DetailedHTMLProps[ColHTMLAttributes[HTMLTableColElement], HTMLTableColElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(col = col.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withColgroup(colgroup: DetailedHTMLProps[ColgroupHTMLAttributes[HTMLTableColElement], HTMLTableColElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(colgroup = colgroup.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withData(
+      data: DetailedHTMLProps[DataHTMLAttributes[org.scalajs.dom.raw.Element], org.scalajs.dom.raw.Element]
+    ): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(data = data.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withDatalist(datalist: DetailedHTMLProps[HTMLAttributes[HTMLDataListElement], HTMLDataListElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(datalist = datalist.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withDd(dd: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(dd = dd.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withDefs(defs: SVGProps[SVGDefsElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(defs = defs.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withDel(del: DetailedHTMLProps[DelHTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(del = del.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withDesc(desc: SVGProps[SVGDescElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(desc = desc.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withDetails(details: DetailedHTMLProps[DetailsHTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(details = details.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withDfn(dfn: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(dfn = dfn.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withDialog(
+      dialog: DetailedHTMLProps[DialogHTMLAttributes[org.scalajs.dom.raw.Element], org.scalajs.dom.raw.Element]
+    ): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(dialog = dialog.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withDiv(div: DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(div = div.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withDl(dl: DetailedHTMLProps[HTMLAttributes[HTMLDListElement], HTMLDListElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(dl = dl.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withDt(dt: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(dt = dt.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withEllipse(ellipse: SVGProps[SVGEllipseElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(ellipse = ellipse.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withEm(em: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(em = em.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withEmbed(embed: DetailedHTMLProps[EmbedHTMLAttributes[HTMLEmbedElement], HTMLEmbedElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(embed = embed.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeBlend(feBlend: SVGProps[SVGFEBlendElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feBlend = feBlend.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeColorMatrix(feColorMatrix: SVGProps[SVGFEColorMatrixElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feColorMatrix = feColorMatrix.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeComponentTransfer(feComponentTransfer: SVGProps[SVGFEComponentTransferElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feComponentTransfer = feComponentTransfer.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeComposite(feComposite: SVGProps[SVGFECompositeElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feComposite = feComposite.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeConvolveMatrix(feConvolveMatrix: SVGProps[SVGFEConvolveMatrixElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feConvolveMatrix = feConvolveMatrix.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeDiffuseLighting(feDiffuseLighting: SVGProps[SVGFEDiffuseLightingElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feDiffuseLighting = feDiffuseLighting.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeDisplacementMap(feDisplacementMap: SVGProps[SVGFEDisplacementMapElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feDisplacementMap = feDisplacementMap.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeDistantLight(feDistantLight: SVGProps[SVGFEDistantLightElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feDistantLight = feDistantLight.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeDropShadow(feDropShadow: SVGProps[org.scalajs.dom.raw.Element]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feDropShadow = feDropShadow.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeFlood(feFlood: SVGProps[SVGFEFloodElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feFlood = feFlood.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeFuncA(feFuncA: SVGProps[SVGFEFuncAElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feFuncA = feFuncA.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeFuncB(feFuncB: SVGProps[SVGFEFuncBElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feFuncB = feFuncB.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeFuncG(feFuncG: SVGProps[SVGFEFuncGElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feFuncG = feFuncG.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeFuncR(feFuncR: SVGProps[SVGFEFuncRElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feFuncR = feFuncR.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeGaussianBlur(feGaussianBlur: SVGProps[SVGFEGaussianBlurElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feGaussianBlur = feGaussianBlur.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeImage(feImage: SVGProps[SVGFEImageElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feImage = feImage.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeMerge(feMerge: SVGProps[SVGFEMergeElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feMerge = feMerge.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeMergeNode(feMergeNode: SVGProps[SVGFEMergeNodeElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feMergeNode = feMergeNode.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeMorphology(feMorphology: SVGProps[SVGFEMorphologyElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feMorphology = feMorphology.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeOffset(feOffset: SVGProps[SVGFEOffsetElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feOffset = feOffset.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFePointLight(fePointLight: SVGProps[SVGFEPointLightElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(fePointLight = fePointLight.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeSpecularLighting(feSpecularLighting: SVGProps[SVGFESpecularLightingElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feSpecularLighting = feSpecularLighting.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeSpotLight(feSpotLight: SVGProps[SVGFESpotLightElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feSpotLight = feSpotLight.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeTile(feTile: SVGProps[SVGFETileElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feTile = feTile.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFeTurbulence(feTurbulence: SVGProps[SVGFETurbulenceElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(feTurbulence = feTurbulence.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFieldset(fieldset: DetailedHTMLProps[FieldsetHTMLAttributes[HTMLFieldSetElement], HTMLFieldSetElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(fieldset = fieldset.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFigcaption(figcaption: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(figcaption = figcaption.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFigure(figure: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(figure = figure.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFilter(filter: SVGProps[SVGFilterElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(filter = filter.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withFooter(footer: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(footer = footer.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withForeignObject(foreignObject: SVGProps[org.scalajs.dom.raw.Element]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(foreignObject = foreignObject.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withForm(form: DetailedHTMLProps[FormHTMLAttributes[HTMLFormElement], HTMLFormElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(form = form.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withG(g: SVGProps[SVGGElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(g = g.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withH1(h1: DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(h1 = h1.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withH2(h2: DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(h2 = h2.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withH3(h3: DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(h3 = h3.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withH4(h4: DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(h4 = h4.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withH5(h5: DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(h5 = h5.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withH6(h6: DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(h6 = h6.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withHead(head: DetailedHTMLProps[HTMLAttributes[HTMLHeadElement], HTMLHeadElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(head = head.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withHeader(header: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(header = header.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withHgroup(hgroup: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(hgroup = hgroup.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withHr(hr: DetailedHTMLProps[HTMLAttributes[HTMLHRElement], HTMLHRElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(hr = hr.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withHtml(html: DetailedHTMLProps[HtmlHTMLAttributes[HTMLHtmlElement], HTMLHtmlElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(html = html.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withI(i: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(i = i.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withIframe(iframe: DetailedHTMLProps[IframeHTMLAttributes[HTMLIFrameElement], HTMLIFrameElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(iframe = iframe.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withImage(image: SVGProps[SVGImageElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(image = image.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withImg(img: DetailedHTMLProps[ImgHTMLAttributes[HTMLImageElement], HTMLImageElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(img = img.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withInput(input: DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(input = input.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withIns(ins: DetailedHTMLProps[InsHTMLAttributes[HTMLModElement], HTMLModElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(ins = ins.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withKbd(kbd: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(kbd = kbd.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withKeygen(keygen: DetailedHTMLProps[KeygenHTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(keygen = keygen.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withLabel(label: DetailedHTMLProps[LabelHTMLAttributes[HTMLLabelElement], HTMLLabelElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(label = label.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withLegend(legend: DetailedHTMLProps[HTMLAttributes[HTMLLegendElement], HTMLLegendElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(legend = legend.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withLi(li: DetailedHTMLProps[LiHTMLAttributes[HTMLLIElement], HTMLLIElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(li = li.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withLine(line: SVGProps[SVGLineElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(line = line.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withLinearGradient(linearGradient: SVGProps[SVGLinearGradientElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(linearGradient = linearGradient.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withLink(link: DetailedHTMLProps[LinkHTMLAttributes[HTMLLinkElement], HTMLLinkElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(link = link.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withMain(main: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(main = main.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withMap(map: DetailedHTMLProps[MapHTMLAttributes[HTMLMapElement], HTMLMapElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(map = map.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withMark(mark: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(mark = mark.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withMarker(marker: SVGProps[SVGMarkerElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(marker = marker.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withMask(mask: SVGProps[SVGMaskElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(mask = mask.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withMenu(menu: DetailedHTMLProps[MenuHTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(menu = menu.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withMenuitem(menuitem: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(menuitem = menuitem.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withMeta(meta: DetailedHTMLProps[MetaHTMLAttributes[HTMLMetaElement], HTMLMetaElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(meta = meta.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withMetadata(metadata: SVGProps[SVGMetadataElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(metadata = metadata.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withMeter(meter: DetailedHTMLProps[MeterHTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(meter = meter.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withMpath(mpath: SVGProps[SVGElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(mpath = mpath.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withNav(nav: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(nav = nav.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withNoindex(noindex: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(noindex = noindex.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withNoscript(noscript: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(noscript = noscript.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withObject(`object`: DetailedHTMLProps[ObjectHTMLAttributes[HTMLObjectElement], HTMLObjectElement]): IntrinsicElements = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    }
+    @scala.inline
+    def withOl(ol: DetailedHTMLProps[OlHTMLAttributes[HTMLOListElement], HTMLOListElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(ol = ol.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withOptgroup(optgroup: DetailedHTMLProps[OptgroupHTMLAttributes[HTMLOptGroupElement], HTMLOptGroupElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(optgroup = optgroup.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withOption(option: DetailedHTMLProps[OptionHTMLAttributes[HTMLOptionElement], HTMLOptionElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(option = option.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withOutput(output: DetailedHTMLProps[OutputHTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(output = output.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withP(p: DetailedHTMLProps[HTMLAttributes[HTMLParagraphElement], HTMLParagraphElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(p = p.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withParam(param: DetailedHTMLProps[ParamHTMLAttributes[HTMLParamElement], HTMLParamElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(param = param.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withPath(path: SVGProps[SVGPathElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(path = path.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withPattern(pattern: SVGProps[SVGPatternElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(pattern = pattern.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withPicture(picture: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(picture = picture.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withPolygon(polygon: SVGProps[SVGPolygonElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(polygon = polygon.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withPolyline(polyline: SVGProps[SVGPolylineElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(polyline = polyline.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withPre(pre: DetailedHTMLProps[HTMLAttributes[HTMLPreElement], HTMLPreElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(pre = pre.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withProgress(progress: DetailedHTMLProps[ProgressHTMLAttributes[HTMLProgressElement], HTMLProgressElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(progress = progress.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withQ(q: DetailedHTMLProps[QuoteHTMLAttributes[HTMLQuoteElement], HTMLQuoteElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(q = q.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withRadialGradient(radialGradient: SVGProps[SVGRadialGradientElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(radialGradient = radialGradient.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withRect(rect: SVGProps[SVGRectElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(rect = rect.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withRp(rp: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(rp = rp.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withRt(rt: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(rt = rt.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withRuby(ruby: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(ruby = ruby.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withS(s: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(s = s.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withSamp(samp: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(samp = samp.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withScript(script: DetailedHTMLProps[ScriptHTMLAttributes[HTMLScriptElement], HTMLScriptElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(script = script.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withSection(section: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(section = section.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withSelect(select: DetailedHTMLProps[SelectHTMLAttributes[HTMLSelectElement], HTMLSelectElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(select = select.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withSmall(small: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(small = small.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withSource(source: DetailedHTMLProps[SourceHTMLAttributes[HTMLSourceElement], HTMLSourceElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(source = source.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withSpan(span: DetailedHTMLProps[HTMLAttributes[HTMLSpanElement], HTMLSpanElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(span = span.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withStop(stop: SVGProps[SVGStopElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(stop = stop.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withStrong(strong: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(strong = strong.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withStyle(style: DetailedHTMLProps[StyleHTMLAttributes[HTMLStyleElement], HTMLStyleElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(style = style.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withSub(sub: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(sub = sub.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withSummary(summary: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(summary = summary.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withSup(sup: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(sup = sup.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withSvg(svg: SVGProps[SVGSVGElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(svg = svg.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withSwitch(switch: SVGProps[SVGSwitchElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(switch = switch.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withSymbol(symbol: SVGProps[SVGSymbolElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(symbol = symbol.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withTable(table: DetailedHTMLProps[TableHTMLAttributes[HTMLTableElement], HTMLTableElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(table = table.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withTbody(tbody: DetailedHTMLProps[HTMLAttributes[HTMLTableSectionElement], HTMLTableSectionElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(tbody = tbody.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withTd(td: DetailedHTMLProps[TdHTMLAttributes[org.scalajs.dom.raw.Element], org.scalajs.dom.raw.Element]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(td = td.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withTemplate(
+      template: DetailedHTMLProps[HTMLAttributes[org.scalajs.dom.raw.Element], org.scalajs.dom.raw.Element]
+    ): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(template = template.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withText(text: SVGProps[SVGTextElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(text = text.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withTextPath(textPath: SVGProps[SVGTextPathElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(textPath = textPath.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withTextarea(textarea: DetailedHTMLProps[TextareaHTMLAttributes[HTMLTextAreaElement], HTMLTextAreaElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(textarea = textarea.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withTfoot(tfoot: DetailedHTMLProps[HTMLAttributes[HTMLTableSectionElement], HTMLTableSectionElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(tfoot = tfoot.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withTh(th: DetailedHTMLProps[ThHTMLAttributes[org.scalajs.dom.raw.Element], org.scalajs.dom.raw.Element]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(th = th.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withThead(thead: DetailedHTMLProps[HTMLAttributes[HTMLTableSectionElement], HTMLTableSectionElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(thead = thead.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withTime(time: DetailedHTMLProps[TimeHTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(time = time.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withTitle(title: DetailedHTMLProps[HTMLAttributes[HTMLTitleElement], HTMLTitleElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(title = title.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withTr(tr: DetailedHTMLProps[HTMLAttributes[HTMLTableRowElement], HTMLTableRowElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(tr = tr.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withTrack(track: DetailedHTMLProps[TrackHTMLAttributes[HTMLTrackElement], HTMLTrackElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(track = track.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withTspan(tspan: SVGProps[SVGTSpanElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(tspan = tspan.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withU(u: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(u = u.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withUl(ul: DetailedHTMLProps[HTMLAttributes[HTMLUListElement], HTMLUListElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(ul = ul.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withUse(use: SVGProps[SVGUseElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(use = use.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withVar(`var`: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      obj.updateDynamic("var")(`var`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    }
+    @scala.inline
+    def withVideo(video: DetailedHTMLProps[VideoHTMLAttributes[HTMLVideoElement], HTMLVideoElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(video = video.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withView(view: SVGProps[SVGViewElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(view = view.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withWbr(wbr: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(wbr = wbr.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+    @scala.inline
+    def withWebview(
+      webview: DetailedHTMLProps[WebViewHTMLAttributes[org.scalajs.dom.raw.Element], org.scalajs.dom.raw.Element]
+    ): IntrinsicElements = js.Dynamic.global.Object.assign(js.Dynamic.literal(webview = webview.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod._Global_.JSX.IntrinsicElements]
+  }
+  
 }
 

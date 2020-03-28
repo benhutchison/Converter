@@ -31,5 +31,55 @@ object ReadableOptions {
     if (read != null) __obj.updateDynamic("read")(read.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadableOptions]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: ReadableOptions) {
+    @scala.inline
+    def duplicate: ReadableOptions = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.node.streamMod.ReadableOptions]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ReadableOptions with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.node.streamMod.ReadableOptions with T]
+    @scala.inline
+    def withDestroy(destroy: /* error */ js.UndefOr[Error] => _): ReadableOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (destroy != null) obj.updateDynamic("destroy")(js.Any.fromFunction1(destroy))
+      obj.asInstanceOf[typings.node.streamMod.ReadableOptions]
+    }
+    @scala.inline
+    def withEncoding(encoding: String): ReadableOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (encoding != null) obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.node.streamMod.ReadableOptions]
+    }
+    @scala.inline
+    def withHighWaterMarkInt(highWaterMark: Int): ReadableOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (highWaterMark != null) obj.updateDynamic("highWaterMark")(highWaterMark.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.node.streamMod.ReadableOptions]
+    }
+    @scala.inline
+    def withHighWaterMarkDouble(highWaterMark: Double): ReadableOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (highWaterMark != null) obj.updateDynamic("highWaterMark")(highWaterMark.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.node.streamMod.ReadableOptions]
+    }
+    @scala.inline
+    def withObjectModeUndefined: ReadableOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "objectMode")
+      obj.asInstanceOf[typings.node.streamMod.ReadableOptions]
+    }
+    @scala.inline
+    def withObjectMode(objectMode: Boolean): ReadableOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(objectMode)) obj.updateDynamic("objectMode")(objectMode.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.node.streamMod.ReadableOptions]
+    }
+    @scala.inline
+    def withRead(read: js.ThisFunction1[/* this */ Readable, /* size */ js.UndefOr[Double], _]): ReadableOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (read != null) obj.updateDynamic("read")(read.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.node.streamMod.ReadableOptions]
+    }
+  }
+  
 }
 

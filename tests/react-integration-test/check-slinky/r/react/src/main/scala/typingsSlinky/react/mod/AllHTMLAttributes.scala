@@ -333,5 +333,937 @@ object AllHTMLAttributes {
     if (wrap != null) __obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
     __obj.asInstanceOf[AllHTMLAttributes[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T] (x: AllHTMLAttributes[T]) {
+    @scala.inline
+    def duplicate: AllHTMLAttributes[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): AllHTMLAttributes[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T] with T]
+    @scala.inline
+    def withHTMLAttributes(HTMLAttributes: HTMLAttributes[T]): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (HTMLAttributes != null) js.Dynamic.global.Object.assign(obj, HTMLAttributes)
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAccept(accept: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (accept != null) obj.updateDynamic("accept")(accept.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAcceptCharset(acceptCharset: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (acceptCharset != null) obj.updateDynamic("acceptCharset")(acceptCharset.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAction(action: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (action != null) obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAllowFullScreenUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "allowFullScreen")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAllowFullScreen(allowFullScreen: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(allowFullScreen)) obj.updateDynamic("allowFullScreen")(allowFullScreen.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAllowTransparencyUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "allowTransparency")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAllowTransparency(allowTransparency: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(allowTransparency)) obj.updateDynamic("allowTransparency")(allowTransparency.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAlt(alt: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alt != null) obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAs(as: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (as != null) obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAsyncUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "async")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAsync(async: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(async)) obj.updateDynamic("async")(async.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAutoComplete(autoComplete: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (autoComplete != null) obj.updateDynamic("autoComplete")(autoComplete.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAutoFocusUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "autoFocus")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAutoFocus(autoFocus: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(autoFocus)) obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAutoPlayUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "autoPlay")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withAutoPlay(autoPlay: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(autoPlay)) obj.updateDynamic("autoPlay")(autoPlay.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withCaptureBoolean(capture: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (capture != null) obj.updateDynamic("capture")(capture.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withCaptureString(capture: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (capture != null) obj.updateDynamic("capture")(capture.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withCellPaddingString(cellPadding: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (cellPadding != null) obj.updateDynamic("cellPadding")(cellPadding.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withCellPaddingDouble(cellPadding: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (cellPadding != null) obj.updateDynamic("cellPadding")(cellPadding.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withCellSpacingString(cellSpacing: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (cellSpacing != null) obj.updateDynamic("cellSpacing")(cellSpacing.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withCellSpacingDouble(cellSpacing: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (cellSpacing != null) obj.updateDynamic("cellSpacing")(cellSpacing.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withChallenge(challenge: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (challenge != null) obj.updateDynamic("challenge")(challenge.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withCharSet(charSet: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (charSet != null) obj.updateDynamic("charSet")(charSet.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withCheckedUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "checked")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withChecked(checked: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(checked)) obj.updateDynamic("checked")(checked.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withCite(cite: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (cite != null) obj.updateDynamic("cite")(cite.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withClassID(classID: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (classID != null) obj.updateDynamic("classID")(classID.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withColSpanInt(colSpan: Int): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (colSpan != null) obj.updateDynamic("colSpan")(colSpan.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withColSpanDouble(colSpan: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (colSpan != null) obj.updateDynamic("colSpan")(colSpan.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withColsInt(cols: Int): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (cols != null) obj.updateDynamic("cols")(cols.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withColsDouble(cols: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (cols != null) obj.updateDynamic("cols")(cols.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withContent(content: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (content != null) obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withControlsUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "controls")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withControls(controls: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(controls)) obj.updateDynamic("controls")(controls.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withCoords(coords: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (coords != null) obj.updateDynamic("coords")(coords.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withCrossOrigin(crossOrigin: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (crossOrigin != null) obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withData(data: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (data != null) obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withDateTime(dateTime: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (dateTime != null) obj.updateDynamic("dateTime")(dateTime.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withDefaultUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "default")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withDefault(default: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(default)) obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withDeferUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "defer")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withDefer(defer: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(defer)) obj.updateDynamic("defer")(defer.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withDisabledUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "disabled")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withDisabled(disabled: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(disabled)) obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withDownload(download: js.Any): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (download != null) obj.updateDynamic("download")(download.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withEncType(encType: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (encType != null) obj.updateDynamic("encType")(encType.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withForm(form: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (form != null) obj.updateDynamic("form")(form.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withFormAction(formAction: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (formAction != null) obj.updateDynamic("formAction")(formAction.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withFormEncType(formEncType: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (formEncType != null) obj.updateDynamic("formEncType")(formEncType.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withFormMethod(formMethod: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (formMethod != null) obj.updateDynamic("formMethod")(formMethod.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withFormNoValidateUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "formNoValidate")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withFormNoValidate(formNoValidate: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(formNoValidate)) obj.updateDynamic("formNoValidate")(formNoValidate.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withFormTarget(formTarget: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (formTarget != null) obj.updateDynamic("formTarget")(formTarget.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withFrameBorderString(frameBorder: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (frameBorder != null) obj.updateDynamic("frameBorder")(frameBorder.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withFrameBorderDouble(frameBorder: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (frameBorder != null) obj.updateDynamic("frameBorder")(frameBorder.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withHeaders(headers: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (headers != null) obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withHeightString(height: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (height != null) obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withHeightDouble(height: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (height != null) obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withHighInt(high: Int): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (high != null) obj.updateDynamic("high")(high.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withHighDouble(high: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (high != null) obj.updateDynamic("high")(high.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withHref(href: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (href != null) obj.updateDynamic("href")(href.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withHrefLang(hrefLang: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (hrefLang != null) obj.updateDynamic("hrefLang")(hrefLang.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withHtmlFor(htmlFor: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (htmlFor != null) obj.updateDynamic("htmlFor")(htmlFor.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withHttpEquiv(httpEquiv: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (httpEquiv != null) obj.updateDynamic("httpEquiv")(httpEquiv.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withIntegrity(integrity: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (integrity != null) obj.updateDynamic("integrity")(integrity.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withKeyParams(keyParams: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (keyParams != null) obj.updateDynamic("keyParams")(keyParams.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withKeyType(keyType: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (keyType != null) obj.updateDynamic("keyType")(keyType.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withKind(kind: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (kind != null) obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withLabel(label: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (label != null) obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withList(list: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (list != null) obj.updateDynamic("list")(list.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withLoopUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "loop")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withLoop(loop: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(loop)) obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withLowInt(low: Int): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (low != null) obj.updateDynamic("low")(low.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withLowDouble(low: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (low != null) obj.updateDynamic("low")(low.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withManifest(manifest: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (manifest != null) obj.updateDynamic("manifest")(manifest.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMarginHeightInt(marginHeight: Int): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (marginHeight != null) obj.updateDynamic("marginHeight")(marginHeight.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMarginHeightDouble(marginHeight: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (marginHeight != null) obj.updateDynamic("marginHeight")(marginHeight.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMarginWidthInt(marginWidth: Int): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (marginWidth != null) obj.updateDynamic("marginWidth")(marginWidth.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMarginWidthDouble(marginWidth: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (marginWidth != null) obj.updateDynamic("marginWidth")(marginWidth.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMaxString(max: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (max != null) obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMaxDouble(max: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (max != null) obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMaxLengthInt(maxLength: Int): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (maxLength != null) obj.updateDynamic("maxLength")(maxLength.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMaxLengthDouble(maxLength: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (maxLength != null) obj.updateDynamic("maxLength")(maxLength.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMedia(media: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (media != null) obj.updateDynamic("media")(media.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMediaGroup(mediaGroup: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (mediaGroup != null) obj.updateDynamic("mediaGroup")(mediaGroup.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMethod(method: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (method != null) obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMinString(min: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (min != null) obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMinDouble(min: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (min != null) obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMinLengthInt(minLength: Int): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (minLength != null) obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMinLengthDouble(minLength: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (minLength != null) obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMultipleUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "multiple")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMultiple(multiple: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(multiple)) obj.updateDynamic("multiple")(multiple.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMutedUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "muted")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withMuted(muted: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(muted)) obj.updateDynamic("muted")(muted.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withName(name: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (name != null) obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withNoValidateUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "noValidate")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withNoValidate(noValidate: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(noValidate)) obj.updateDynamic("noValidate")(noValidate.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withNonce(nonce: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (nonce != null) obj.updateDynamic("nonce")(nonce.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withOpenUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "open")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withOpen(open: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(open)) obj.updateDynamic("open")(open.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withOptimumInt(optimum: Int): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (optimum != null) obj.updateDynamic("optimum")(optimum.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withOptimumDouble(optimum: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (optimum != null) obj.updateDynamic("optimum")(optimum.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withPattern(pattern: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (pattern != null) obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withPlaysInlineUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "playsInline")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withPlaysInline(playsInline: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(playsInline)) obj.updateDynamic("playsInline")(playsInline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withPoster(poster: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (poster != null) obj.updateDynamic("poster")(poster.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withPreload(preload: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (preload != null) obj.updateDynamic("preload")(preload.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withReadOnlyUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "readOnly")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withReadOnly(readOnly: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(readOnly)) obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withRel(rel: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (rel != null) obj.updateDynamic("rel")(rel.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withRequiredUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "required")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withRequired(required: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(required)) obj.updateDynamic("required")(required.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withReversedUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "reversed")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withReversed(reversed: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(reversed)) obj.updateDynamic("reversed")(reversed.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withRowSpanInt(rowSpan: Int): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (rowSpan != null) obj.updateDynamic("rowSpan")(rowSpan.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withRowSpanDouble(rowSpan: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (rowSpan != null) obj.updateDynamic("rowSpan")(rowSpan.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withRowsInt(rows: Int): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (rows != null) obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withRowsDouble(rows: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (rows != null) obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withSandbox(sandbox: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (sandbox != null) obj.updateDynamic("sandbox")(sandbox.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withScope(scope: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (scope != null) obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withScopedUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "scoped")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withScoped(scoped: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(scoped)) obj.updateDynamic("scoped")(scoped.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withScrolling(scrolling: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (scrolling != null) obj.updateDynamic("scrolling")(scrolling.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withSeamlessUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "seamless")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withSeamless(seamless: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(seamless)) obj.updateDynamic("seamless")(seamless.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withSelectedUndefined: AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "selected")
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withSelected(selected: Boolean): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(selected)) obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withShape(shape: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (shape != null) obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withSizeInt(size: Int): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (size != null) obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withSizeDouble(size: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (size != null) obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withSizes(sizes: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (sizes != null) obj.updateDynamic("sizes")(sizes.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withSpanInt(span: Int): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (span != null) obj.updateDynamic("span")(span.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withSpanDouble(span: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (span != null) obj.updateDynamic("span")(span.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withSrc(src: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (src != null) obj.updateDynamic("src")(src.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withSrcDoc(srcDoc: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (srcDoc != null) obj.updateDynamic("srcDoc")(srcDoc.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withSrcLang(srcLang: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (srcLang != null) obj.updateDynamic("srcLang")(srcLang.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withSrcSet(srcSet: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (srcSet != null) obj.updateDynamic("srcSet")(srcSet.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withStartInt(start: Int): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (start != null) obj.updateDynamic("start")(start.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withStartDouble(start: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (start != null) obj.updateDynamic("start")(start.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withStepString(step: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (step != null) obj.updateDynamic("step")(step.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withStepDouble(step: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (step != null) obj.updateDynamic("step")(step.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withSummary(summary: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (summary != null) obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withTarget(target: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (target != null) obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withType(`type`: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`type` != null) obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withUseMap(useMap: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (useMap != null) obj.updateDynamic("useMap")(useMap.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withValueArray(value: js.Array[String]): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (value != null) obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withValueString(value: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (value != null) obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withValueDouble(value: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (value != null) obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withWidthString(width: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (width != null) obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withWidthDouble(width: Double): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (width != null) obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withWmode(wmode: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (wmode != null) obj.updateDynamic("wmode")(wmode.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+    @scala.inline
+    def withWrap(wrap: String): AllHTMLAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (wrap != null) obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.mod.AllHTMLAttributes[T]]
+    }
+  }
+  
 }
 

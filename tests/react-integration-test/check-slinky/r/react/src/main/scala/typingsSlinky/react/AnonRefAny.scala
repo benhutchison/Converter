@@ -20,5 +20,21 @@ object AnonRefAny {
     if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonRefAny]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: AnonRefAny) {
+    @scala.inline
+    def duplicate: AnonRefAny = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.react.AnonRefAny]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): AnonRefAny with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.react.AnonRefAny with T]
+    @scala.inline
+    def withRef(
+      ref: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Exclude<R, string> */ js.Any
+    ): AnonRefAny = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (ref != null) obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.react.AnonRefAny]
+    }
+  }
+  
 }
 

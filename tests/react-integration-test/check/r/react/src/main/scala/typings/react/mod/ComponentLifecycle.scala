@@ -80,5 +80,87 @@ object ComponentLifecycle {
     if (shouldComponentUpdate != null) __obj.updateDynamic("shouldComponentUpdate")(js.Any.fromFunction3(shouldComponentUpdate))
     __obj.asInstanceOf[ComponentLifecycle[P, S, SS]]
   }
+  @scala.inline
+  implicit sealed class Sugar[P, S, SS] (x: ComponentLifecycle[P, S, SS]) {
+    @scala.inline
+    def duplicate: ComponentLifecycle[P, S, SS] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.ComponentLifecycle[P, S, SS]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): (ComponentLifecycle[P, S, SS]) with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.ComponentLifecycle[P, S, SS] with T]
+    @scala.inline
+    def withUNSAFE_componentWillMount(UNSAFE_componentWillMount: () => Unit): ComponentLifecycle[P, S, SS] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (UNSAFE_componentWillMount != null) obj.updateDynamic("UNSAFE_componentWillMount")(js.Any.fromFunction0(UNSAFE_componentWillMount))
+      obj.asInstanceOf[typings.react.mod.ComponentLifecycle[P, S, SS]]
+    }
+    @scala.inline
+    def withUNSAFE_componentWillReceiveProps(UNSAFE_componentWillReceiveProps: (P, /* nextContext */ js.Any) => Unit): ComponentLifecycle[P, S, SS] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (UNSAFE_componentWillReceiveProps != null) obj.updateDynamic("UNSAFE_componentWillReceiveProps")(js.Any.fromFunction2(UNSAFE_componentWillReceiveProps))
+      obj.asInstanceOf[typings.react.mod.ComponentLifecycle[P, S, SS]]
+    }
+    @scala.inline
+    def withUNSAFE_componentWillUpdate(UNSAFE_componentWillUpdate: (P, S, /* nextContext */ js.Any) => Unit): ComponentLifecycle[P, S, SS] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (UNSAFE_componentWillUpdate != null) obj.updateDynamic("UNSAFE_componentWillUpdate")(js.Any.fromFunction3(UNSAFE_componentWillUpdate))
+      obj.asInstanceOf[typings.react.mod.ComponentLifecycle[P, S, SS]]
+    }
+    @scala.inline
+    def withComponentDidCatch(
+      componentDidCatch: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Error */ /* error */ js.Any, /* errorInfo */ ErrorInfo) => Unit
+    ): ComponentLifecycle[P, S, SS] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (componentDidCatch != null) obj.updateDynamic("componentDidCatch")(js.Any.fromFunction2(componentDidCatch))
+      obj.asInstanceOf[typings.react.mod.ComponentLifecycle[P, S, SS]]
+    }
+    @scala.inline
+    def withComponentDidMount(componentDidMount: () => Unit): ComponentLifecycle[P, S, SS] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (componentDidMount != null) obj.updateDynamic("componentDidMount")(js.Any.fromFunction0(componentDidMount))
+      obj.asInstanceOf[typings.react.mod.ComponentLifecycle[P, S, SS]]
+    }
+    @scala.inline
+    def withComponentDidUpdate(componentDidUpdate: (P, S, /* snapshot */ js.UndefOr[SS]) => Unit): ComponentLifecycle[P, S, SS] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (componentDidUpdate != null) obj.updateDynamic("componentDidUpdate")(js.Any.fromFunction3(componentDidUpdate))
+      obj.asInstanceOf[typings.react.mod.ComponentLifecycle[P, S, SS]]
+    }
+    @scala.inline
+    def withComponentWillMount(componentWillMount: () => Unit): ComponentLifecycle[P, S, SS] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (componentWillMount != null) obj.updateDynamic("componentWillMount")(js.Any.fromFunction0(componentWillMount))
+      obj.asInstanceOf[typings.react.mod.ComponentLifecycle[P, S, SS]]
+    }
+    @scala.inline
+    def withComponentWillReceiveProps(componentWillReceiveProps: (P, /* nextContext */ js.Any) => Unit): ComponentLifecycle[P, S, SS] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (componentWillReceiveProps != null) obj.updateDynamic("componentWillReceiveProps")(js.Any.fromFunction2(componentWillReceiveProps))
+      obj.asInstanceOf[typings.react.mod.ComponentLifecycle[P, S, SS]]
+    }
+    @scala.inline
+    def withComponentWillUnmount(componentWillUnmount: () => Unit): ComponentLifecycle[P, S, SS] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (componentWillUnmount != null) obj.updateDynamic("componentWillUnmount")(js.Any.fromFunction0(componentWillUnmount))
+      obj.asInstanceOf[typings.react.mod.ComponentLifecycle[P, S, SS]]
+    }
+    @scala.inline
+    def withComponentWillUpdate(componentWillUpdate: (P, S, /* nextContext */ js.Any) => Unit): ComponentLifecycle[P, S, SS] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (componentWillUpdate != null) obj.updateDynamic("componentWillUpdate")(js.Any.fromFunction3(componentWillUpdate))
+      obj.asInstanceOf[typings.react.mod.ComponentLifecycle[P, S, SS]]
+    }
+    @scala.inline
+    def withGetSnapshotBeforeUpdate(getSnapshotBeforeUpdate: (P, S) => SS | Null): ComponentLifecycle[P, S, SS] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (getSnapshotBeforeUpdate != null) obj.updateDynamic("getSnapshotBeforeUpdate")(js.Any.fromFunction2(getSnapshotBeforeUpdate))
+      obj.asInstanceOf[typings.react.mod.ComponentLifecycle[P, S, SS]]
+    }
+    @scala.inline
+    def withShouldComponentUpdate(shouldComponentUpdate: (/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any) => Boolean): ComponentLifecycle[P, S, SS] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (shouldComponentUpdate != null) obj.updateDynamic("shouldComponentUpdate")(js.Any.fromFunction3(shouldComponentUpdate))
+      obj.asInstanceOf[typings.react.mod.ComponentLifecycle[P, S, SS]]
+    }
+  }
+  
 }
 

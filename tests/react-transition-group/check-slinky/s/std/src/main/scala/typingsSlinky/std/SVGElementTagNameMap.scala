@@ -16,5 +16,15 @@ object SVGElementTagNameMap {
   
     __obj.asInstanceOf[SVGElementTagNameMap]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: SVGElementTagNameMap) {
+    @scala.inline
+    def duplicate: SVGElementTagNameMap = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.std.SVGElementTagNameMap]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): SVGElementTagNameMap with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.std.SVGElementTagNameMap with T]
+    @scala.inline
+    def withCircle(circle: org.scalajs.dom.raw.SVGCircleElement): SVGElementTagNameMap = js.Dynamic.global.Object.assign(js.Dynamic.literal(circle = circle.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.std.SVGElementTagNameMap]
+  }
+  
 }
 

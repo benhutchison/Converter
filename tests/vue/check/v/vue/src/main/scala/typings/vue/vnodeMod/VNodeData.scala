@@ -77,5 +77,157 @@ object VNodeData {
     if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
     __obj.asInstanceOf[VNodeData]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: VNodeData) {
+    @scala.inline
+    def duplicate: VNodeData = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): VNodeData with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.vue.vnodeMod.VNodeData with T]
+    @scala.inline
+    def withAttrs(attrs: StringDictionary[js.Any]): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (attrs != null) obj.updateDynamic("attrs")(attrs.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withClass(`class`: js.Any): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`class` != null) obj.updateDynamic("class")(`class`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withDirectives(directives: js.Array[VNodeDirective]): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (directives != null) obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withDomProps(domProps: StringDictionary[js.Any]): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (domProps != null) obj.updateDynamic("domProps")(domProps.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withHook(hook: StringDictionary[js.Function]): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (hook != null) obj.updateDynamic("hook")(hook.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withInlineTemplate(inlineTemplate: AnonRender): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (inlineTemplate != null) obj.updateDynamic("inlineTemplate")(inlineTemplate.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withKeepAliveUndefined: VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "keepAlive")
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withKeepAlive(keepAlive: Boolean): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(keepAlive)) obj.updateDynamic("keepAlive")(keepAlive.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withKeyString(key: String): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (key != null) obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withKeyDouble(key: Double): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (key != null) obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withNativeOn(nativeOn: StringDictionary[js.Function | js.Array[js.Function]]): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (nativeOn != null) obj.updateDynamic("nativeOn")(nativeOn.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withOn(on: StringDictionary[js.Function | js.Array[js.Function]]): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (on != null) obj.updateDynamic("on")(on.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withProps(props: StringDictionary[js.Any]): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (props != null) obj.updateDynamic("props")(props.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withRef(ref: String): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (ref != null) obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withScopedSlots(scopedSlots: StringDictionary[ScopedSlot]): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (scopedSlots != null) obj.updateDynamic("scopedSlots")(scopedSlots.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withShowUndefined: VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "show")
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withShow(show: Boolean): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(show)) obj.updateDynamic("show")(show.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withSlot(slot: String): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (slot != null) obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withStaticClass(staticClass: String): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (staticClass != null) obj.updateDynamic("staticClass")(staticClass.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withStaticStyle(staticStyle: StringDictionary[js.Any]): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (staticStyle != null) obj.updateDynamic("staticStyle")(staticStyle.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withStyleObject(style: js.Object): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (style != null) obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withStyleArray(style: js.Array[js.Object]): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (style != null) obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withTag(tag: String): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (tag != null) obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+    @scala.inline
+    def withTransition(transition: js.Object): VNodeData = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (transition != null) obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNodeData]
+    }
+  }
+  
 }
 

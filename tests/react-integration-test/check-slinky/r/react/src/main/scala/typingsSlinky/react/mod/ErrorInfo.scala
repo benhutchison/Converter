@@ -22,5 +22,15 @@ object ErrorInfo {
   
     __obj.asInstanceOf[ErrorInfo]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: ErrorInfo) {
+    @scala.inline
+    def duplicate: ErrorInfo = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.react.mod.ErrorInfo]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ErrorInfo with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.react.mod.ErrorInfo with T]
+    @scala.inline
+    def withComponentStack(componentStack: String): ErrorInfo = js.Dynamic.global.Object.assign(js.Dynamic.literal(componentStack = componentStack.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.react.mod.ErrorInfo]
+  }
+  
 }
 

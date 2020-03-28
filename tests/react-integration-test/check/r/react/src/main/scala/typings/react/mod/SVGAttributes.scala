@@ -826,5 +826,2857 @@ object SVGAttributes {
     if (y1 != null) __obj.updateDynamic("y1")(y1.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGAttributes[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T] (x: SVGAttributes[T]) {
+    @scala.inline
+    def duplicate: SVGAttributes[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): SVGAttributes[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.SVGAttributes[T] with T]
+    @scala.inline
+    def withAriaAttributes(AriaAttributes: AriaAttributes): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (AriaAttributes != null) js.Dynamic.global.Object.assign(obj, AriaAttributes)
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDOMAttributes(DOMAttributes: DOMAttributes[T]): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (DOMAttributes != null) js.Dynamic.global.Object.assign(obj, DOMAttributes)
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAccentHeightString(accentHeight: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (accentHeight != null) obj.updateDynamic("accentHeight")(accentHeight.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAccentHeightDouble(accentHeight: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (accentHeight != null) obj.updateDynamic("accentHeight")(accentHeight.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAccumulateNone(accumulate: none): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (accumulate != null) obj.updateDynamic("accumulate")(accumulate.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAccumulateSum(accumulate: sum): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (accumulate != null) obj.updateDynamic("accumulate")(accumulate.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAdditiveReplace(additive: replace): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (additive != null) obj.updateDynamic("additive")(additive.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAdditiveSum(additive: sum): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (additive != null) obj.updateDynamic("additive")(additive.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAlignmentBaselineAuto(alignmentBaseline: auto): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alignmentBaseline != null) obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAlignmentBaselineAlphabetic(alignmentBaseline: alphabetic): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alignmentBaseline != null) obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAlignmentBaselineBaseline(alignmentBaseline: baseline): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alignmentBaseline != null) obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAlignmentBaselineCentral(alignmentBaseline: central): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alignmentBaseline != null) obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAlignmentBaselineMiddle(alignmentBaseline: middle): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alignmentBaseline != null) obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def `withAlignmentBaselineText-after-edge`(alignmentBaseline: `text-after-edge`): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alignmentBaseline != null) obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAlignmentBaselineInherit(alignmentBaseline: inherit): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alignmentBaseline != null) obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def `withAlignmentBaselineAfter-edge`(alignmentBaseline: `after-edge`): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alignmentBaseline != null) obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAlignmentBaselineHanging(alignmentBaseline: hanging): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alignmentBaseline != null) obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAlignmentBaselineMathematical(alignmentBaseline: mathematical): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alignmentBaseline != null) obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def `withAlignmentBaselineText-before-edge`(alignmentBaseline: `text-before-edge`): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alignmentBaseline != null) obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAlignmentBaselineIdeographic(alignmentBaseline: ideographic): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alignmentBaseline != null) obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def `withAlignmentBaselineBefore-edge`(alignmentBaseline: `before-edge`): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alignmentBaseline != null) obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAllowReorderYes(allowReorder: yes): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (allowReorder != null) obj.updateDynamic("allowReorder")(allowReorder.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAllowReorderNo(allowReorder: no): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (allowReorder != null) obj.updateDynamic("allowReorder")(allowReorder.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAlphabeticString(alphabetic: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alphabetic != null) obj.updateDynamic("alphabetic")(alphabetic.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAlphabeticDouble(alphabetic: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (alphabetic != null) obj.updateDynamic("alphabetic")(alphabetic.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAmplitudeString(amplitude: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (amplitude != null) obj.updateDynamic("amplitude")(amplitude.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAmplitudeDouble(amplitude: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (amplitude != null) obj.updateDynamic("amplitude")(amplitude.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withArabicFormInitial(arabicForm: initial): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (arabicForm != null) obj.updateDynamic("arabicForm")(arabicForm.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withArabicFormMedial(arabicForm: medial): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (arabicForm != null) obj.updateDynamic("arabicForm")(arabicForm.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withArabicFormIsolated(arabicForm: isolated): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (arabicForm != null) obj.updateDynamic("arabicForm")(arabicForm.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withArabicFormTerminal(arabicForm: terminal): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (arabicForm != null) obj.updateDynamic("arabicForm")(arabicForm.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAscentString(ascent: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (ascent != null) obj.updateDynamic("ascent")(ascent.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAscentDouble(ascent: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (ascent != null) obj.updateDynamic("ascent")(ascent.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAttributeName(attributeName: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (attributeName != null) obj.updateDynamic("attributeName")(attributeName.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAttributeType(attributeType: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (attributeType != null) obj.updateDynamic("attributeType")(attributeType.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAutoReverseString(autoReverse: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (autoReverse != null) obj.updateDynamic("autoReverse")(autoReverse.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAutoReverseDouble(autoReverse: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (autoReverse != null) obj.updateDynamic("autoReverse")(autoReverse.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAzimuthString(azimuth: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (azimuth != null) obj.updateDynamic("azimuth")(azimuth.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withAzimuthDouble(azimuth: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (azimuth != null) obj.updateDynamic("azimuth")(azimuth.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withBaseFrequencyString(baseFrequency: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (baseFrequency != null) obj.updateDynamic("baseFrequency")(baseFrequency.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withBaseFrequencyDouble(baseFrequency: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (baseFrequency != null) obj.updateDynamic("baseFrequency")(baseFrequency.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withBaseProfileString(baseProfile: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (baseProfile != null) obj.updateDynamic("baseProfile")(baseProfile.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withBaseProfileDouble(baseProfile: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (baseProfile != null) obj.updateDynamic("baseProfile")(baseProfile.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withBaselineShiftString(baselineShift: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (baselineShift != null) obj.updateDynamic("baselineShift")(baselineShift.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withBaselineShiftDouble(baselineShift: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (baselineShift != null) obj.updateDynamic("baselineShift")(baselineShift.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withBboxString(bbox: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (bbox != null) obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withBboxDouble(bbox: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (bbox != null) obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withBeginString(begin: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (begin != null) obj.updateDynamic("begin")(begin.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withBeginDouble(begin: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (begin != null) obj.updateDynamic("begin")(begin.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withBiasString(bias: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (bias != null) obj.updateDynamic("bias")(bias.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withBiasDouble(bias: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (bias != null) obj.updateDynamic("bias")(bias.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withByString(by: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (by != null) obj.updateDynamic("by")(by.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withByDouble(by: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (by != null) obj.updateDynamic("by")(by.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withCalcModeString(calcMode: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (calcMode != null) obj.updateDynamic("calcMode")(calcMode.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withCalcModeDouble(calcMode: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (calcMode != null) obj.updateDynamic("calcMode")(calcMode.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withCapHeightString(capHeight: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (capHeight != null) obj.updateDynamic("capHeight")(capHeight.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withCapHeightDouble(capHeight: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (capHeight != null) obj.updateDynamic("capHeight")(capHeight.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withClassName(className: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (className != null) obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withClipString(clip: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (clip != null) obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withClipDouble(clip: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (clip != null) obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withClipPath(clipPath: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (clipPath != null) obj.updateDynamic("clipPath")(clipPath.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withClipPathUnitsString(clipPathUnits: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (clipPathUnits != null) obj.updateDynamic("clipPathUnits")(clipPathUnits.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withClipPathUnitsDouble(clipPathUnits: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (clipPathUnits != null) obj.updateDynamic("clipPathUnits")(clipPathUnits.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withClipRuleString(clipRule: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (clipRule != null) obj.updateDynamic("clipRule")(clipRule.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withClipRuleDouble(clipRule: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (clipRule != null) obj.updateDynamic("clipRule")(clipRule.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withColor(color: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (color != null) obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withColorInterpolationString(colorInterpolation: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (colorInterpolation != null) obj.updateDynamic("colorInterpolation")(colorInterpolation.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withColorInterpolationDouble(colorInterpolation: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (colorInterpolation != null) obj.updateDynamic("colorInterpolation")(colorInterpolation.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withColorInterpolationFiltersInherit(colorInterpolationFilters: inherit): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (colorInterpolationFilters != null) obj.updateDynamic("colorInterpolationFilters")(colorInterpolationFilters.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withColorInterpolationFiltersAuto(colorInterpolationFilters: auto): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (colorInterpolationFilters != null) obj.updateDynamic("colorInterpolationFilters")(colorInterpolationFilters.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withColorInterpolationFiltersSRGB(colorInterpolationFilters: sRGB): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (colorInterpolationFilters != null) obj.updateDynamic("colorInterpolationFilters")(colorInterpolationFilters.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withColorInterpolationFiltersLinearRGB(colorInterpolationFilters: linearRGB): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (colorInterpolationFilters != null) obj.updateDynamic("colorInterpolationFilters")(colorInterpolationFilters.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withColorProfileString(colorProfile: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (colorProfile != null) obj.updateDynamic("colorProfile")(colorProfile.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withColorProfileDouble(colorProfile: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (colorProfile != null) obj.updateDynamic("colorProfile")(colorProfile.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withColorRenderingString(colorRendering: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (colorRendering != null) obj.updateDynamic("colorRendering")(colorRendering.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withColorRenderingDouble(colorRendering: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (colorRendering != null) obj.updateDynamic("colorRendering")(colorRendering.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withContentScriptTypeString(contentScriptType: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (contentScriptType != null) obj.updateDynamic("contentScriptType")(contentScriptType.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withContentScriptTypeDouble(contentScriptType: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (contentScriptType != null) obj.updateDynamic("contentScriptType")(contentScriptType.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withContentStyleTypeString(contentStyleType: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (contentStyleType != null) obj.updateDynamic("contentStyleType")(contentStyleType.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withContentStyleTypeDouble(contentStyleType: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (contentStyleType != null) obj.updateDynamic("contentStyleType")(contentStyleType.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withCursorString(cursor: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (cursor != null) obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withCursorDouble(cursor: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (cursor != null) obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withCxString(cx: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (cx != null) obj.updateDynamic("cx")(cx.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withCxDouble(cx: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (cx != null) obj.updateDynamic("cx")(cx.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withCyString(cy: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (cy != null) obj.updateDynamic("cy")(cy.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withCyDouble(cy: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (cy != null) obj.updateDynamic("cy")(cy.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withD(d: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (d != null) obj.updateDynamic("d")(d.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDecelerateString(decelerate: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (decelerate != null) obj.updateDynamic("decelerate")(decelerate.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDecelerateDouble(decelerate: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (decelerate != null) obj.updateDynamic("decelerate")(decelerate.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDescentString(descent: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (descent != null) obj.updateDynamic("descent")(descent.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDescentDouble(descent: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (descent != null) obj.updateDynamic("descent")(descent.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDiffuseConstantString(diffuseConstant: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (diffuseConstant != null) obj.updateDynamic("diffuseConstant")(diffuseConstant.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDiffuseConstantDouble(diffuseConstant: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (diffuseConstant != null) obj.updateDynamic("diffuseConstant")(diffuseConstant.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDirectionString(direction: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (direction != null) obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDirectionDouble(direction: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (direction != null) obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDisplayString(display: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (display != null) obj.updateDynamic("display")(display.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDisplayDouble(display: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (display != null) obj.updateDynamic("display")(display.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDivisorString(divisor: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (divisor != null) obj.updateDynamic("divisor")(divisor.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDivisorDouble(divisor: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (divisor != null) obj.updateDynamic("divisor")(divisor.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDominantBaselineString(dominantBaseline: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (dominantBaseline != null) obj.updateDynamic("dominantBaseline")(dominantBaseline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDominantBaselineDouble(dominantBaseline: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (dominantBaseline != null) obj.updateDynamic("dominantBaseline")(dominantBaseline.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDurString(dur: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (dur != null) obj.updateDynamic("dur")(dur.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDurDouble(dur: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (dur != null) obj.updateDynamic("dur")(dur.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDxString(dx: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (dx != null) obj.updateDynamic("dx")(dx.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDxDouble(dx: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (dx != null) obj.updateDynamic("dx")(dx.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDyString(dy: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (dy != null) obj.updateDynamic("dy")(dy.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withDyDouble(dy: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (dy != null) obj.updateDynamic("dy")(dy.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withEdgeModeString(edgeMode: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (edgeMode != null) obj.updateDynamic("edgeMode")(edgeMode.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withEdgeModeDouble(edgeMode: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (edgeMode != null) obj.updateDynamic("edgeMode")(edgeMode.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withElevationString(elevation: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (elevation != null) obj.updateDynamic("elevation")(elevation.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withElevationDouble(elevation: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (elevation != null) obj.updateDynamic("elevation")(elevation.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withEnableBackgroundString(enableBackground: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (enableBackground != null) obj.updateDynamic("enableBackground")(enableBackground.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withEnableBackgroundDouble(enableBackground: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (enableBackground != null) obj.updateDynamic("enableBackground")(enableBackground.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withEndString(end: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (end != null) obj.updateDynamic("end")(end.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withEndDouble(end: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (end != null) obj.updateDynamic("end")(end.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withExponentString(exponent: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (exponent != null) obj.updateDynamic("exponent")(exponent.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withExponentDouble(exponent: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (exponent != null) obj.updateDynamic("exponent")(exponent.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withExternalResourcesRequiredString(externalResourcesRequired: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (externalResourcesRequired != null) obj.updateDynamic("externalResourcesRequired")(externalResourcesRequired.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withExternalResourcesRequiredDouble(externalResourcesRequired: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (externalResourcesRequired != null) obj.updateDynamic("externalResourcesRequired")(externalResourcesRequired.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFill(fill: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fill != null) obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFillOpacityString(fillOpacity: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fillOpacity != null) obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFillOpacityDouble(fillOpacity: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fillOpacity != null) obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFillRuleInherit(fillRule: inherit): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fillRule != null) obj.updateDynamic("fillRule")(fillRule.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFillRuleNonzero(fillRule: nonzero): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fillRule != null) obj.updateDynamic("fillRule")(fillRule.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFillRuleEvenodd(fillRule: evenodd): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fillRule != null) obj.updateDynamic("fillRule")(fillRule.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFilter(filter: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (filter != null) obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFilterResString(filterRes: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (filterRes != null) obj.updateDynamic("filterRes")(filterRes.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFilterResDouble(filterRes: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (filterRes != null) obj.updateDynamic("filterRes")(filterRes.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFilterUnitsString(filterUnits: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (filterUnits != null) obj.updateDynamic("filterUnits")(filterUnits.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFilterUnitsDouble(filterUnits: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (filterUnits != null) obj.updateDynamic("filterUnits")(filterUnits.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFloodColorString(floodColor: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (floodColor != null) obj.updateDynamic("floodColor")(floodColor.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFloodColorDouble(floodColor: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (floodColor != null) obj.updateDynamic("floodColor")(floodColor.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFloodOpacityString(floodOpacity: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (floodOpacity != null) obj.updateDynamic("floodOpacity")(floodOpacity.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFloodOpacityDouble(floodOpacity: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (floodOpacity != null) obj.updateDynamic("floodOpacity")(floodOpacity.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFocusableString(focusable: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (focusable != null) obj.updateDynamic("focusable")(focusable.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFocusableDouble(focusable: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (focusable != null) obj.updateDynamic("focusable")(focusable.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFontFamily(fontFamily: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontFamily != null) obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFontSizeString(fontSize: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontSize != null) obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFontSizeDouble(fontSize: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontSize != null) obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFontSizeAdjustString(fontSizeAdjust: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontSizeAdjust != null) obj.updateDynamic("fontSizeAdjust")(fontSizeAdjust.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFontSizeAdjustDouble(fontSizeAdjust: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontSizeAdjust != null) obj.updateDynamic("fontSizeAdjust")(fontSizeAdjust.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFontStretchString(fontStretch: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontStretch != null) obj.updateDynamic("fontStretch")(fontStretch.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFontStretchDouble(fontStretch: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontStretch != null) obj.updateDynamic("fontStretch")(fontStretch.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFontStyleString(fontStyle: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontStyle != null) obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFontStyleDouble(fontStyle: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontStyle != null) obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFontVariantString(fontVariant: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontVariant != null) obj.updateDynamic("fontVariant")(fontVariant.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFontVariantDouble(fontVariant: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontVariant != null) obj.updateDynamic("fontVariant")(fontVariant.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFontWeightString(fontWeight: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontWeight != null) obj.updateDynamic("fontWeight")(fontWeight.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFontWeightDouble(fontWeight: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fontWeight != null) obj.updateDynamic("fontWeight")(fontWeight.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFormatString(format: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (format != null) obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFormatDouble(format: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (format != null) obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFromString(from: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (from != null) obj.updateDynamic("from")(from.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFromDouble(from: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (from != null) obj.updateDynamic("from")(from.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFxString(fx: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fx != null) obj.updateDynamic("fx")(fx.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFxDouble(fx: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fx != null) obj.updateDynamic("fx")(fx.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFyString(fy: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fy != null) obj.updateDynamic("fy")(fy.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withFyDouble(fy: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (fy != null) obj.updateDynamic("fy")(fy.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withG1String(g1: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (g1 != null) obj.updateDynamic("g1")(g1.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withG1Double(g1: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (g1 != null) obj.updateDynamic("g1")(g1.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withG2String(g2: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (g2 != null) obj.updateDynamic("g2")(g2.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withG2Double(g2: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (g2 != null) obj.updateDynamic("g2")(g2.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withGlyphNameString(glyphName: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (glyphName != null) obj.updateDynamic("glyphName")(glyphName.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withGlyphNameDouble(glyphName: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (glyphName != null) obj.updateDynamic("glyphName")(glyphName.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withGlyphOrientationHorizontalString(glyphOrientationHorizontal: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (glyphOrientationHorizontal != null) obj.updateDynamic("glyphOrientationHorizontal")(glyphOrientationHorizontal.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withGlyphOrientationHorizontalDouble(glyphOrientationHorizontal: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (glyphOrientationHorizontal != null) obj.updateDynamic("glyphOrientationHorizontal")(glyphOrientationHorizontal.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withGlyphOrientationVerticalString(glyphOrientationVertical: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (glyphOrientationVertical != null) obj.updateDynamic("glyphOrientationVertical")(glyphOrientationVertical.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withGlyphOrientationVerticalDouble(glyphOrientationVertical: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (glyphOrientationVertical != null) obj.updateDynamic("glyphOrientationVertical")(glyphOrientationVertical.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withGlyphRefString(glyphRef: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (glyphRef != null) obj.updateDynamic("glyphRef")(glyphRef.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withGlyphRefDouble(glyphRef: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (glyphRef != null) obj.updateDynamic("glyphRef")(glyphRef.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withGradientTransform(gradientTransform: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (gradientTransform != null) obj.updateDynamic("gradientTransform")(gradientTransform.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withGradientUnits(gradientUnits: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (gradientUnits != null) obj.updateDynamic("gradientUnits")(gradientUnits.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withHangingString(hanging: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (hanging != null) obj.updateDynamic("hanging")(hanging.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withHangingDouble(hanging: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (hanging != null) obj.updateDynamic("hanging")(hanging.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withHeightString(height: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (height != null) obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withHeightDouble(height: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (height != null) obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withHorizAdvXString(horizAdvX: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (horizAdvX != null) obj.updateDynamic("horizAdvX")(horizAdvX.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withHorizAdvXDouble(horizAdvX: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (horizAdvX != null) obj.updateDynamic("horizAdvX")(horizAdvX.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withHorizOriginXString(horizOriginX: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (horizOriginX != null) obj.updateDynamic("horizOriginX")(horizOriginX.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withHorizOriginXDouble(horizOriginX: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (horizOriginX != null) obj.updateDynamic("horizOriginX")(horizOriginX.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withHref(href: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (href != null) obj.updateDynamic("href")(href.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withId(id: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (id != null) obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withIdeographicString(ideographic: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (ideographic != null) obj.updateDynamic("ideographic")(ideographic.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withIdeographicDouble(ideographic: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (ideographic != null) obj.updateDynamic("ideographic")(ideographic.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withImageRenderingString(imageRendering: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (imageRendering != null) obj.updateDynamic("imageRendering")(imageRendering.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withImageRenderingDouble(imageRendering: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (imageRendering != null) obj.updateDynamic("imageRendering")(imageRendering.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withIn(in: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (in != null) obj.updateDynamic("in")(in.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withIn2String(in2: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (in2 != null) obj.updateDynamic("in2")(in2.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withIn2Double(in2: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (in2 != null) obj.updateDynamic("in2")(in2.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withInterceptString(intercept: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (intercept != null) obj.updateDynamic("intercept")(intercept.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withInterceptDouble(intercept: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (intercept != null) obj.updateDynamic("intercept")(intercept.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withKString(k: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (k != null) obj.updateDynamic("k")(k.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withKDouble(k: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (k != null) obj.updateDynamic("k")(k.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withK1String(k1: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (k1 != null) obj.updateDynamic("k1")(k1.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withK1Double(k1: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (k1 != null) obj.updateDynamic("k1")(k1.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withK2String(k2: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (k2 != null) obj.updateDynamic("k2")(k2.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withK2Double(k2: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (k2 != null) obj.updateDynamic("k2")(k2.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withK3String(k3: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (k3 != null) obj.updateDynamic("k3")(k3.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withK3Double(k3: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (k3 != null) obj.updateDynamic("k3")(k3.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withK4String(k4: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (k4 != null) obj.updateDynamic("k4")(k4.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withK4Double(k4: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (k4 != null) obj.updateDynamic("k4")(k4.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withKernelMatrixString(kernelMatrix: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (kernelMatrix != null) obj.updateDynamic("kernelMatrix")(kernelMatrix.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withKernelMatrixDouble(kernelMatrix: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (kernelMatrix != null) obj.updateDynamic("kernelMatrix")(kernelMatrix.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withKernelUnitLengthString(kernelUnitLength: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (kernelUnitLength != null) obj.updateDynamic("kernelUnitLength")(kernelUnitLength.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withKernelUnitLengthDouble(kernelUnitLength: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (kernelUnitLength != null) obj.updateDynamic("kernelUnitLength")(kernelUnitLength.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withKerningString(kerning: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (kerning != null) obj.updateDynamic("kerning")(kerning.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withKerningDouble(kerning: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (kerning != null) obj.updateDynamic("kerning")(kerning.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withKeyPointsString(keyPoints: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (keyPoints != null) obj.updateDynamic("keyPoints")(keyPoints.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withKeyPointsDouble(keyPoints: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (keyPoints != null) obj.updateDynamic("keyPoints")(keyPoints.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withKeySplinesString(keySplines: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (keySplines != null) obj.updateDynamic("keySplines")(keySplines.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withKeySplinesDouble(keySplines: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (keySplines != null) obj.updateDynamic("keySplines")(keySplines.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withKeyTimesString(keyTimes: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (keyTimes != null) obj.updateDynamic("keyTimes")(keyTimes.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withKeyTimesDouble(keyTimes: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (keyTimes != null) obj.updateDynamic("keyTimes")(keyTimes.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withLang(lang: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (lang != null) obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withLengthAdjustString(lengthAdjust: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (lengthAdjust != null) obj.updateDynamic("lengthAdjust")(lengthAdjust.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withLengthAdjustDouble(lengthAdjust: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (lengthAdjust != null) obj.updateDynamic("lengthAdjust")(lengthAdjust.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withLetterSpacingString(letterSpacing: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (letterSpacing != null) obj.updateDynamic("letterSpacing")(letterSpacing.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withLetterSpacingDouble(letterSpacing: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (letterSpacing != null) obj.updateDynamic("letterSpacing")(letterSpacing.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withLightingColorString(lightingColor: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (lightingColor != null) obj.updateDynamic("lightingColor")(lightingColor.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withLightingColorDouble(lightingColor: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (lightingColor != null) obj.updateDynamic("lightingColor")(lightingColor.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withLimitingConeAngleString(limitingConeAngle: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (limitingConeAngle != null) obj.updateDynamic("limitingConeAngle")(limitingConeAngle.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withLimitingConeAngleDouble(limitingConeAngle: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (limitingConeAngle != null) obj.updateDynamic("limitingConeAngle")(limitingConeAngle.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withLocalString(local: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (local != null) obj.updateDynamic("local")(local.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withLocalDouble(local: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (local != null) obj.updateDynamic("local")(local.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMarkerEnd(markerEnd: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (markerEnd != null) obj.updateDynamic("markerEnd")(markerEnd.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMarkerHeightString(markerHeight: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (markerHeight != null) obj.updateDynamic("markerHeight")(markerHeight.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMarkerHeightDouble(markerHeight: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (markerHeight != null) obj.updateDynamic("markerHeight")(markerHeight.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMarkerMid(markerMid: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (markerMid != null) obj.updateDynamic("markerMid")(markerMid.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMarkerStart(markerStart: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (markerStart != null) obj.updateDynamic("markerStart")(markerStart.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMarkerUnitsString(markerUnits: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (markerUnits != null) obj.updateDynamic("markerUnits")(markerUnits.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMarkerUnitsDouble(markerUnits: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (markerUnits != null) obj.updateDynamic("markerUnits")(markerUnits.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMarkerWidthString(markerWidth: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (markerWidth != null) obj.updateDynamic("markerWidth")(markerWidth.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMarkerWidthDouble(markerWidth: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (markerWidth != null) obj.updateDynamic("markerWidth")(markerWidth.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMask(mask: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (mask != null) obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMaskContentUnitsString(maskContentUnits: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (maskContentUnits != null) obj.updateDynamic("maskContentUnits")(maskContentUnits.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMaskContentUnitsDouble(maskContentUnits: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (maskContentUnits != null) obj.updateDynamic("maskContentUnits")(maskContentUnits.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMaskUnitsString(maskUnits: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (maskUnits != null) obj.updateDynamic("maskUnits")(maskUnits.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMaskUnitsDouble(maskUnits: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (maskUnits != null) obj.updateDynamic("maskUnits")(maskUnits.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMathematicalString(mathematical: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (mathematical != null) obj.updateDynamic("mathematical")(mathematical.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMathematicalDouble(mathematical: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (mathematical != null) obj.updateDynamic("mathematical")(mathematical.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMaxString(max: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (max != null) obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMaxDouble(max: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (max != null) obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMedia(media: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (media != null) obj.updateDynamic("media")(media.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMethod(method: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (method != null) obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMinString(min: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (min != null) obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withMinDouble(min: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (min != null) obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withModeString(mode: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (mode != null) obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withModeDouble(mode: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (mode != null) obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withName(name: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (name != null) obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withNumOctavesString(numOctaves: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (numOctaves != null) obj.updateDynamic("numOctaves")(numOctaves.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withNumOctavesDouble(numOctaves: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (numOctaves != null) obj.updateDynamic("numOctaves")(numOctaves.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOffsetString(offset: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (offset != null) obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOffsetDouble(offset: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (offset != null) obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOpacityString(opacity: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (opacity != null) obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOpacityDouble(opacity: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (opacity != null) obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOperatorString(operator: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (operator != null) obj.updateDynamic("operator")(operator.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOperatorDouble(operator: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (operator != null) obj.updateDynamic("operator")(operator.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOrderString(order: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (order != null) obj.updateDynamic("order")(order.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOrderDouble(order: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (order != null) obj.updateDynamic("order")(order.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOrientString(orient: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (orient != null) obj.updateDynamic("orient")(orient.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOrientDouble(orient: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (orient != null) obj.updateDynamic("orient")(orient.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOrientationString(orientation: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (orientation != null) obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOrientationDouble(orientation: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (orientation != null) obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOriginString(origin: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (origin != null) obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOriginDouble(origin: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (origin != null) obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOverflowString(overflow: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (overflow != null) obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOverflowDouble(overflow: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (overflow != null) obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOverlinePositionString(overlinePosition: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (overlinePosition != null) obj.updateDynamic("overlinePosition")(overlinePosition.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOverlinePositionDouble(overlinePosition: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (overlinePosition != null) obj.updateDynamic("overlinePosition")(overlinePosition.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOverlineThicknessString(overlineThickness: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (overlineThickness != null) obj.updateDynamic("overlineThickness")(overlineThickness.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withOverlineThicknessDouble(overlineThickness: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (overlineThickness != null) obj.updateDynamic("overlineThickness")(overlineThickness.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPaintOrderString(paintOrder: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (paintOrder != null) obj.updateDynamic("paintOrder")(paintOrder.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPaintOrderDouble(paintOrder: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (paintOrder != null) obj.updateDynamic("paintOrder")(paintOrder.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPanose1String(panose1: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (panose1 != null) obj.updateDynamic("panose1")(panose1.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPanose1Double(panose1: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (panose1 != null) obj.updateDynamic("panose1")(panose1.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPathLengthString(pathLength: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (pathLength != null) obj.updateDynamic("pathLength")(pathLength.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPathLengthDouble(pathLength: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (pathLength != null) obj.updateDynamic("pathLength")(pathLength.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPatternContentUnits(patternContentUnits: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (patternContentUnits != null) obj.updateDynamic("patternContentUnits")(patternContentUnits.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPatternTransformString(patternTransform: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (patternTransform != null) obj.updateDynamic("patternTransform")(patternTransform.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPatternTransformDouble(patternTransform: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (patternTransform != null) obj.updateDynamic("patternTransform")(patternTransform.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPatternUnits(patternUnits: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (patternUnits != null) obj.updateDynamic("patternUnits")(patternUnits.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPointerEventsString(pointerEvents: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (pointerEvents != null) obj.updateDynamic("pointerEvents")(pointerEvents.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPointerEventsDouble(pointerEvents: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (pointerEvents != null) obj.updateDynamic("pointerEvents")(pointerEvents.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPoints(points: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (points != null) obj.updateDynamic("points")(points.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPointsAtXString(pointsAtX: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (pointsAtX != null) obj.updateDynamic("pointsAtX")(pointsAtX.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPointsAtXDouble(pointsAtX: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (pointsAtX != null) obj.updateDynamic("pointsAtX")(pointsAtX.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPointsAtYString(pointsAtY: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (pointsAtY != null) obj.updateDynamic("pointsAtY")(pointsAtY.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPointsAtYDouble(pointsAtY: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (pointsAtY != null) obj.updateDynamic("pointsAtY")(pointsAtY.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPointsAtZString(pointsAtZ: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (pointsAtZ != null) obj.updateDynamic("pointsAtZ")(pointsAtZ.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPointsAtZDouble(pointsAtZ: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (pointsAtZ != null) obj.updateDynamic("pointsAtZ")(pointsAtZ.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPreserveAlphaString(preserveAlpha: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (preserveAlpha != null) obj.updateDynamic("preserveAlpha")(preserveAlpha.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPreserveAlphaDouble(preserveAlpha: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (preserveAlpha != null) obj.updateDynamic("preserveAlpha")(preserveAlpha.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPreserveAspectRatio(preserveAspectRatio: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (preserveAspectRatio != null) obj.updateDynamic("preserveAspectRatio")(preserveAspectRatio.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPrimitiveUnitsString(primitiveUnits: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (primitiveUnits != null) obj.updateDynamic("primitiveUnits")(primitiveUnits.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withPrimitiveUnitsDouble(primitiveUnits: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (primitiveUnits != null) obj.updateDynamic("primitiveUnits")(primitiveUnits.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRString(r: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (r != null) obj.updateDynamic("r")(r.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRDouble(r: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (r != null) obj.updateDynamic("r")(r.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRadiusString(radius: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (radius != null) obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRadiusDouble(radius: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (radius != null) obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRefXString(refX: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (refX != null) obj.updateDynamic("refX")(refX.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRefXDouble(refX: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (refX != null) obj.updateDynamic("refX")(refX.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRefYString(refY: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (refY != null) obj.updateDynamic("refY")(refY.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRefYDouble(refY: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (refY != null) obj.updateDynamic("refY")(refY.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRenderingIntentString(renderingIntent: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (renderingIntent != null) obj.updateDynamic("renderingIntent")(renderingIntent.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRenderingIntentDouble(renderingIntent: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (renderingIntent != null) obj.updateDynamic("renderingIntent")(renderingIntent.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRepeatCountString(repeatCount: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (repeatCount != null) obj.updateDynamic("repeatCount")(repeatCount.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRepeatCountDouble(repeatCount: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (repeatCount != null) obj.updateDynamic("repeatCount")(repeatCount.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRepeatDurString(repeatDur: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (repeatDur != null) obj.updateDynamic("repeatDur")(repeatDur.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRepeatDurDouble(repeatDur: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (repeatDur != null) obj.updateDynamic("repeatDur")(repeatDur.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRequiredExtensionsString(requiredExtensions: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (requiredExtensions != null) obj.updateDynamic("requiredExtensions")(requiredExtensions.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRequiredExtensionsDouble(requiredExtensions: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (requiredExtensions != null) obj.updateDynamic("requiredExtensions")(requiredExtensions.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRequiredFeaturesString(requiredFeatures: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (requiredFeatures != null) obj.updateDynamic("requiredFeatures")(requiredFeatures.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRequiredFeaturesDouble(requiredFeatures: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (requiredFeatures != null) obj.updateDynamic("requiredFeatures")(requiredFeatures.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRestartString(restart: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (restart != null) obj.updateDynamic("restart")(restart.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRestartDouble(restart: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (restart != null) obj.updateDynamic("restart")(restart.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withResult(result: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (result != null) obj.updateDynamic("result")(result.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRole(role: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (role != null) obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRotateString(rotate: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (rotate != null) obj.updateDynamic("rotate")(rotate.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRotateDouble(rotate: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (rotate != null) obj.updateDynamic("rotate")(rotate.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRxString(rx: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (rx != null) obj.updateDynamic("rx")(rx.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRxDouble(rx: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (rx != null) obj.updateDynamic("rx")(rx.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRyString(ry: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (ry != null) obj.updateDynamic("ry")(ry.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withRyDouble(ry: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (ry != null) obj.updateDynamic("ry")(ry.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withScaleString(scale: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (scale != null) obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withScaleDouble(scale: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (scale != null) obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSeedString(seed: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (seed != null) obj.updateDynamic("seed")(seed.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSeedDouble(seed: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (seed != null) obj.updateDynamic("seed")(seed.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withShapeRenderingString(shapeRendering: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (shapeRendering != null) obj.updateDynamic("shapeRendering")(shapeRendering.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withShapeRenderingDouble(shapeRendering: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (shapeRendering != null) obj.updateDynamic("shapeRendering")(shapeRendering.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSlopeString(slope: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (slope != null) obj.updateDynamic("slope")(slope.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSlopeDouble(slope: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (slope != null) obj.updateDynamic("slope")(slope.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSpacingString(spacing: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (spacing != null) obj.updateDynamic("spacing")(spacing.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSpacingDouble(spacing: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (spacing != null) obj.updateDynamic("spacing")(spacing.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSpecularConstantString(specularConstant: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (specularConstant != null) obj.updateDynamic("specularConstant")(specularConstant.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSpecularConstantDouble(specularConstant: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (specularConstant != null) obj.updateDynamic("specularConstant")(specularConstant.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSpecularExponentString(specularExponent: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (specularExponent != null) obj.updateDynamic("specularExponent")(specularExponent.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSpecularExponentDouble(specularExponent: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (specularExponent != null) obj.updateDynamic("specularExponent")(specularExponent.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSpeedString(speed: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (speed != null) obj.updateDynamic("speed")(speed.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSpeedDouble(speed: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (speed != null) obj.updateDynamic("speed")(speed.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSpreadMethod(spreadMethod: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (spreadMethod != null) obj.updateDynamic("spreadMethod")(spreadMethod.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStartOffsetString(startOffset: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (startOffset != null) obj.updateDynamic("startOffset")(startOffset.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStartOffsetDouble(startOffset: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (startOffset != null) obj.updateDynamic("startOffset")(startOffset.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStdDeviationString(stdDeviation: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (stdDeviation != null) obj.updateDynamic("stdDeviation")(stdDeviation.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStdDeviationDouble(stdDeviation: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (stdDeviation != null) obj.updateDynamic("stdDeviation")(stdDeviation.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStemhString(stemh: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (stemh != null) obj.updateDynamic("stemh")(stemh.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStemhDouble(stemh: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (stemh != null) obj.updateDynamic("stemh")(stemh.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStemvString(stemv: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (stemv != null) obj.updateDynamic("stemv")(stemv.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStemvDouble(stemv: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (stemv != null) obj.updateDynamic("stemv")(stemv.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStitchTilesString(stitchTiles: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (stitchTiles != null) obj.updateDynamic("stitchTiles")(stitchTiles.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStitchTilesDouble(stitchTiles: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (stitchTiles != null) obj.updateDynamic("stitchTiles")(stitchTiles.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStopColor(stopColor: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (stopColor != null) obj.updateDynamic("stopColor")(stopColor.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStopOpacityString(stopOpacity: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (stopOpacity != null) obj.updateDynamic("stopOpacity")(stopOpacity.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStopOpacityDouble(stopOpacity: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (stopOpacity != null) obj.updateDynamic("stopOpacity")(stopOpacity.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrikethroughPositionString(strikethroughPosition: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strikethroughPosition != null) obj.updateDynamic("strikethroughPosition")(strikethroughPosition.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrikethroughPositionDouble(strikethroughPosition: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strikethroughPosition != null) obj.updateDynamic("strikethroughPosition")(strikethroughPosition.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrikethroughThicknessString(strikethroughThickness: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strikethroughThickness != null) obj.updateDynamic("strikethroughThickness")(strikethroughThickness.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrikethroughThicknessDouble(strikethroughThickness: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strikethroughThickness != null) obj.updateDynamic("strikethroughThickness")(strikethroughThickness.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStringString(string: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (string != null) obj.updateDynamic("string")(string.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStringDouble(string: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (string != null) obj.updateDynamic("string")(string.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStroke(stroke: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (stroke != null) obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeDasharrayString(strokeDasharray: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeDasharray != null) obj.updateDynamic("strokeDasharray")(strokeDasharray.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeDasharrayDouble(strokeDasharray: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeDasharray != null) obj.updateDynamic("strokeDasharray")(strokeDasharray.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeDashoffsetString(strokeDashoffset: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeDashoffset != null) obj.updateDynamic("strokeDashoffset")(strokeDashoffset.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeDashoffsetDouble(strokeDashoffset: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeDashoffset != null) obj.updateDynamic("strokeDashoffset")(strokeDashoffset.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeLinecapSquare(strokeLinecap: square): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeLinecap != null) obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeLinecapInherit(strokeLinecap: inherit): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeLinecap != null) obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeLinecapRound(strokeLinecap: round): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeLinecap != null) obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeLinecapButt(strokeLinecap: butt): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeLinecap != null) obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeLinejoinInherit(strokeLinejoin: inherit): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeLinejoin != null) obj.updateDynamic("strokeLinejoin")(strokeLinejoin.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeLinejoinRound(strokeLinejoin: round): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeLinejoin != null) obj.updateDynamic("strokeLinejoin")(strokeLinejoin.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeLinejoinBevel(strokeLinejoin: bevel): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeLinejoin != null) obj.updateDynamic("strokeLinejoin")(strokeLinejoin.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeLinejoinMiter(strokeLinejoin: miter): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeLinejoin != null) obj.updateDynamic("strokeLinejoin")(strokeLinejoin.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeMiterlimitString(strokeMiterlimit: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeMiterlimit != null) obj.updateDynamic("strokeMiterlimit")(strokeMiterlimit.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeMiterlimitDouble(strokeMiterlimit: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeMiterlimit != null) obj.updateDynamic("strokeMiterlimit")(strokeMiterlimit.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeOpacityString(strokeOpacity: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeOpacity != null) obj.updateDynamic("strokeOpacity")(strokeOpacity.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeOpacityDouble(strokeOpacity: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeOpacity != null) obj.updateDynamic("strokeOpacity")(strokeOpacity.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeWidthString(strokeWidth: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeWidth != null) obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStrokeWidthDouble(strokeWidth: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (strokeWidth != null) obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withStyle(style: CSSProperties): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (style != null) obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSurfaceScaleString(surfaceScale: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (surfaceScale != null) obj.updateDynamic("surfaceScale")(surfaceScale.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSurfaceScaleDouble(surfaceScale: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (surfaceScale != null) obj.updateDynamic("surfaceScale")(surfaceScale.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSystemLanguageString(systemLanguage: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (systemLanguage != null) obj.updateDynamic("systemLanguage")(systemLanguage.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withSystemLanguageDouble(systemLanguage: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (systemLanguage != null) obj.updateDynamic("systemLanguage")(systemLanguage.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTabIndexInt(tabIndex: Int): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (tabIndex != null) obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTabIndexDouble(tabIndex: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (tabIndex != null) obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTableValuesString(tableValues: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (tableValues != null) obj.updateDynamic("tableValues")(tableValues.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTableValuesDouble(tableValues: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (tableValues != null) obj.updateDynamic("tableValues")(tableValues.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTarget(target: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (target != null) obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTargetXString(targetX: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (targetX != null) obj.updateDynamic("targetX")(targetX.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTargetXDouble(targetX: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (targetX != null) obj.updateDynamic("targetX")(targetX.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTargetYString(targetY: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (targetY != null) obj.updateDynamic("targetY")(targetY.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTargetYDouble(targetY: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (targetY != null) obj.updateDynamic("targetY")(targetY.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTextAnchor(textAnchor: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (textAnchor != null) obj.updateDynamic("textAnchor")(textAnchor.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTextDecorationString(textDecoration: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (textDecoration != null) obj.updateDynamic("textDecoration")(textDecoration.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTextDecorationDouble(textDecoration: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (textDecoration != null) obj.updateDynamic("textDecoration")(textDecoration.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTextLengthString(textLength: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (textLength != null) obj.updateDynamic("textLength")(textLength.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTextLengthDouble(textLength: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (textLength != null) obj.updateDynamic("textLength")(textLength.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTextRenderingString(textRendering: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (textRendering != null) obj.updateDynamic("textRendering")(textRendering.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTextRenderingDouble(textRendering: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (textRendering != null) obj.updateDynamic("textRendering")(textRendering.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withToString(to: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (to != null) obj.updateDynamic("to")(to.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withToDouble(to: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (to != null) obj.updateDynamic("to")(to.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withTransform(transform: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (transform != null) obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withType(`type`: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (`type` != null) obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withU1String(u1: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (u1 != null) obj.updateDynamic("u1")(u1.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withU1Double(u1: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (u1 != null) obj.updateDynamic("u1")(u1.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withU2String(u2: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (u2 != null) obj.updateDynamic("u2")(u2.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withU2Double(u2: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (u2 != null) obj.updateDynamic("u2")(u2.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withUnderlinePositionString(underlinePosition: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (underlinePosition != null) obj.updateDynamic("underlinePosition")(underlinePosition.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withUnderlinePositionDouble(underlinePosition: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (underlinePosition != null) obj.updateDynamic("underlinePosition")(underlinePosition.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withUnderlineThicknessString(underlineThickness: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (underlineThickness != null) obj.updateDynamic("underlineThickness")(underlineThickness.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withUnderlineThicknessDouble(underlineThickness: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (underlineThickness != null) obj.updateDynamic("underlineThickness")(underlineThickness.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withUnicodeString(unicode: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (unicode != null) obj.updateDynamic("unicode")(unicode.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withUnicodeDouble(unicode: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (unicode != null) obj.updateDynamic("unicode")(unicode.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withUnicodeBidiString(unicodeBidi: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (unicodeBidi != null) obj.updateDynamic("unicodeBidi")(unicodeBidi.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withUnicodeBidiDouble(unicodeBidi: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (unicodeBidi != null) obj.updateDynamic("unicodeBidi")(unicodeBidi.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withUnicodeRangeString(unicodeRange: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (unicodeRange != null) obj.updateDynamic("unicodeRange")(unicodeRange.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withUnicodeRangeDouble(unicodeRange: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (unicodeRange != null) obj.updateDynamic("unicodeRange")(unicodeRange.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withUnitsPerEmString(unitsPerEm: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (unitsPerEm != null) obj.updateDynamic("unitsPerEm")(unitsPerEm.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withUnitsPerEmDouble(unitsPerEm: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (unitsPerEm != null) obj.updateDynamic("unitsPerEm")(unitsPerEm.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVAlphabeticString(vAlphabetic: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vAlphabetic != null) obj.updateDynamic("vAlphabetic")(vAlphabetic.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVAlphabeticDouble(vAlphabetic: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vAlphabetic != null) obj.updateDynamic("vAlphabetic")(vAlphabetic.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVHangingString(vHanging: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vHanging != null) obj.updateDynamic("vHanging")(vHanging.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVHangingDouble(vHanging: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vHanging != null) obj.updateDynamic("vHanging")(vHanging.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVIdeographicString(vIdeographic: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vIdeographic != null) obj.updateDynamic("vIdeographic")(vIdeographic.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVIdeographicDouble(vIdeographic: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vIdeographic != null) obj.updateDynamic("vIdeographic")(vIdeographic.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVMathematicalString(vMathematical: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vMathematical != null) obj.updateDynamic("vMathematical")(vMathematical.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVMathematicalDouble(vMathematical: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vMathematical != null) obj.updateDynamic("vMathematical")(vMathematical.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withValues(values: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (values != null) obj.updateDynamic("values")(values.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVectorEffectString(vectorEffect: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vectorEffect != null) obj.updateDynamic("vectorEffect")(vectorEffect.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVectorEffectDouble(vectorEffect: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vectorEffect != null) obj.updateDynamic("vectorEffect")(vectorEffect.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVersion(version: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (version != null) obj.updateDynamic("version")(version.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVertAdvYString(vertAdvY: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vertAdvY != null) obj.updateDynamic("vertAdvY")(vertAdvY.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVertAdvYDouble(vertAdvY: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vertAdvY != null) obj.updateDynamic("vertAdvY")(vertAdvY.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVertOriginXString(vertOriginX: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vertOriginX != null) obj.updateDynamic("vertOriginX")(vertOriginX.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVertOriginXDouble(vertOriginX: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vertOriginX != null) obj.updateDynamic("vertOriginX")(vertOriginX.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVertOriginYString(vertOriginY: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vertOriginY != null) obj.updateDynamic("vertOriginY")(vertOriginY.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVertOriginYDouble(vertOriginY: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (vertOriginY != null) obj.updateDynamic("vertOriginY")(vertOriginY.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withViewBox(viewBox: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (viewBox != null) obj.updateDynamic("viewBox")(viewBox.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withViewTargetString(viewTarget: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (viewTarget != null) obj.updateDynamic("viewTarget")(viewTarget.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withViewTargetDouble(viewTarget: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (viewTarget != null) obj.updateDynamic("viewTarget")(viewTarget.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVisibilityString(visibility: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (visibility != null) obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withVisibilityDouble(visibility: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (visibility != null) obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withWidthString(width: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (width != null) obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withWidthDouble(width: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (width != null) obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withWidthsString(widths: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (widths != null) obj.updateDynamic("widths")(widths.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withWidthsDouble(widths: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (widths != null) obj.updateDynamic("widths")(widths.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withWordSpacingString(wordSpacing: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (wordSpacing != null) obj.updateDynamic("wordSpacing")(wordSpacing.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withWordSpacingDouble(wordSpacing: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (wordSpacing != null) obj.updateDynamic("wordSpacing")(wordSpacing.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withWritingModeString(writingMode: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (writingMode != null) obj.updateDynamic("writingMode")(writingMode.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withWritingModeDouble(writingMode: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (writingMode != null) obj.updateDynamic("writingMode")(writingMode.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXString(x: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (x != null) obj.updateDynamic("x")(x.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXDouble(x: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (x != null) obj.updateDynamic("x")(x.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withX1String(x1: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (x1 != null) obj.updateDynamic("x1")(x1.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withX1Double(x1: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (x1 != null) obj.updateDynamic("x1")(x1.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withX2String(x2: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (x2 != null) obj.updateDynamic("x2")(x2.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withX2Double(x2: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (x2 != null) obj.updateDynamic("x2")(x2.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXChannelSelector(xChannelSelector: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (xChannelSelector != null) obj.updateDynamic("xChannelSelector")(xChannelSelector.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXHeightString(xHeight: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (xHeight != null) obj.updateDynamic("xHeight")(xHeight.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXHeightDouble(xHeight: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (xHeight != null) obj.updateDynamic("xHeight")(xHeight.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXlinkActuate(xlinkActuate: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (xlinkActuate != null) obj.updateDynamic("xlinkActuate")(xlinkActuate.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXlinkArcrole(xlinkArcrole: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (xlinkArcrole != null) obj.updateDynamic("xlinkArcrole")(xlinkArcrole.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXlinkHref(xlinkHref: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (xlinkHref != null) obj.updateDynamic("xlinkHref")(xlinkHref.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXlinkRole(xlinkRole: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (xlinkRole != null) obj.updateDynamic("xlinkRole")(xlinkRole.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXlinkShow(xlinkShow: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (xlinkShow != null) obj.updateDynamic("xlinkShow")(xlinkShow.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXlinkTitle(xlinkTitle: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (xlinkTitle != null) obj.updateDynamic("xlinkTitle")(xlinkTitle.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXlinkType(xlinkType: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (xlinkType != null) obj.updateDynamic("xlinkType")(xlinkType.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXmlBase(xmlBase: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (xmlBase != null) obj.updateDynamic("xmlBase")(xmlBase.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXmlLang(xmlLang: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (xmlLang != null) obj.updateDynamic("xmlLang")(xmlLang.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXmlSpace(xmlSpace: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (xmlSpace != null) obj.updateDynamic("xmlSpace")(xmlSpace.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXmlns(xmlns: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (xmlns != null) obj.updateDynamic("xmlns")(xmlns.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withXmlnsXlink(xmlnsXlink: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (xmlnsXlink != null) obj.updateDynamic("xmlnsXlink")(xmlnsXlink.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withYString(y: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (y != null) obj.updateDynamic("y")(y.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withYDouble(y: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (y != null) obj.updateDynamic("y")(y.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withY1String(y1: String): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (y1 != null) obj.updateDynamic("y1")(y1.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+    @scala.inline
+    def withY1Double(y1: Double): SVGAttributes[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (y1 != null) obj.updateDynamic("y1")(y1.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.SVGAttributes[T]]
+    }
+  }
+  
 }
 

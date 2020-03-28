@@ -50,5 +50,117 @@ object StrictAccordionProps {
     if (!js.isUndefined(styled)) __obj.updateDynamic("styled")(styled.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictAccordionProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: StrictAccordionProps) {
+    @scala.inline
+    def duplicate: StrictAccordionProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): StrictAccordionProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps with T]
+    @scala.inline
+    def withActiveIndexArray(activeIndex: js.Array[Double]): StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (activeIndex != null) obj.updateDynamic("activeIndex")(activeIndex.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withActiveIndexDouble(activeIndex: Double): StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (activeIndex != null) obj.updateDynamic("activeIndex")(activeIndex.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withAs(as: js.Any): StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (as != null) obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withChildren(children: TagMod[Any]): StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (children != null) obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withClassName(className: String): StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (className != null) obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withDefaultActiveIndexArray(defaultActiveIndex: js.Array[Double]): StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (defaultActiveIndex != null) obj.updateDynamic("defaultActiveIndex")(defaultActiveIndex.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withDefaultActiveIndexDouble(defaultActiveIndex: Double): StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (defaultActiveIndex != null) obj.updateDynamic("defaultActiveIndex")(defaultActiveIndex.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withExclusiveUndefined: StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "exclusive")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withExclusive(exclusive: Boolean): StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(exclusive)) obj.updateDynamic("exclusive")(exclusive.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withFluidUndefined: StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "fluid")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withFluid(fluid: Boolean): StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(fluid)) obj.updateDynamic("fluid")(fluid.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withInvertedUndefined: StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "inverted")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withInverted(inverted: Boolean): StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(inverted)) obj.updateDynamic("inverted")(inverted.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withOnTitleClick(
+      onTitleClick: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ AccordionTitleProps) => Unit
+    ): StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onTitleClick != null) obj.updateDynamic("onTitleClick")(js.Any.fromFunction2(onTitleClick))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withPanels(panels: SemanticShorthandCollection[AccordionPanelProps]): StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (panels != null) obj.updateDynamic("panels")(panels.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withStyledUndefined: StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "styled")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+    @scala.inline
+    def withStyled(styled: Boolean): StrictAccordionProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(styled)) obj.updateDynamic("styled")(styled.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionAccordionMod.StrictAccordionProps]
+    }
+  }
+  
 }
 

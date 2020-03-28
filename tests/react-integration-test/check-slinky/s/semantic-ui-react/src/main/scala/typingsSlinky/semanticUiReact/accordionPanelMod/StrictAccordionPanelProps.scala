@@ -51,5 +51,57 @@ object StrictAccordionPanelProps {
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictAccordionPanelProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: StrictAccordionPanelProps) {
+    @scala.inline
+    def duplicate: StrictAccordionPanelProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.semanticUiReact.accordionPanelMod.StrictAccordionPanelProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): StrictAccordionPanelProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.semanticUiReact.accordionPanelMod.StrictAccordionPanelProps with T]
+    @scala.inline
+    def withActiveUndefined: StrictAccordionPanelProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "active")
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionPanelMod.StrictAccordionPanelProps]
+    }
+    @scala.inline
+    def withActive(active: Boolean): StrictAccordionPanelProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(active)) obj.updateDynamic("active")(active.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionPanelMod.StrictAccordionPanelProps]
+    }
+    @scala.inline
+    def withContent(content: SemanticShorthandItem[AccordionContentProps]): StrictAccordionPanelProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (content != null) obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionPanelMod.StrictAccordionPanelProps]
+    }
+    @scala.inline
+    def withIndexString(index: String): StrictAccordionPanelProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (index != null) obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionPanelMod.StrictAccordionPanelProps]
+    }
+    @scala.inline
+    def withIndexDouble(index: Double): StrictAccordionPanelProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (index != null) obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionPanelMod.StrictAccordionPanelProps]
+    }
+    @scala.inline
+    def withOnTitleClick(
+      onTitleClick: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ AccordionTitleProps) => Unit
+    ): StrictAccordionPanelProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onTitleClick != null) obj.updateDynamic("onTitleClick")(js.Any.fromFunction2(onTitleClick))
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionPanelMod.StrictAccordionPanelProps]
+    }
+    @scala.inline
+    def withTitle(title: SemanticShorthandItem[AccordionTitleProps]): StrictAccordionPanelProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (title != null) obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.accordionPanelMod.StrictAccordionPanelProps]
+    }
+  }
+  
 }
 

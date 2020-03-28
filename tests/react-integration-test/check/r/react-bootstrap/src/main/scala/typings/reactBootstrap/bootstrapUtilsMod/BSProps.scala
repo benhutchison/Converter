@@ -16,5 +16,15 @@ object BSProps {
   
     __obj.asInstanceOf[BSProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: BSProps) {
+    @scala.inline
+    def duplicate: BSProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.reactBootstrap.bootstrapUtilsMod.BSProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): BSProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.reactBootstrap.bootstrapUtilsMod.BSProps with T]
+    @scala.inline
+    def withBsClass(bsClass: js.Any): BSProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(bsClass = bsClass.asInstanceOf[js.Any]), x).asInstanceOf[typings.reactBootstrap.bootstrapUtilsMod.BSProps]
+  }
+  
 }
 

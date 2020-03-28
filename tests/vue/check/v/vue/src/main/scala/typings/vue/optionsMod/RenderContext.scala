@@ -31,5 +31,25 @@ object RenderContext {
   
     __obj.asInstanceOf[RenderContext[Props]]
   }
+  @scala.inline
+  implicit sealed class Sugar[Props] (x: RenderContext[Props]) {
+    @scala.inline
+    def duplicate: RenderContext[Props] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.vue.optionsMod.RenderContext[Props]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): RenderContext[Props] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.vue.optionsMod.RenderContext[Props] with T]
+    @scala.inline
+    def withChildren(children: js.Array[VNode]): RenderContext[Props] = js.Dynamic.global.Object.assign(js.Dynamic.literal(children = children.asInstanceOf[js.Any]), x).asInstanceOf[typings.vue.optionsMod.RenderContext[Props]]
+    @scala.inline
+    def withData(data: VNodeData): RenderContext[Props] = js.Dynamic.global.Object.assign(js.Dynamic.literal(data = data.asInstanceOf[js.Any]), x).asInstanceOf[typings.vue.optionsMod.RenderContext[Props]]
+    @scala.inline
+    def withInjections(injections: js.Any): RenderContext[Props] = js.Dynamic.global.Object.assign(js.Dynamic.literal(injections = injections.asInstanceOf[js.Any]), x).asInstanceOf[typings.vue.optionsMod.RenderContext[Props]]
+    @scala.inline
+    def withParent(parent: Vue): RenderContext[Props] = js.Dynamic.global.Object.assign(js.Dynamic.literal(parent = parent.asInstanceOf[js.Any]), x).asInstanceOf[typings.vue.optionsMod.RenderContext[Props]]
+    @scala.inline
+    def withProps(props: Props): RenderContext[Props] = js.Dynamic.global.Object.assign(js.Dynamic.literal(props = props.asInstanceOf[js.Any]), x).asInstanceOf[typings.vue.optionsMod.RenderContext[Props]]
+    @scala.inline
+    def withSlots(slots: () => js.Any): RenderContext[Props] = js.Dynamic.global.Object.assign(js.Dynamic.literal(slots = js.Any.fromFunction0(slots)), x).asInstanceOf[typings.vue.optionsMod.RenderContext[Props]]
+  }
+  
 }
 

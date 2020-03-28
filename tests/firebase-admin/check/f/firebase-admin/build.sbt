@@ -1,11 +1,11 @@
 organization := "org.scalablytyped"
 name := "firebase-admin"
-version := "8.2.0-5b627d"
+version := "8.2.0-dc2dbb"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "org.scalablytyped" %%% "google-cloud__firestore" % "2.2.3-e2cb2e")
+  "org.scalablytyped" %%% "google-cloud__firestore" % "2.2.3-e6ac27")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

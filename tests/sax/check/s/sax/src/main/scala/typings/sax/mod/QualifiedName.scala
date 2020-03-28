@@ -19,5 +19,21 @@ object QualifiedName {
   
     __obj.asInstanceOf[QualifiedName]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: QualifiedName) {
+    @scala.inline
+    def duplicate: QualifiedName = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.sax.mod.QualifiedName]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): QualifiedName with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.sax.mod.QualifiedName with T]
+    @scala.inline
+    def withLocal(local: String): QualifiedName = js.Dynamic.global.Object.assign(js.Dynamic.literal(local = local.asInstanceOf[js.Any]), x).asInstanceOf[typings.sax.mod.QualifiedName]
+    @scala.inline
+    def withName(name: String): QualifiedName = js.Dynamic.global.Object.assign(js.Dynamic.literal(name = name.asInstanceOf[js.Any]), x).asInstanceOf[typings.sax.mod.QualifiedName]
+    @scala.inline
+    def withPrefix(prefix: String): QualifiedName = js.Dynamic.global.Object.assign(js.Dynamic.literal(prefix = prefix.asInstanceOf[js.Any]), x).asInstanceOf[typings.sax.mod.QualifiedName]
+    @scala.inline
+    def withUri(uri: String): QualifiedName = js.Dynamic.global.Object.assign(js.Dynamic.literal(uri = uri.asInstanceOf[js.Any]), x).asInstanceOf[typings.sax.mod.QualifiedName]
+  }
+  
 }
 

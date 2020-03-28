@@ -308,5 +308,251 @@ object ReactHTML {
     __obj.updateDynamic("var")(`var`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactHTML]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: ReactHTML) {
+    @scala.inline
+    def duplicate: ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): ReactHTML with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.ReactHTML with T]
+    @scala.inline
+    def withA(a: DetailedHTMLFactory[AnchorHTMLAttributes[HTMLAnchorElement], HTMLAnchorElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(a = a.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withAbbr(abbr: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(abbr = abbr.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withAddress(address: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(address = address.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withArea(area: DetailedHTMLFactory[AreaHTMLAttributes[HTMLAreaElement], HTMLAreaElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(area = area.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withArticle(article: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(article = article.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withAside(aside: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(aside = aside.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withAudio(audio: DetailedHTMLFactory[AudioHTMLAttributes[HTMLAudioElement], HTMLAudioElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(audio = audio.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withB(b: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(b = b.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withBase(base: DetailedHTMLFactory[BaseHTMLAttributes[HTMLBaseElement], HTMLBaseElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(base = base.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withBdi(bdi: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(bdi = bdi.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withBdo(bdo: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(bdo = bdo.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withBig(big: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(big = big.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withBlockquote(blockquote: DetailedHTMLFactory[BlockquoteHTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(blockquote = blockquote.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withBody(body: DetailedHTMLFactory[HTMLAttributes[HTMLBodyElement], HTMLBodyElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(body = body.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withBr(br: DetailedHTMLFactory[HTMLAttributes[HTMLBRElement], HTMLBRElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(br = br.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withButton(button: DetailedHTMLFactory[ButtonHTMLAttributes[HTMLButtonElement], HTMLButtonElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(button = button.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withCanvas(canvas: DetailedHTMLFactory[CanvasHTMLAttributes[HTMLCanvasElement], HTMLCanvasElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(canvas = canvas.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withCaption(caption: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(caption = caption.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withCite(cite: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(cite = cite.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withCode(code: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(code = code.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withCol(col: DetailedHTMLFactory[ColHTMLAttributes[HTMLTableColElement], HTMLTableColElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(col = col.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withColgroup(colgroup: DetailedHTMLFactory[ColgroupHTMLAttributes[HTMLTableColElement], HTMLTableColElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(colgroup = colgroup.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withData(data: DetailedHTMLFactory[DataHTMLAttributes[HTMLDataElement], HTMLDataElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(data = data.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withDatalist(datalist: DetailedHTMLFactory[HTMLAttributes[HTMLDataListElement], HTMLDataListElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(datalist = datalist.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withDd(dd: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(dd = dd.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withDel(del: DetailedHTMLFactory[DelHTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(del = del.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withDetails(details: DetailedHTMLFactory[DetailsHTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(details = details.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withDfn(dfn: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(dfn = dfn.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withDialog(dialog: DetailedHTMLFactory[DialogHTMLAttributes[HTMLDialogElement], HTMLDialogElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(dialog = dialog.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withDiv(div: DetailedHTMLFactory[HTMLAttributes[HTMLDivElement], HTMLDivElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(div = div.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withDl(dl: DetailedHTMLFactory[HTMLAttributes[HTMLDListElement], HTMLDListElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(dl = dl.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withDt(dt: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(dt = dt.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withEm(em: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(em = em.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withEmbed(embed: DetailedHTMLFactory[EmbedHTMLAttributes[HTMLEmbedElement], HTMLEmbedElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(embed = embed.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withFieldset(fieldset: DetailedHTMLFactory[FieldsetHTMLAttributes[HTMLFieldSetElement], HTMLFieldSetElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(fieldset = fieldset.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withFigcaption(figcaption: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(figcaption = figcaption.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withFigure(figure: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(figure = figure.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withFooter(footer: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(footer = footer.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withForm(form: DetailedHTMLFactory[FormHTMLAttributes[HTMLFormElement], HTMLFormElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(form = form.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withH1(h1: DetailedHTMLFactory[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(h1 = h1.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withH2(h2: DetailedHTMLFactory[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(h2 = h2.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withH3(h3: DetailedHTMLFactory[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(h3 = h3.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withH4(h4: DetailedHTMLFactory[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(h4 = h4.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withH5(h5: DetailedHTMLFactory[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(h5 = h5.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withH6(h6: DetailedHTMLFactory[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(h6 = h6.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withHead(head: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLHeadElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(head = head.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withHeader(header: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(header = header.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withHgroup(hgroup: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(hgroup = hgroup.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withHr(hr: DetailedHTMLFactory[HTMLAttributes[HTMLHRElement], HTMLHRElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(hr = hr.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withHtml(html: DetailedHTMLFactory[HtmlHTMLAttributes[HTMLHtmlElement], HTMLHtmlElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(html = html.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withI(i: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(i = i.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withIframe(iframe: DetailedHTMLFactory[IframeHTMLAttributes[HTMLIFrameElement], HTMLIFrameElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(iframe = iframe.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withImg(img: DetailedHTMLFactory[ImgHTMLAttributes[HTMLImageElement], HTMLImageElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(img = img.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withInput(input: DetailedHTMLFactory[InputHTMLAttributes[HTMLInputElement], HTMLInputElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(input = input.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withIns(ins: DetailedHTMLFactory[InsHTMLAttributes[HTMLModElement], HTMLModElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(ins = ins.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withKbd(kbd: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(kbd = kbd.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withKeygen(keygen: DetailedHTMLFactory[KeygenHTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(keygen = keygen.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withLabel(label: DetailedHTMLFactory[LabelHTMLAttributes[HTMLLabelElement], HTMLLabelElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(label = label.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withLegend(legend: DetailedHTMLFactory[HTMLAttributes[HTMLLegendElement], HTMLLegendElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(legend = legend.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withLi(li: DetailedHTMLFactory[LiHTMLAttributes[HTMLLIElement], HTMLLIElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(li = li.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withLink(link: DetailedHTMLFactory[LinkHTMLAttributes[HTMLLinkElement], HTMLLinkElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(link = link.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withMain(main: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(main = main.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withMap(map: DetailedHTMLFactory[MapHTMLAttributes[HTMLMapElement], HTMLMapElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(map = map.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withMark(mark: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(mark = mark.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withMenu(menu: DetailedHTMLFactory[MenuHTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(menu = menu.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withMenuitem(menuitem: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(menuitem = menuitem.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withMeta(meta: DetailedHTMLFactory[MetaHTMLAttributes[HTMLMetaElement], HTMLMetaElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(meta = meta.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withMeter(meter: DetailedHTMLFactory[MeterHTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(meter = meter.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withNav(nav: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(nav = nav.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withNoscript(noscript: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(noscript = noscript.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withObject(`object`: DetailedHTMLFactory[ObjectHTMLAttributes[HTMLObjectElement], HTMLObjectElement]): ReactHTML = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.ReactHTML]
+    }
+    @scala.inline
+    def withOl(ol: DetailedHTMLFactory[OlHTMLAttributes[HTMLOListElement], HTMLOListElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(ol = ol.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withOptgroup(optgroup: DetailedHTMLFactory[OptgroupHTMLAttributes[HTMLOptGroupElement], HTMLOptGroupElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(optgroup = optgroup.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withOption(option: DetailedHTMLFactory[OptionHTMLAttributes[HTMLOptionElement], HTMLOptionElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(option = option.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withOutput(output: DetailedHTMLFactory[OutputHTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(output = output.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withP(p: DetailedHTMLFactory[HTMLAttributes[HTMLParagraphElement], HTMLParagraphElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(p = p.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withParam(param: DetailedHTMLFactory[ParamHTMLAttributes[HTMLParamElement], HTMLParamElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(param = param.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withPicture(picture: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(picture = picture.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withPre(pre: DetailedHTMLFactory[HTMLAttributes[HTMLPreElement], HTMLPreElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(pre = pre.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withProgress(progress: DetailedHTMLFactory[ProgressHTMLAttributes[HTMLProgressElement], HTMLProgressElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(progress = progress.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withQ(q: DetailedHTMLFactory[QuoteHTMLAttributes[HTMLQuoteElement], HTMLQuoteElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(q = q.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withRp(rp: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(rp = rp.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withRt(rt: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(rt = rt.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withRuby(ruby: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(ruby = ruby.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withS(s: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(s = s.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withSamp(samp: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(samp = samp.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withScript(script: DetailedHTMLFactory[ScriptHTMLAttributes[HTMLScriptElement], HTMLScriptElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(script = script.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withSection(section: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(section = section.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withSelect(select: DetailedHTMLFactory[SelectHTMLAttributes[HTMLSelectElement], HTMLSelectElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(select = select.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withSmall(small: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(small = small.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withSource(source: DetailedHTMLFactory[SourceHTMLAttributes[HTMLSourceElement], HTMLSourceElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(source = source.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withSpan(span: DetailedHTMLFactory[HTMLAttributes[HTMLSpanElement], HTMLSpanElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(span = span.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withStrong(strong: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(strong = strong.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withStyle(style: DetailedHTMLFactory[StyleHTMLAttributes[HTMLStyleElement], HTMLStyleElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(style = style.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withSub(sub: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(sub = sub.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withSummary(summary: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(summary = summary.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withSup(sup: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(sup = sup.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withTable(table: DetailedHTMLFactory[TableHTMLAttributes[HTMLTableElement], HTMLTableElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(table = table.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withTbody(tbody: DetailedHTMLFactory[HTMLAttributes[HTMLTableSectionElement], HTMLTableSectionElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(tbody = tbody.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withTd(td: DetailedHTMLFactory[TdHTMLAttributes[HTMLTableDataCellElement], HTMLTableDataCellElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(td = td.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withTemplate(template: DetailedHTMLFactory[HTMLAttributes[HTMLTemplateElement], HTMLTemplateElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(template = template.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withTextarea(textarea: DetailedHTMLFactory[TextareaHTMLAttributes[HTMLTextAreaElement], HTMLTextAreaElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(textarea = textarea.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withTfoot(tfoot: DetailedHTMLFactory[HTMLAttributes[HTMLTableSectionElement], HTMLTableSectionElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(tfoot = tfoot.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withTh(th: DetailedHTMLFactory[ThHTMLAttributes[HTMLTableHeaderCellElement], HTMLTableHeaderCellElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(th = th.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withThead(thead: DetailedHTMLFactory[HTMLAttributes[HTMLTableSectionElement], HTMLTableSectionElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(thead = thead.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withTime(time: DetailedHTMLFactory[TimeHTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(time = time.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withTitle(title: DetailedHTMLFactory[HTMLAttributes[HTMLTitleElement], HTMLTitleElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(title = title.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withTr(tr: DetailedHTMLFactory[HTMLAttributes[HTMLTableRowElement], HTMLTableRowElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(tr = tr.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withTrack(track: DetailedHTMLFactory[TrackHTMLAttributes[HTMLTrackElement], HTMLTrackElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(track = track.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withU(u: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(u = u.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withUl(ul: DetailedHTMLFactory[HTMLAttributes[HTMLUListElement], HTMLUListElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(ul = ul.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withVar(`var`: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      obj.updateDynamic("var")(`var`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.ReactHTML]
+    }
+    @scala.inline
+    def withVideo(video: DetailedHTMLFactory[VideoHTMLAttributes[HTMLVideoElement], HTMLVideoElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(video = video.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withWbr(wbr: DetailedHTMLFactory[HTMLAttributes[HTMLElement], HTMLElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(wbr = wbr.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+    @scala.inline
+    def withWebview(webview: DetailedHTMLFactory[WebViewHTMLAttributes[HTMLWebViewElement], HTMLWebViewElement]): ReactHTML = js.Dynamic.global.Object.assign(js.Dynamic.literal(webview = webview.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.ReactHTML]
+  }
+  
 }
 

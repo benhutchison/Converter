@@ -23,5 +23,37 @@ object StrictButtonOrProps {
     if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictButtonOrProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: StrictButtonOrProps) {
+    @scala.inline
+    def duplicate: StrictButtonOrProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.semanticUiReact.buttonOrMod.StrictButtonOrProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): StrictButtonOrProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.semanticUiReact.buttonOrMod.StrictButtonOrProps with T]
+    @scala.inline
+    def withAs(as: js.Any): StrictButtonOrProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (as != null) obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.buttonOrMod.StrictButtonOrProps]
+    }
+    @scala.inline
+    def withClassName(className: String): StrictButtonOrProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (className != null) obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.buttonOrMod.StrictButtonOrProps]
+    }
+    @scala.inline
+    def withTextString(text: String): StrictButtonOrProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (text != null) obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.buttonOrMod.StrictButtonOrProps]
+    }
+    @scala.inline
+    def withTextDouble(text: Double): StrictButtonOrProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (text != null) obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.semanticUiReact.buttonOrMod.StrictButtonOrProps]
+    }
+  }
+  
 }
 

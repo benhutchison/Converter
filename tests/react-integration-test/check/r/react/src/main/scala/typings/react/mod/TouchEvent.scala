@@ -51,5 +51,63 @@ object TouchEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TouchEvent[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T] (x: TouchEvent[T]) {
+    @scala.inline
+    def duplicate: TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): TouchEvent[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.TouchEvent[T] with T]
+    @scala.inline
+    def withAltKey(altKey: Boolean): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(altKey = altKey.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withBubbles(bubbles: Boolean): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(bubbles = bubbles.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withCancelable(cancelable: Boolean): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(cancelable = cancelable.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withChangedTouches(changedTouches: TouchList): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(changedTouches = changedTouches.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withCtrlKey(ctrlKey: Boolean): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(ctrlKey = ctrlKey.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withCurrentTarget(currentTarget: EventTarget with T): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(currentTarget = currentTarget.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withDefaultPrevented(defaultPrevented: Boolean): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(defaultPrevented = defaultPrevented.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withEventPhase(eventPhase: Double): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(eventPhase = eventPhase.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withGetModifierState(getModifierState: String => Boolean): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(getModifierState = js.Any.fromFunction1(getModifierState)), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withIsDefaultPrevented(isDefaultPrevented: () => Boolean): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented)), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withIsPropagationStopped(isPropagationStopped: () => Boolean): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(isPropagationStopped = js.Any.fromFunction0(isPropagationStopped)), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withIsTrusted(isTrusted: Boolean): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(isTrusted = isTrusted.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withMetaKey(metaKey: Boolean): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(metaKey = metaKey.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withNativeEvent(nativeEvent: NativeTouchEvent): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(nativeEvent = nativeEvent.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withPersist(persist: () => Unit): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(persist = js.Any.fromFunction0(persist)), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withPreventDefault(preventDefault: () => Unit): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(preventDefault = js.Any.fromFunction0(preventDefault)), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withShiftKey(shiftKey: Boolean): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(shiftKey = shiftKey.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withStopPropagation(stopPropagation: () => Unit): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(stopPropagation = js.Any.fromFunction0(stopPropagation)), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withTarget(target: EventTarget): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(target = target.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withTargetTouches(targetTouches: TouchList): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(targetTouches = targetTouches.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withTimeStamp(timeStamp: Double): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(timeStamp = timeStamp.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withTouches(touches: TouchList): TouchEvent[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(touches = touches.asInstanceOf[js.Any]), x).asInstanceOf[typings.react.mod.TouchEvent[T]]
+    @scala.inline
+    def withType(`type`: String): TouchEvent[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.react.mod.TouchEvent[T]]
+    }
+  }
+  
 }
 

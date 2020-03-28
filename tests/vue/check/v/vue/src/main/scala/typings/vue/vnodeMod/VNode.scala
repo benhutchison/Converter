@@ -60,5 +60,113 @@ object VNode {
     if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[VNode]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: VNode) {
+    @scala.inline
+    def duplicate: VNode = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.vue.vnodeMod.VNode]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): VNode with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.vue.vnodeMod.VNode with T]
+    @scala.inline
+    def withIsComment(isComment: Boolean): VNode = js.Dynamic.global.Object.assign(js.Dynamic.literal(isComment = isComment.asInstanceOf[js.Any]), x).asInstanceOf[typings.vue.vnodeMod.VNode]
+    @scala.inline
+    def withIsRootInsert(isRootInsert: Boolean): VNode = js.Dynamic.global.Object.assign(js.Dynamic.literal(isRootInsert = isRootInsert.asInstanceOf[js.Any]), x).asInstanceOf[typings.vue.vnodeMod.VNode]
+    @scala.inline
+    def withChildren(children: js.Array[VNode]): VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (children != null) obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+    @scala.inline
+    def withComponentInstance(componentInstance: Vue): VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (componentInstance != null) obj.updateDynamic("componentInstance")(componentInstance.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+    @scala.inline
+    def withComponentOptions(componentOptions: VNodeComponentOptions): VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (componentOptions != null) obj.updateDynamic("componentOptions")(componentOptions.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+    @scala.inline
+    def withContext(context: Vue): VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (context != null) obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+    @scala.inline
+    def withData(data: VNodeData): VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (data != null) obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+    @scala.inline
+    def withElm(elm: Node): VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (elm != null) obj.updateDynamic("elm")(elm.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+    @scala.inline
+    def withIsStaticUndefined: VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "isStatic")
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+    @scala.inline
+    def withIsStatic(isStatic: Boolean): VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(isStatic)) obj.updateDynamic("isStatic")(isStatic.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+    @scala.inline
+    def withKeyString(key: String): VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (key != null) obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+    @scala.inline
+    def withKeyDouble(key: Double): VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (key != null) obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+    @scala.inline
+    def withNs(ns: String): VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (ns != null) obj.updateDynamic("ns")(ns.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+    @scala.inline
+    def withParent(parent: VNode): VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (parent != null) obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+    @scala.inline
+    def withRawUndefined: VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "raw")
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+    @scala.inline
+    def withRaw(raw: Boolean): VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(raw)) obj.updateDynamic("raw")(raw.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+    @scala.inline
+    def withTag(tag: String): VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (tag != null) obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+    @scala.inline
+    def withText(text: String): VNode = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (text != null) obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.vue.vnodeMod.VNode]
+    }
+  }
+  
 }
 

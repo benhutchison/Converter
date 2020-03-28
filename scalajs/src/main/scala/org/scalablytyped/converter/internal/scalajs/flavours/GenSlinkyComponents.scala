@@ -142,6 +142,7 @@ object GenSlinkyComponents {
   /* These definitions are here to make `ShortenNames` work in the presence of inherited names. */
   object classDefs {
     val ExternalComponentPropsCls = ClassTree(
+      isImplicit = false,
       Empty,
       names.ExternalComponentProps.parts.last,
       IArray(
@@ -174,6 +175,7 @@ object GenSlinkyComponents {
     )
 
     val ExternalComponentNoPropsCls = ClassTree(
+      isImplicit = false,
       Empty,
       names.ExternalComponentNoProps.parts.last,
       IArray(
@@ -407,6 +409,7 @@ class GenSlinkyComponents(
       IArray.fromOption(knownRefRewritten.map(_ => TypeParamTree(names.ComponentRef, Some(TypeRef.Object), NoComments)))
 
     ClassTree(
+      isImplicit = false,
       Empty,
       name,
       refInTParams,

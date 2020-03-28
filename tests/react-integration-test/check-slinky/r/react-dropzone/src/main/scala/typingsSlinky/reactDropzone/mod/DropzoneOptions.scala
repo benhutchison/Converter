@@ -113,5 +113,197 @@ object DropzoneOptions {
     if (!js.isUndefined(preventDropOnDocument)) __obj.updateDynamic("preventDropOnDocument")(preventDropOnDocument.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropzoneOptions]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: DropzoneOptions) {
+    @scala.inline
+    def duplicate: DropzoneOptions = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): DropzoneOptions with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions with T]
+    @scala.inline
+    def withAcceptArray(accept: js.Array[String]): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (accept != null) obj.updateDynamic("accept")(accept.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withAcceptString(accept: String): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (accept != null) obj.updateDynamic("accept")(accept.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withDisabledUndefined: DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "disabled")
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withDisabled(disabled: Boolean): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(disabled)) obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withGetFilesFromEvent(
+      getFilesFromEvent: /* event */ DropEvent => /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Promise<Array<File | DataTransferItem>> */ _
+    ): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (getFilesFromEvent != null) obj.updateDynamic("getFilesFromEvent")(js.Any.fromFunction1(getFilesFromEvent))
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withMaxSizeInt(maxSize: Int): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (maxSize != null) obj.updateDynamic("maxSize")(maxSize.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withMaxSizeDouble(maxSize: Double): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (maxSize != null) obj.updateDynamic("maxSize")(maxSize.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withMinSizeInt(minSize: Int): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (minSize != null) obj.updateDynamic("minSize")(minSize.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withMinSizeDouble(minSize: Double): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (minSize != null) obj.updateDynamic("minSize")(minSize.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withMultipleUndefined: DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "multiple")
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withMultiple(multiple: Boolean): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(multiple)) obj.updateDynamic("multiple")(multiple.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withNoClickUndefined: DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "noClick")
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withNoClick(noClick: Boolean): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(noClick)) obj.updateDynamic("noClick")(noClick.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withNoDragUndefined: DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "noDrag")
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withNoDrag(noDrag: Boolean): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(noDrag)) obj.updateDynamic("noDrag")(noDrag.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withNoDragEventsBubblingUndefined: DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "noDragEventsBubbling")
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withNoDragEventsBubbling(noDragEventsBubbling: Boolean): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(noDragEventsBubbling)) obj.updateDynamic("noDragEventsBubbling")(noDragEventsBubbling.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withNoKeyboardUndefined: DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "noKeyboard")
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withNoKeyboard(noKeyboard: Boolean): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(noKeyboard)) obj.updateDynamic("noKeyboard")(noKeyboard.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withOnDragEnter(onDragEnter: DragEvent[HTMLElement] => Unit): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDragEnter != null) obj.updateDynamic("onDragEnter")(js.Any.fromFunction1(onDragEnter))
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withOnDragLeave(onDragLeave: DragEvent[HTMLElement] => Unit): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDragLeave != null) obj.updateDynamic("onDragLeave")(js.Any.fromFunction1(onDragLeave))
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withOnDragOver(onDragOver: DragEvent[HTMLElement] => Unit): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDragOver != null) obj.updateDynamic("onDragOver")(js.Any.fromFunction1(onDragOver))
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withOnDrop(
+      onDrop: (/* acceptedFiles */ js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify File */ _
+        ], /* rejectedFiles */ js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify File */ _
+        ], /* event */ DropEvent) => Unit
+    ): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDrop != null) obj.updateDynamic("onDrop")(js.Any.fromFunction3(onDrop))
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withOnDropAccepted(
+      onDropAccepted: (/* files */ js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify File */ _
+        ], /* event */ DropEvent) => Unit
+    ): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDropAccepted != null) obj.updateDynamic("onDropAccepted")(js.Any.fromFunction2(onDropAccepted))
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withOnDropRejected(
+      onDropRejected: (/* files */ js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify File */ _
+        ], /* event */ DropEvent) => Unit
+    ): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onDropRejected != null) obj.updateDynamic("onDropRejected")(js.Any.fromFunction2(onDropRejected))
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withOnFileDialogCancel(onFileDialogCancel: () => Unit): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onFileDialogCancel != null) obj.updateDynamic("onFileDialogCancel")(js.Any.fromFunction0(onFileDialogCancel))
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withPreventDropOnDocumentUndefined: DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "preventDropOnDocument")
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+    @scala.inline
+    def withPreventDropOnDocument(preventDropOnDocument: Boolean): DropzoneOptions = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(preventDropOnDocument)) obj.updateDynamic("preventDropOnDocument")(preventDropOnDocument.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactDropzone.mod.DropzoneOptions]
+    }
+  }
+  
 }
 

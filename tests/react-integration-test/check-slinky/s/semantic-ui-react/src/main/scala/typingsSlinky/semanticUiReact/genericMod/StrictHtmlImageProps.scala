@@ -16,5 +16,19 @@ object StrictHtmlImageProps {
     if (src != null) __obj.updateDynamic("src")(src.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictHtmlImageProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: StrictHtmlImageProps) {
+    @scala.inline
+    def duplicate: StrictHtmlImageProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.semanticUiReact.genericMod.StrictHtmlImageProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): StrictHtmlImageProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.semanticUiReact.genericMod.StrictHtmlImageProps with T]
+    @scala.inline
+    def withSrc(src: String): StrictHtmlImageProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (src != null) obj.updateDynamic("src")(src.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.semanticUiReact.genericMod.StrictHtmlImageProps]
+    }
+  }
+  
 }
 

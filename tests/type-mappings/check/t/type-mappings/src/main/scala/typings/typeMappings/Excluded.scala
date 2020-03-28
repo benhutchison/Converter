@@ -29,5 +29,25 @@ object Excluded {
   
     __obj.asInstanceOf[Excluded]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: Excluded) {
+    @scala.inline
+    def duplicate: Excluded = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.typeMappings.Excluded]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): Excluded with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.typeMappings.Excluded with T]
+    @scala.inline
+    def withFontFamily(fontFamily: String): Excluded = js.Dynamic.global.Object.assign(js.Dynamic.literal(fontFamily = fontFamily.asInstanceOf[js.Any]), x).asInstanceOf[typings.typeMappings.Excluded]
+    @scala.inline
+    def withFontSize(fontSize: String): Excluded = js.Dynamic.global.Object.assign(js.Dynamic.literal(fontSize = fontSize.asInstanceOf[js.Any]), x).asInstanceOf[typings.typeMappings.Excluded]
+    @scala.inline
+    def withFontWeight(fontWeight: String): Excluded = js.Dynamic.global.Object.assign(js.Dynamic.literal(fontWeight = fontWeight.asInstanceOf[js.Any]), x).asInstanceOf[typings.typeMappings.Excluded]
+    @scala.inline
+    def withLetterSpacing(letterSpacing: String): Excluded = js.Dynamic.global.Object.assign(js.Dynamic.literal(letterSpacing = letterSpacing.asInstanceOf[js.Any]), x).asInstanceOf[typings.typeMappings.Excluded]
+    @scala.inline
+    def withLineHeight(lineHeight: String): Excluded = js.Dynamic.global.Object.assign(js.Dynamic.literal(lineHeight = lineHeight.asInstanceOf[js.Any]), x).asInstanceOf[typings.typeMappings.Excluded]
+    @scala.inline
+    def withTextTransform(textTransform: String): Excluded = js.Dynamic.global.Object.assign(js.Dynamic.literal(textTransform = textTransform.asInstanceOf[js.Any]), x).asInstanceOf[typings.typeMappings.Excluded]
+  }
+  
 }
 

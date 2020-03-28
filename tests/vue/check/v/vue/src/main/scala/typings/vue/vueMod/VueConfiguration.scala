@@ -37,5 +37,31 @@ object VueConfiguration {
   
     __obj.asInstanceOf[VueConfiguration]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: VueConfiguration) {
+    @scala.inline
+    def duplicate: VueConfiguration = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.vue.vueMod.VueConfiguration]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): VueConfiguration with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.vue.vueMod.VueConfiguration with T]
+    @scala.inline
+    def withDevtools(devtools: Boolean): VueConfiguration = js.Dynamic.global.Object.assign(js.Dynamic.literal(devtools = devtools.asInstanceOf[js.Any]), x).asInstanceOf[typings.vue.vueMod.VueConfiguration]
+    @scala.inline
+    def withErrorHandler(errorHandler: (Error, Vue, String) => Unit): VueConfiguration = js.Dynamic.global.Object.assign(js.Dynamic.literal(errorHandler = js.Any.fromFunction3(errorHandler)), x).asInstanceOf[typings.vue.vueMod.VueConfiguration]
+    @scala.inline
+    def withIgnoredElements(ignoredElements: js.Array[String | RegExp]): VueConfiguration = js.Dynamic.global.Object.assign(js.Dynamic.literal(ignoredElements = ignoredElements.asInstanceOf[js.Any]), x).asInstanceOf[typings.vue.vueMod.VueConfiguration]
+    @scala.inline
+    def withKeyCodes(keyCodes: StringDictionary[Double | js.Array[Double]]): VueConfiguration = js.Dynamic.global.Object.assign(js.Dynamic.literal(keyCodes = keyCodes.asInstanceOf[js.Any]), x).asInstanceOf[typings.vue.vueMod.VueConfiguration]
+    @scala.inline
+    def withOptionMergeStrategies(optionMergeStrategies: js.Any): VueConfiguration = js.Dynamic.global.Object.assign(js.Dynamic.literal(optionMergeStrategies = optionMergeStrategies.asInstanceOf[js.Any]), x).asInstanceOf[typings.vue.vueMod.VueConfiguration]
+    @scala.inline
+    def withPerformance(performance: Boolean): VueConfiguration = js.Dynamic.global.Object.assign(js.Dynamic.literal(performance = performance.asInstanceOf[js.Any]), x).asInstanceOf[typings.vue.vueMod.VueConfiguration]
+    @scala.inline
+    def withProductionTip(productionTip: Boolean): VueConfiguration = js.Dynamic.global.Object.assign(js.Dynamic.literal(productionTip = productionTip.asInstanceOf[js.Any]), x).asInstanceOf[typings.vue.vueMod.VueConfiguration]
+    @scala.inline
+    def withSilent(silent: Boolean): VueConfiguration = js.Dynamic.global.Object.assign(js.Dynamic.literal(silent = silent.asInstanceOf[js.Any]), x).asInstanceOf[typings.vue.vueMod.VueConfiguration]
+    @scala.inline
+    def withWarnHandler(warnHandler: (String, Vue, String) => Unit): VueConfiguration = js.Dynamic.global.Object.assign(js.Dynamic.literal(warnHandler = js.Any.fromFunction3(warnHandler)), x).asInstanceOf[typings.vue.vueMod.VueConfiguration]
+  }
+  
 }
 

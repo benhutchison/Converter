@@ -53,5 +53,90 @@ object SubMenuProps {
     if (!js.isUndefined(rtl)) __obj.updateDynamic("rtl")(rtl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubMenuProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: SubMenuProps) {
+    @scala.inline
+    def duplicate: SubMenuProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typingsSlinky.reactContextmenu.mod.SubMenuProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): SubMenuProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typingsSlinky.reactContextmenu.mod.SubMenuProps with T]
+    @scala.inline
+    def withTitleReactElement(title: ReactElement): SubMenuProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(title = title.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.reactContextmenu.mod.SubMenuProps]
+    @scala.inline
+    def withTitleReactText(title: ReactText): SubMenuProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(title = title.asInstanceOf[js.Any]), x).asInstanceOf[typingsSlinky.reactContextmenu.mod.SubMenuProps]
+    @scala.inline
+    def withClassName(className: String): SubMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (className != null) obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactContextmenu.mod.SubMenuProps]
+    }
+    @scala.inline
+    def withDisabledUndefined: SubMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "disabled")
+      obj.asInstanceOf[typingsSlinky.reactContextmenu.mod.SubMenuProps]
+    }
+    @scala.inline
+    def withDisabled(disabled: Boolean): SubMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(disabled)) obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactContextmenu.mod.SubMenuProps]
+    }
+    @scala.inline
+    def withHoverDelayInt(hoverDelay: Int): SubMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (hoverDelay != null) obj.updateDynamic("hoverDelay")(hoverDelay.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactContextmenu.mod.SubMenuProps]
+    }
+    @scala.inline
+    def withHoverDelayDouble(hoverDelay: Double): SubMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (hoverDelay != null) obj.updateDynamic("hoverDelay")(hoverDelay.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactContextmenu.mod.SubMenuProps]
+    }
+    @scala.inline
+    def withOnClickFunction3(
+      onClick: js.Function3[
+          /* event */ SyntheticTouchEvent[HTMLDivElement] | SyntheticMouseEvent[HTMLDivElement], 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Object */ /* data */ js.Any, 
+          /* target */ HTMLElement, 
+          Unit
+        ]
+    ): SubMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onClick != null) obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactContextmenu.mod.SubMenuProps]
+    }
+    @scala.inline
+    def withOnClickFunction(onClick: js.Function): SubMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onClick != null) obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactContextmenu.mod.SubMenuProps]
+    }
+    @scala.inline
+    def withPreventCloseOnClickUndefined: SubMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "preventCloseOnClick")
+      obj.asInstanceOf[typingsSlinky.reactContextmenu.mod.SubMenuProps]
+    }
+    @scala.inline
+    def withPreventCloseOnClick(preventCloseOnClick: Boolean): SubMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(preventCloseOnClick)) obj.updateDynamic("preventCloseOnClick")(preventCloseOnClick.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactContextmenu.mod.SubMenuProps]
+    }
+    @scala.inline
+    def withRtlUndefined: SubMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "rtl")
+      obj.asInstanceOf[typingsSlinky.reactContextmenu.mod.SubMenuProps]
+    }
+    @scala.inline
+    def withRtl(rtl: Boolean): SubMenuProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(rtl)) obj.updateDynamic("rtl")(rtl.asInstanceOf[js.Any])
+      obj.asInstanceOf[typingsSlinky.reactContextmenu.mod.SubMenuProps]
+    }
+  }
+  
 }
 

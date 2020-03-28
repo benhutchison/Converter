@@ -319,7 +319,7 @@ class IdentifyReactComponents(reactNames: ReactNames) {
       val current = scope.stack(idx)
       val base: Option[LocationAnnotation] =
         current match {
-          case ClassTree(Location(loc), _, _, _, _, _, _, _, _, _) => Some(loc)
+          case ClassTree(_, Location(loc), _, _, _, _, _, _, _, _, _) => Some(loc)
           case ModuleTree(Location(loc), _, _, _, _, _, _)         => Some(loc)
           case PackageTree(Location(loc), _, _, _, _)              => Some(loc)
           case _                                                   => None

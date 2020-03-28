@@ -17,5 +17,25 @@ object HTMLProps {
     if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
     __obj.asInstanceOf[HTMLProps[T]]
   }
+  @scala.inline
+  implicit sealed class Sugar[T] (x: HTMLProps[T]) {
+    @scala.inline
+    def duplicate: HTMLProps[T] = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.react.mod.HTMLProps[T]]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): HTMLProps[T] with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.react.mod.HTMLProps[T] with T]
+    @scala.inline
+    def withAllHTMLAttributes(AllHTMLAttributes: AllHTMLAttributes[T]): HTMLProps[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(obj, AllHTMLAttributes)
+      obj.asInstanceOf[typings.react.mod.HTMLProps[T]]
+    }
+    @scala.inline
+    def withClassAttributes(ClassAttributes: ClassAttributes[T]): HTMLProps[T] = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (ClassAttributes != null) js.Dynamic.global.Object.assign(obj, ClassAttributes)
+      obj.asInstanceOf[typings.react.mod.HTMLProps[T]]
+    }
+  }
+  
 }
 

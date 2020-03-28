@@ -34,6 +34,7 @@ class GenReactFacadeComponents(reactNames: ReactNames) {
         setCodePath(
           traitCodePath,
           ClassTree(
+            isImplicit = false,
             annotations = Empty,
             name        = traitName,
             tparams     = Empty,

@@ -56,5 +56,88 @@ object MenuItemProps {
     if (!js.isUndefined(preventClose)) __obj.updateDynamic("preventClose")(preventClose.asInstanceOf[js.Any])
     __obj.asInstanceOf[MenuItemProps]
   }
+  @scala.inline
+  implicit sealed class Sugar (x: MenuItemProps) {
+    @scala.inline
+    def duplicate: MenuItemProps = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x).asInstanceOf[typings.reactContextmenu.mod.MenuItemProps]
+    @scala.inline
+    def combine[T /* <: js.Any */](other: T): MenuItemProps with T = js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any]).asInstanceOf[typings.reactContextmenu.mod.MenuItemProps with T]
+    @scala.inline
+    def withAttributes(attributes: HTMLAttributes[HTMLDivElement]): MenuItemProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (attributes != null) obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.MenuItemProps]
+    }
+    @scala.inline
+    def withClassName(className: String): MenuItemProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (className != null) obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.MenuItemProps]
+    }
+    @scala.inline
+    def withData(
+      data: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Object */ js.Any
+    ): MenuItemProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (data != null) obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.MenuItemProps]
+    }
+    @scala.inline
+    def withDisabledUndefined: MenuItemProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "disabled")
+      obj.asInstanceOf[typings.reactContextmenu.mod.MenuItemProps]
+    }
+    @scala.inline
+    def withDisabled(disabled: Boolean): MenuItemProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(disabled)) obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.MenuItemProps]
+    }
+    @scala.inline
+    def withDividerUndefined: MenuItemProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "divider")
+      obj.asInstanceOf[typings.reactContextmenu.mod.MenuItemProps]
+    }
+    @scala.inline
+    def withDivider(divider: Boolean): MenuItemProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(divider)) obj.updateDynamic("divider")(divider.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.MenuItemProps]
+    }
+    @scala.inline
+    def withOnClickFunction3(
+      onClick: js.Function3[
+          /* event */ TouchEvent[HTMLDivElement] | (MouseEvent[HTMLDivElement, NativeMouseEvent]), 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Object */ /* data */ js.Any, 
+          /* target */ HTMLElement, 
+          Unit
+        ]
+    ): MenuItemProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onClick != null) obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.MenuItemProps]
+    }
+    @scala.inline
+    def withOnClickFunction(onClick: js.Function): MenuItemProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (onClick != null) obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.MenuItemProps]
+    }
+    @scala.inline
+    def withPreventCloseUndefined: MenuItemProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      js.special.delete(obj, "preventClose")
+      obj.asInstanceOf[typings.reactContextmenu.mod.MenuItemProps]
+    }
+    @scala.inline
+    def withPreventClose(preventClose: Boolean): MenuItemProps = {
+      val obj = duplicate.asInstanceOf[js.Dynamic]
+      if (!js.isUndefined(preventClose)) obj.updateDynamic("preventClose")(preventClose.asInstanceOf[js.Any])
+      obj.asInstanceOf[typings.reactContextmenu.mod.MenuItemProps]
+    }
+  }
+  
 }
 
