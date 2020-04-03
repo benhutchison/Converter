@@ -25,6 +25,7 @@ object ImportEnum {
       importName:   AdaptiveNamingImport,
       importType:   ImportType,
       illegalNames: CleanIllegalNames,
+      importExpr:   ImportExpr,
   ): IArray[Tree] =
     e match {
       /* exported const enum? type alias */
@@ -45,22 +46,6 @@ object ImportEnum {
         )
 
         def module = {
-          val cast = {
-            val castName = Name("cast")
-            val T        = Name("T")
-            MethodTree(
-              IArray(Annotation.Inline),
-              ProtectionLevel.Private,
-              castName,
-              IArray(TypeParamTree(T, None, NoComments)),
-              IArray(IArray(ParamTree(Name("in"), false, TypeRef.Any, NotImplemented, NoComments))),
-              ExprTree.Custom("in.asInstanceOf[T]"),
-              TypeRef(T),
-              isOverride = false,
-              NoComments,
-              importedCodePath + castName,
-            )
-          }
           val newMembers = members.map {
             case TsEnumMember(memberCs, ImportName(memberName), exprOpt) =>
               val expr = exprOpt.getOrElse(sys.error("Expression cannot be empty here"))
@@ -71,7 +56,7 @@ object ImportEnum {
                 memberName,
                 Empty,
                 Empty,
-                ExprTree.Custom(s"this.cast(${TsExpr.format(expr)})"),
+                ExprTree.Cast(importExpr(expr, scope), tpe),
                 tpe,
                 isOverride = false,
                 memberCs,
@@ -80,14 +65,12 @@ object ImportEnum {
           }
 
           /* keep module members when minimizing */
-          val related = Comments(
-            CommentData(Minimization.Related(TypeRef(cast.codePath) +: newMembers.map(m => TypeRef(m.codePath)))),
-          )
+          val related = Comments(CommentData(Minimization.Related(newMembers.map(m => TypeRef(m.codePath)))))
           ModuleTree(
             Empty,
             importedCodePath.parts.last,
             Empty,
-            cast +: newMembers,
+            newMembers,
             related,
             importedCodePath,
             isOverride = false,

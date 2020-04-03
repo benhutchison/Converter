@@ -100,6 +100,17 @@ final class GenCompanions(memberToProp: MemberToProp, findProps: FindProps) exte
 
         val ret = TypeRef(QualifiedName(IArray(typeName)), TypeParamTree.asTypeArgs(typeTparams), NoComments)
 
+        val impl: ExprTree = {
+          import ExprTree._
+          val objName = Name("__obj")
+          Block(
+            IArray(
+              IArray(Val(objName, Call(Ref(QualifiedName.DynamicLiteral), IArray(inLiterals)))),
+              optionals.map(f => f(objName)),
+              IArray(Cast(Ref(QualifiedName(IArray(objName))), ret)),
+            ).flatten,
+          )
+        }
         Some(
           MethodTree(
             IArray(Annotation.Inline),
@@ -107,11 +118,7 @@ final class GenCompanions(memberToProp: MemberToProp, findProps: FindProps) exte
             name,
             typeTparams,
             IArray(props.map(_.parameter)),
-            ExprTree.Custom(s"""{
-                  |  val __obj = js.Dynamic.literal(${inLiterals.mkString(", ")})
-                  |${optionals.map(f => "  " + f("__obj")).mkString("\n")}
-                  |  __obj.asInstanceOf[${Printer.formatTypeRef(0)(ret)}]
-                  |}""".stripMargin),
+            impl,
             ret,
             isOverride = false,
             NoComments,

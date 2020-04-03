@@ -245,12 +245,7 @@ object Printer {
           typeAnnotation(formatName(name), indent, tpe, name),
         )
 
-        impl match {
-          case NotImplemented        => println()
-          case ExprTree.undefined    => println(" = js.undefined")
-          case ExprTree.native       => println(" = js.native")
-          case ExprTree.Custom(impl) => println(" = ", impl)
-        }
+        println(formatImpl(indent)(impl))
 
       case MethodTree(anns, level, name, tparams, params, impl, resultType, isOverride, comments, _) =>
         print(Comments.format(comments))
@@ -272,12 +267,7 @@ object Printer {
         print(
           typeAnnotation(formatName(name) + tparamString + paramString.mkString, indent, resultType, name),
         )
-        impl match {
-          case NotImplemented        => println()
-          case ExprTree.native       => println(" = js.native")
-          case ExprTree.undefined    => println(" = js.undefined")
-          case ExprTree.Custom(impl) => println(" = ", impl)
-        }
+        println(formatImpl(indent)(impl))
 
       case CtorTree(level, params, comments) =>
         print(Comments.format(comments))
@@ -289,17 +279,7 @@ object Printer {
           " = this()",
         )
 
-      case tree @ ParamTree(_, _, _, _, comments) =>
-        print(Comments.format(comments))
-        println(formatParamTree(indent)(tree))
-
-      case tree @ TypeParamTree(_, _, comments) =>
-        print(Comments.format(comments))
-        print(formatTypeParamTree(isNative = true, indent)(tree))
-
-      case tree @ TypeRef(_, _, comments) =>
-        print(Comments.format(comments))
-        print(formatTypeRef(indent)(tree))
+      case other => scope.logger.fatal(s"unexpected ${other.getClass.getSimpleName}")
     }
   }
 
@@ -335,7 +315,7 @@ object Printer {
       Comments.format(tree.comments),
       if (tree.isImplicit) "implicit " else "",
       typeAnnotation(formatName(tree.name), indent + 2, tree.tpe, Name.WILDCARD),
-      formatImpl(tree.default),
+      formatImpl(indent)(tree.default),
     ).mkString
 
   def formatDefaultedTypeRef(indent: Int)(ref: TypeRef): String =
@@ -346,13 +326,14 @@ object Printer {
     }
 
   def formatQN(q: QualifiedName): String =
-    q.parts match {
-      case IArray.exactlyFour(Name.scala, Name.scalajs, Name.js, name) => "js." + formatName(name)
-      case other                                                       => other.map(formatName).mkString(".")
-    }
+    if (q.startsWith(QualifiedName.scala_js))
+      formatQN(QualifiedName(q.parts.drop(QualifiedName.scala_js.parts.length - 1)))
+    else q.parts.map(formatName).mkString(".")
 
   def formatName(name: Name): String = name match {
     case Name.APPLY => "apply"
+    case Name.THIS  => "this"
+    case Name.SUPER => "super"
     case other      => other.value
   }
 
@@ -464,21 +445,54 @@ object Printer {
       case formatted => formatted.sorted.mkString("", "\n", "\n")
     }
 
-  def formatExpr(e: ExprTree): String =
+  def formatExpr(indent: Int)(e: ExprTree): String =
     e match {
-      case ExprTree.Ref(value)       => formatQN(value)
-      case ExprTree.StringLit(value) => stringUtils.quote(value)
-      case ExprTree.Cast(one, as)    => formatExpr(one) + s".asInstanceOf[${formatQN(as.value)}]"
-      case ExprTree.Custom(impl)     => impl
-      case ExprTree.`null`           => "null"
-      //      case ExprTree.Call(function, params) =>
-      //      case ExprTree.Unary(op, expr) =>
-      //      case ExprTree.BinaryOp(one, op, two) =>
+      case ExprTree.Val(name, value) =>
+        s"val ${name.value} = ${formatExpr(indent)(value)}"
+      case ExprTree.TApply(ref, targs) =>
+        s"${formatExpr(0)(ref)}[${targs.map(formatTypeRef(indent)).mkString(", ")}]"
+      case ExprTree.If(pred, ifTrue, Some(ifFalse)) =>
+        s"if (${formatExpr(indent)(pred)}) ${formatExpr(indent)(ifTrue)} else ${formatExpr(indent)(ifFalse)}"
+      case ExprTree.If(pred, ifTrue, None) =>
+        s"if (${formatExpr(indent)(pred)}) ${formatExpr(indent)(ifTrue)}"
+      case ExprTree.Block(es) =>
+        es.map(e => (" " * indent) + formatExpr(indent + 2)(e)).mkString("{\n", "\n", "\n}")
+      case ExprTree.Null =>
+        "null"
+      case ExprTree.Ref(value) =>
+        formatQN(value)
+      case ExprTree.StringLit(value) =>
+        stringUtils.quote(value)
+      case ExprTree.NumberLit(value) =>
+        value
+      case ExprTree.BooleanLit(value) =>
+        value.toString
+      case ExprTree.Cast(one, as) =>
+        s"${paramsIfNeeded(formatExpr(indent)(one))}.asInstanceOf[${formatTypeRef(indent)(as)}]"
+      case ExprTree.Unary(op, expr) =>
+        s"$op${formatExpr(indent)(expr)}"
+      case ExprTree.BinaryOp(one, op, two) =>
+        s"${formatExpr(indent)(one)} $op ${formatExpr(indent)(two)}"
+      case ExprTree.New(expr, Empty) =>
+        s"new ${formatTypeRef(indent)(expr)}"
+      case ExprTree.New(expr, params) =>
+        s"new ${formatTypeRef(indent)(expr)}${params.map(formatExpr(indent)).mkString("(", ", ", ")")}"
+      case ExprTree.Lambda(params, body) =>
+        s"${params.map(formatParamTree(indent)).mkString("(", ", ", ")")} => ${formatExpr(indent)(body)}"
+      case ExprTree.Call(function, paramss) =>
+        val ps = paramss.map(params => params.map(formatExpr(indent)).mkString("(", ", ", ")")).mkString
+        s"${formatExpr(indent)(function)}$ps"
+      case ExprTree.Select(from, path) =>
+        s"${formatExpr(indent)(from)}.${formatName(path)}"
+      case ExprTree.`_:*`(ref) =>
+        s"${formatExpr(indent)(ref)} :_*"
+      case ExprTree.Custom(impl) =>
+        impl
     }
 
-  def formatImpl(e: ImplTree): String =
+  def formatImpl(indent: Int)(e: ImplTree): String =
     e match {
       case NotImplemented => ""
-      case e: ExprTree => " = " + formatExpr(e)
+      case e: ExprTree => " = " + formatExpr(indent)(e)
     }
 }

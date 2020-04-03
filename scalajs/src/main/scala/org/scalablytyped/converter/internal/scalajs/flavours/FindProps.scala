@@ -60,11 +60,12 @@ object FindProps {
   def parentParameter(name: Name, ref: TypeRef, isRequired: Boolean): (Name, Prop) =
     name ->
       Prop(
-        ParamTree(name, isImplicit = false, ref, if (isRequired) NotImplemented else ExprTree.`null`, NoComments),
-        Right(obj =>
-          if (!isRequired) s"if (${name.value} != null) js.Dynamic.global.Object.assign($obj, ${name.value})"
-          else s"js.Dynamic.global.Object.assign($obj, ${name.value})",
-        ),
+        ParamTree(name, isImplicit = false, ref, if (isRequired) NotImplemented else ExprTree.Null, NoComments),
+        Right { obj =>
+          import ExprTree._
+          val assign = Call(Ref(QualifiedName.DynamicGlobalObjectAssign), IArray(IArray(Ref(obj), Ref(name))))
+          if (isRequired) assign else If(BinaryOp(Ref(name), "!=", Null), assign, None)
+        },
         Left(ref),
       )
 

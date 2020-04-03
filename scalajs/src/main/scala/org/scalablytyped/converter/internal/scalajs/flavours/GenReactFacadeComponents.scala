@@ -95,7 +95,7 @@ class GenReactFacadeComponents(reactNames: ReactNames) {
             name        = comp.shortenedPropsName,
             tparams     = Empty,
             params      = Empty,
-            impl        = ExprTree.Custom(Printer.formatQN(generatedPropsCompanion.codePath)),
+            impl        = ExprTree.Ref(generatedPropsCompanion.codePath),
             resultType  = TypeRef.Singleton(TypeRef(generatedPropsCompanion.codePath, Empty, NoComments)),
             isOverride  = false,
             comments    = NoComments,
@@ -111,19 +111,19 @@ class GenReactFacadeComponents(reactNames: ReactNames) {
     }
 
     val retType = TypeRef(reactNames.ComponentType, IArray(shortenedProps), NoComments)
+    val impl    = ExprTree.Cast(Component.formatReferenceTo(comp.scalaRef, comp.componentType), retType)
+
     MethodTree(
       annotations = IArray(Annotation.Inline),
       level       = ProtectionLevel.Default,
       name        = comp.fullName,
       tparams     = comp.tparams,
       params      = Empty,
-      impl = ExprTree.Custom(
-        s"${Component.formatReferenceTo(comp.scalaRef, comp.componentType)}.asInstanceOf[${Printer.formatTypeRef(0)(retType)}]",
-      ),
-      resultType = retType,
-      isOverride = false,
-      comments   = NoComments,
-      codePath   = moduleCodePath + comp.fullName,
+      impl        = impl,
+      resultType  = retType,
+      isOverride  = false,
+      comments    = NoComments,
+      codePath    = moduleCodePath + comp.fullName,
     )
   }
 }

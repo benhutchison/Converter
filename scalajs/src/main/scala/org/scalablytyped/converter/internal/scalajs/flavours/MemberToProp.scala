@@ -21,11 +21,23 @@ object MemberToProp {
           FollowAliases(scope)(origTpe) match {
             case Optional(TypeRef.Double) =>
               val tpe = TypeRef.Union(IArray(TypeRef.Int, TypeRef.Double), sort = false)
+              import ExprTree._
+
               Some(
                 Prop(
-                  ParamTree(name, isImplicit = false, tpe, ExprTree.`null`, NoComments),
+                  ParamTree(name, isImplicit = false, tpe, ExprTree.Null, NoComments),
                   Right(obj =>
-                    s"""if (${name.value} != null) $obj.updateDynamic(${escapeIntoString(f.originalName)})(${name.value}$Cast)""",
+                    If(
+                      BinaryOp(Ref(name), "!=", Null),
+                      Call(
+                        Ref(QualifiedName(IArray(obj, Name("updateDynamic")))),
+                        IArray(
+                          IArray(StringLit(EscapeStrings.java(f.originalName.unescaped))),
+                          IArray(ExprTree.Cast(Ref(name), TypeRef.Any)),
+                        ),
+                      ),
+                      None,
+                    ),
                   ),
                   Right(f),
                 ),
@@ -35,7 +47,11 @@ object MemberToProp {
                 Prop(
                   ParamTree(name, isImplicit = false, TypeRef.UndefOr(tpe), ExprTree.undefined, NoComments),
                   Right(obj =>
-                    s"""if (!js.isUndefined(${name.value})) $obj.updateDynamic(${escapeIntoString(f.originalName)})(${name.value}$Cast)""",
+                    ExprTree.Custom(
+                      s"""if (!js.isUndefined(${name.value})) ${obj.value}.updateDynamic(${escapeIntoString(
+                        f.originalName,
+                      )})(${name.value}$Cast)""",
+                    ),
                   ),
                   Right(f),
                 ),
@@ -50,11 +66,16 @@ object MemberToProp {
                       name,
                       isImplicit = false,
                       TypeRef.ScalaFunction(paramTypes, retType, NoComments),
-                      ExprTree.`null`,
+                      ExprTree.Null,
                       NoComments,
                     ),
                     Right(obj =>
-                      s"""if (${name.value} != null) $obj.updateDynamic(${escapeIntoString(f.originalName)})($convertedTarget)""",
+                      ExprTree
+                        .Custom(
+                          s"""if (${name.value} != null) ${obj.unescaped}.updateDynamic(${escapeIntoString(
+                            f.originalName,
+                          )})($convertedTarget)""",
+                        ),
                     ),
                     Right(f),
                   ),
@@ -68,9 +89,11 @@ object MemberToProp {
 
               Some(
                 Prop(
-                  ParamTree(name, isImplicit = false, tpe, ExprTree.`null`, NoComments),
+                  ParamTree(name, isImplicit = false, tpe, ExprTree.Null, NoComments),
                   Right(obj =>
-                    s"""if (${name.value} != null) $obj.updateDynamic(${escapeIntoString(f.originalName)})(${name.value}$Cast)""",
+                    ExprTree.Custom(
+                      s"""if (${name.value} != null) ${obj.unescaped}.updateDynamic(${escapeIntoString(f.originalName)})(${name.value}$Cast)""",
+                    ),
                   ),
                   Right(f),
                 ),
@@ -90,9 +113,13 @@ object MemberToProp {
                       NoComments,
                     ),
                     if (!name.isEscaped && f.originalName === name)
-                      Left(s"""${name.value} = $convertedTarget""")
+                      Left(ExprTree.Custom(s"""${name.value} = $convertedTarget"""))
                     else
-                      Right(obj => s"""$obj.updateDynamic(${escapeIntoString(f.originalName)})($convertedTarget)"""),
+                      Right(obj =>
+                        ExprTree.Custom(
+                          s"""${obj.unescaped}.updateDynamic(${escapeIntoString(f.originalName)})($convertedTarget)""",
+                        ),
+                      ),
                     Right(f),
                   ),
                 )
@@ -101,9 +128,13 @@ object MemberToProp {
                 Prop(
                   ParamTree(name, isImplicit = false, origTpe, NotImplemented, NoComments),
                   if (!name.isEscaped && f.originalName === name)
-                    Left(s"""${name.value} = ${name.value}$Cast""")
+                    Left(ExprTree.Custom(s"""${name.value} = ${name.value}$Cast"""))
                   else
-                    Right(obj => s"""$obj.updateDynamic(${escapeIntoString(f.originalName)})(${name.value}$Cast)"""),
+                    Right(obj =>
+                      ExprTree.Custom(
+                        s"""${obj.unescaped}.updateDynamic(${escapeIntoString(f.originalName)})(${name.value}$Cast)""",
+                      ),
+                    ),
                   Right(f),
                 ),
               )
@@ -126,9 +157,13 @@ object MemberToProp {
                   NoComments,
                 ),
                 if (!m.name.isEscaped && m.originalName === m.name)
-                  Left(s"""${m.name.value} = $convertedTarget""")
+                  Left(ExprTree.Custom(s"""${m.name.value} = $convertedTarget"""))
                 else
-                  Right(obj => s"""$obj.updateDynamic(${escapeIntoString(m.originalName)})($convertedTarget)"""),
+                  Right(obj =>
+                    ExprTree.Custom(
+                      s"""${obj.unescaped}.updateDynamic(${escapeIntoString(m.originalName)})($convertedTarget)""",
+                    ),
+                  ),
                 Right(m),
               ),
             )

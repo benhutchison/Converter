@@ -1936,7 +1936,7 @@ type Readonly<T> = {
         TsIdentSimple("Button"),
         IArray(
           TsEnumMember(NoComments, TsIdentSimple("MINUS"), Some(TsExpr.Literal(TsLiteralNumber("0x00000004")))),
-          TsEnumMember(NoComments, TsIdentSimple("SELECT"), Some(TsExpr.Ref(TsTypeRef(TsIdentSimple("MINUS"))))),
+          TsEnumMember(NoComments, TsIdentSimple("SELECT"), Some(TsExpr.Ref(TsQIdent(IArray(TsIdentSimple("MINUS")))))),
         ),
         isValue      = true,
         exportedFrom = None,
@@ -2608,12 +2608,7 @@ export {};
             readOnly = true,
             TsIdentSimple("start"),
             None,
-            Some(
-              TsExpr
-                .Ref(
-                  TsTypeRef(NoComments, TsQIdent(IArray(TsIdentSimple("ActionTypes"), TsIdentSimple("Start"))), Empty),
-                ),
-            ),
+            Some(TsExpr.Ref(TsQIdent(IArray(TsIdentSimple("ActionTypes"), TsIdentSimple("Start"))))),
             Zero,
             CodePath.NoPath,
             isOptional = false,
@@ -2623,25 +2618,22 @@ export {};
     )
 
     shouldParseAs("""(LoggingLevel.ERROR)""", TsParser.expr)(
-      TsExpr.Ref(TsTypeRef(NoComments, TsQIdent(IArray(TsIdentSimple("LoggingLevel"), TsIdentSimple("ERROR"))), Empty)),
+      TsExpr.Ref(TsQIdent(IArray(TsIdentSimple("LoggingLevel"), TsIdentSimple("ERROR")))),
     )
     shouldParseAs("""WARNING""", TsParser.expr)(
-      TsExpr.Ref(TsTypeRef(NoComments, TsQIdent(IArray(TsIdentSimple("WARNING"))), Empty)),
+      TsExpr.Ref(TsQIdent(IArray(TsIdentSimple("WARNING")))),
     )
     shouldParseAs("""LoggingLevel.ERROR | WARNING""", TsParser.expr)(
       TsExpr.BinaryOp(
-        TsExpr
-          .Ref(TsTypeRef(NoComments, TsQIdent(IArray(TsIdentSimple("LoggingLevel"), TsIdentSimple("ERROR"))), Empty)),
+        TsExpr.Ref(TsQIdent(IArray(TsIdentSimple("LoggingLevel"), TsIdentSimple("ERROR")))),
         "|",
-        TsExpr.Ref(TsTypeRef(NoComments, TsQIdent(IArray(TsIdentSimple("WARNING"))), Empty)),
+        TsExpr.Ref(TsQIdent(IArray(TsIdentSimple("WARNING")))),
       ),
     )
     shouldParseAs("""LoggingLevel.ERROR(6 + 7)""", TsParser.expr)(
       TsExpr.Call(
-        TsExpr.Ref(
-          TsTypeRef(NoComments, TsQIdent(IArray(TsIdentSimple("LoggingLevel"), TsIdentSimple("ERROR"))), Empty),
-        ),
-        List(TsExpr.BinaryOp(TsExpr.Literal(TsLiteralNumber("6")), "+", TsExpr.Literal(TsLiteralNumber("7")))),
+        TsExpr.Ref(TsQIdent(IArray(TsIdentSimple("LoggingLevel"), TsIdentSimple("ERROR")))),
+        IArray(TsExpr.BinaryOp(TsExpr.Literal(TsLiteralNumber("6")), "+", TsExpr.Literal(TsLiteralNumber("7")))),
       ),
     )
 

@@ -52,6 +52,8 @@ object ShortenNames {
 
         val rewrittenOpt: Option[QualifiedName] = {
           if (!Name.Internal(shortName) &&
+              longName.parts.head =/= Name.THIS &&
+              longName.parts.head =/= Name.SUPER &&
               !Forbidden.contains(shortName) &&
               owner.name =/= shortName &&
               longName.parts.length > 1 &&
@@ -134,6 +136,11 @@ object ShortenNames {
         case x: MethodTree =>
           (x.name === longName.parts.last && x.codePath =/= longName) ||
             (methodsAreConflict && x.params.exists(_.exists(_.name === longName.parts.last)))
+        case x: ExprTree.Block =>
+          x.expressions.exists {
+            case ExprTree.Val(name, _) => longName.parts.head === name
+            case _                     => false
+          }
         case _ => false
       }
 

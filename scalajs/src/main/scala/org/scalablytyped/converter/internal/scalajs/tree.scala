@@ -486,14 +486,35 @@ case object NotImplemented extends ImplTree
 sealed trait ExprTree extends ImplTree
 
 object ExprTree {
+
   val undefined = Ref(QualifiedName.scala_js + Name("undefined"))
   val native    = Ref(QualifiedName.scala_js + Name("native"))
-  case object `null` extends ExprTree
-  case class Custom(impl:     String) extends ExprTree
-  case class Ref(value:       QualifiedName) extends ExprTree
-  case class StringLit(value: String) extends ExprTree
-  //  case class Call(function:   ExprTree, params: List[ExprTree]) extends ExprTree
-  //  case class Unary(op:        String, expr: ExprTree) extends ExprTree
-  //  case class BinaryOp(one:    ExprTree, op: String, two: ExprTree) extends ExprTree
-  case class Cast(one: ExprTree, as: Ref) extends ExprTree
+
+  case object Null extends ExprTree
+  case class `_:*`(arg:             ExprTree) extends ExprTree
+  case class BinaryOp(one:          ExprTree, op: String, two: ExprTree) extends ExprTree
+  case class Block(expressions:     IArray[ExprTree]) extends ExprTree
+  case class BooleanLit(value:      Boolean) extends ExprTree
+  case class Call(function:         ExprTree, params: IArray[IArray[ExprTree]]) extends ExprTree
+  case class Cast(one:              ExprTree, as: TypeRef) extends ExprTree
+  case class Custom(impl:           String) extends ExprTree
+  case class If(pred:               ExprTree, ifTrue: ExprTree, ifFalse: Option[ExprTree]) extends ExprTree
+  case class Lambda(params:         IArray[ParamTree], body: ExprTree) extends ExprTree
+  case class New(expr:              TypeRef, params: IArray[ExprTree]) extends ExprTree
+  case class NumberLit(value:       String) extends ExprTree
+  case class Ref(value:             QualifiedName) extends ExprTree
+  case class Select(from:           ExprTree, path: Name) extends ExprTree
+  case class StringLit(value:       String) extends ExprTree
+  case class TApply(ref:            Ref, targs: IArray[TypeRef]) extends ExprTree
+  case class Unary(op:              String, expr: ExprTree) extends ExprTree
+  case class Val(override val name: Name, value: ExprTree) extends ExprTree
+
+  object Ref {
+    def apply(name: Name): Ref =
+      apply(QualifiedName(IArray(name)))
+
+    def apply(tr: TypeRef): ExprTree =
+      if (tr.targs.isEmpty) apply(tr.typeName)
+      else TApply(Ref(tr.typeName), tr.targs)
+  }
 }

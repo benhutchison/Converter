@@ -4,7 +4,7 @@ package flavours
 
 final case class Prop(
     parameter: ParamTree,
-    asString:  Either[String, String => String],
+    asString:  Either[ExprTree, Name => ExprTree],
     /* should be unaffected by `CastConversion` rewrites */
     original: Either[TypeRef, MemberTree],
 ) {

@@ -64,12 +64,44 @@ class TreeTransformation { self =>
 
     val updatedChildren =
       s match {
-        case ExprTree.`null` => ExprTree.`null`
-        case x: ExprTree.Custom => x
-        case x @ ExprTree.Ref(_)       => x
-        case x @ ExprTree.StringLit(_) => x
-        case ExprTree.Cast(one, as) =>
-          ExprTree.Cast(visitExprTree(childrenScope)(one), visitExprRefTree(childrenScope)(as))
+        case ExprTree.Null =>
+          ExprTree.Null
+        case ExprTree.Val(name, value) =>
+          ExprTree.Val(name, visitExprTree(childrenScope)(value))
+        case ExprTree.TApply(ref, targs) =>
+          ExprTree.TApply(
+            visitExprRefTree(childrenScope)(ref),
+            targs map visitTypeRef(childrenScope),
+          )
+        case ExprTree.If(pred, ifTrue, ifFalse) =>
+          ExprTree.If(
+            visitExprTree(childrenScope)(pred),
+            visitExprTree(childrenScope)(ifTrue),
+            ifFalse map visitExprTree(childrenScope),
+          )
+        case ExprTree.`_:*`(arg)         => ExprTree.`_:*`(visitExprTree(childrenScope)(arg))
+        case ExprTree.Block(expressions) => ExprTree.Block(expressions map visitExprTree(childrenScope))
+        case ExprTree.Select(from, path) => ExprTree.Select(visitExprTree(childrenScope)(from), path)
+        case ExprTree.Cast(one, as)      => ExprTree.Cast(visitExprTree(childrenScope)(one), visitTypeRef(childrenScope)(as))
+        case ExprTree.Call(function, params) =>
+          ExprTree.Call(
+            visitExprTree(childrenScope)(function),
+            params.map(_.map(visitExprTree(childrenScope))),
+          )
+        case ExprTree.Unary(op, expr) =>
+          ExprTree.Unary(op, visitExprTree(childrenScope)(expr))
+        case ExprTree.BinaryOp(one, op, two) =>
+          ExprTree.BinaryOp(visitExprTree(childrenScope)(one), op, visitExprTree(childrenScope)(two))
+        case ExprTree.New(expr, params) =>
+          ExprTree.New(visitTypeRef(childrenScope)(expr), params map visitExprTree(childrenScope))
+        case ExprTree.Lambda(params, body) =>
+          ExprTree.Lambda(params map visitParamTree(childrenScope), visitExprTree(childrenScope)(body))
+        case x: ExprTree.Custom     => x
+        case x: ExprTree.Ref        => x
+        case x: ExprTree.NumberLit  => x
+        case x: ExprTree.StringLit  => x
+        case x: ExprTree.BooleanLit => x
+
       }
 
     leaveExprTree(scope)(updatedChildren)

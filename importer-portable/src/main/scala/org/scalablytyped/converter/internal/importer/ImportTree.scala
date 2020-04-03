@@ -12,6 +12,7 @@ class ImportTree(
     importName:           AdaptiveNamingImport,
     importType:           ImportType,
     illegalNames:         CleanIllegalNames,
+    importExpr:           ImportExpr,
     enableScalaJsDefined: Boolean,
 ) {
   def apply(lib: LibTs, logger: Logger[Unit]): PackageTree = {
@@ -171,7 +172,7 @@ class ImportTree(
           )
 
       case e: TsDeclEnum =>
-        ImportEnum(e, ImportJsLocation(e.jsLocation), scope, importName, importType, illegalNames)
+        ImportEnum(e, ImportJsLocation(e.jsLocation), scope, importName, importType, illegalNames, importExpr)
 
       case TsDeclClass(cs, _, isAbstract, _, tparams, parent, implements, members, location, codePath) =>
         val newCodePath = importName(codePath)
