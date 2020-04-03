@@ -95,7 +95,7 @@ class GenReactFacadeComponents(reactNames: ReactNames) {
             name        = comp.shortenedPropsName,
             tparams     = Empty,
             params      = Empty,
-            impl        = MemberImpl.Custom(Printer.formatQN(generatedPropsCompanion.codePath)),
+            impl        = ExprTree.Custom(Printer.formatQN(generatedPropsCompanion.codePath)),
             resultType  = TypeRef.Singleton(TypeRef(generatedPropsCompanion.codePath, Empty, NoComments)),
             isOverride  = false,
             comments    = NoComments,
@@ -117,7 +117,7 @@ class GenReactFacadeComponents(reactNames: ReactNames) {
       name        = comp.fullName,
       tparams     = comp.tparams,
       params      = Empty,
-      impl = MemberImpl.Custom(
+      impl = ExprTree.Custom(
         s"${Component.formatReferenceTo(comp.scalaRef, comp.componentType)}.asInstanceOf[${Printer.formatTypeRef(0)(retType)}]",
       ),
       resultType = retType,

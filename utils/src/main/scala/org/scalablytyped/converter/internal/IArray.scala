@@ -444,6 +444,15 @@ final class IArray[+A <: AnyRef](private val array: Array[AnyRef], val length: I
     fromArrayAndSize[A](ret, newLength)
   }
 
+  def takeRight(n: Int): IArray[A] = {
+    require(n >= 0)
+    val newLength = math.min(length, n)
+    if (newLength == 0) return IArray.Empty
+    val ret = Array.ofDim[AnyRef](newLength)
+    System.arraycopy(array, length - newLength, ret, 0, newLength)
+    fromArrayAndSize[A](ret, newLength)
+  }
+
   def drop(n: Int): IArray[A] = {
     val newLength = math.max(0, length - n)
     if (newLength == 0) return IArray.Empty

@@ -133,7 +133,7 @@ object GenSlinkyComponents {
       name       = Name("_overrides"),
       isImplicit = false,
       tpe        = TypeRef.StringDictionary(TypeRef.Any, NoComments),
-      default    = Some(TypeRef.`null`),
+      default    = ExprTree.`null`,
       comments   = NoComments,
     )
     IArray(overridesParam -> overridesUpdate)
@@ -415,7 +415,13 @@ class GenSlinkyComponents(
         CtorTree(
           ProtectionLevel.Default,
           IArray(
-            ParamTree(Name("pw"), isImplicit = true, TypeRef(names.ExternalPropsWriterProvider), None, NoComments),
+            ParamTree(
+              Name("pw"),
+              isImplicit = true,
+              TypeRef(names.ExternalPropsWriterProvider),
+              NotImplemented,
+              NoComments,
+            ),
           ),
           NoComments,
         ),
@@ -526,7 +532,7 @@ class GenSlinkyComponents(
           name        = name,
           tparams     = tparams,
           params      = IArray(props.requireds.map(_._1) ++ props.optionals.map(_._1)),
-          impl = MemberImpl.Custom(
+          impl = ExprTree.Custom(
             s"""{
                |  val __obj = js.Dynamic.literal(${props.requireds.map(_._2).mkString(", ")})
                |${props.optionals.map { case (_, f) => "  " + f("__obj") }.mkString("\n")}
@@ -555,12 +561,12 @@ class GenSlinkyComponents(
                     Name("mods"),
                     isImplicit = false,
                     TypeRef.Repeated(TagMod(domInfo), NoComments),
-                    None,
+                    NotImplemented,
                     NoComments,
                   ),
                 ),
               ),
-              MemberImpl.Custom(
+              ExprTree.Custom(
                 s"new ${Printer.formatTypeRef(0)(buildingComponent)}(js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)",
               ),
               buildingComponent,
@@ -611,7 +617,7 @@ class GenSlinkyComponents(
         Empty,
         names.component,
         TypeRef.Union(IArray(TypeRef.String, TypeRef.Object), sort = false),
-        MemberImpl.Custom(s"this.${names.componentImport.value}"),
+        ExprTree.Custom(s"this.${names.componentImport.value}"),
         isReadOnly = true,
         isOverride = true,
         Keep,

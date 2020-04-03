@@ -129,7 +129,7 @@ final class GenJapgollyComponents(reactNames: ReactNames, scalaJsDomNames: Scala
       name       = Name("key"),
       isImplicit = false,
       tpe        = TypeRef.UndefOr(TypeRef(japgolly.reactKey)),
-      default    = Some(TypeRef.undefined),
+      default    = ExprTree.undefined,
       comments   = NoComments,
     )
 
@@ -139,7 +139,7 @@ final class GenJapgollyComponents(reactNames: ReactNames, scalaJsDomNames: Scala
       name       = Name("_overrides"),
       isImplicit = false,
       tpe        = TypeRef.StringDictionary(TypeRef.Any, NoComments),
-      default    = Some(TypeRef.`null`),
+      default    = ExprTree.`null`,
       comments   = NoComments,
     )
     IArray(keyParam -> keyUpdate, overridesParam -> overridesUpdate)
@@ -161,19 +161,23 @@ final class GenJapgollyComponents(reactNames: ReactNames, scalaJsDomNames: Scala
       .map {
         /* rewrite functions returning a Callback so that javascript land can call them */
         case p @ Prop(
-              pt @ ParamTree(name, _, TypeRef.ScalaFunction(Empty, StripWildcards(retType)), Some(_), _),
+              pt @ ParamTree(name, _, TypeRef.ScalaFunction(Empty, StripWildcards(retType)), default, _),
               _,
               _,
-            ) =>
+            ) if default =/= NotImplemented =>
           /* wrap optional `Callback` in `js.UndefOr` because it's an `AnyVal` */
           p.copy(
-            parameter = pt.copy(tpe = TypeRef.UndefOr(CallbackTo(retType)), default = Some(TypeRef.undefined)),
+            parameter = pt.copy(tpe = TypeRef.UndefOr(CallbackTo(retType)), default = ExprTree.undefined),
             asString = Right { obj =>
               s"""${name.value}.foreach(p => $obj.updateDynamic("${name.unescaped}")(p.toJsFn))"""
             },
           )
 
-        case p @ Prop(pt @ ParamTree(name, _, TypeRef.ScalaFunction(Empty, StripWildcards(retType)), None, _), _, _) =>
+        case p @ Prop(
+              pt @ ParamTree(name, _, TypeRef.ScalaFunction(Empty, StripWildcards(retType)), NotImplemented, _),
+              _,
+              _,
+            ) =>
           p.copy(
             parameter = pt.copy(tpe = CallbackTo(retType)),
             asString  = Right(obj => s"""$obj.updateDynamic("${name.unescaped}")(${name.value}.toJsFn)"""),
@@ -200,16 +204,21 @@ final class GenJapgollyComponents(reactNames: ReactNames, scalaJsDomNames: Scala
               s"js.Any.fromFunction${paramTypes.length}(($params) => ${name.value}($paramRefs).runNow())"
 
             defaultValue match {
-              case Some(_) => s"""if (${name.value} != null) $obj.updateDynamic("${name.unescaped}")($rewrittenFn)"""
-              case None    => s"""$obj.updateDynamic("${name.unescaped}")($rewrittenFn)"""
+              case NotImplemented => s"""$obj.updateDynamic("${name.unescaped}")($rewrittenFn)"""
+              case _              => s"""if (${name.value} != null) $obj.updateDynamic("${name.unescaped}")($rewrittenFn)"""
             }
           }
 
           val newRetType = TypeRef.ScalaFunction(paramTypes, CallbackTo(retType), NoComments)
 
           p.copy(
-            parameter = pt.copy(tpe = newRetType, default = defaultValue.map(_ => TypeRef.`null`)),
-            asString  = Right(fn),
+            parameter = pt.copy(
+              tpe = newRetType,
+              default =
+                if (defaultValue === NotImplemented) NotImplemented
+                else ExprTree.`null`,
+            ),
+            asString = Right(fn),
           )
 
         case p @ Prop(pt @ ParamTree(name, _, TypeRef(japgolly.rawReactElement, _, _), _, _), _, _) =>
@@ -358,7 +367,7 @@ final class GenJapgollyComponents(reactNames: ReactNames, scalaJsDomNames: Scala
       annotations = Empty,
       name        = names.componentImport,
       tpe         = TypeRef.Any,
-      impl        = MemberImpl.NotImplemented,
+      impl        = NotImplemented,
       isReadOnly  = true,
       isOverride  = false,
       comments    = NoComments,
@@ -488,7 +497,7 @@ final class GenJapgollyComponents(reactNames: ReactNames, scalaJsDomNames: Scala
               name       = names.children,
               isImplicit = false,
               tpe        = TypeRef.Repeated(TypeRef(japgolly.reactChildArg), NoComments),
-              default    = None,
+              default    = NotImplemented,
               comments   = NoComments,
             )
         },
@@ -507,7 +516,7 @@ final class GenJapgollyComponents(reactNames: ReactNames, scalaJsDomNames: Scala
           case None                        => (requireds, optionals, "(children: _*)")
         }
 
-      MemberImpl.Custom(
+      ExprTree.Custom(
         s"""{
            |  val __obj = js.Dynamic.literal(${requireds2.map(_._2).mkString(", ")})
            |

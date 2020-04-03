@@ -53,8 +53,8 @@ object ImportEnum {
               ProtectionLevel.Private,
               castName,
               IArray(TypeParamTree(T, None, NoComments)),
-              IArray(IArray(ParamTree(Name("in"), false, TypeRef.Any, None, NoComments))),
-              MemberImpl.Custom("in.asInstanceOf[T]"),
+              IArray(IArray(ParamTree(Name("in"), false, TypeRef.Any, NotImplemented, NoComments))),
+              ExprTree.Custom("in.asInstanceOf[T]"),
               TypeRef(T),
               isOverride = false,
               NoComments,
@@ -71,7 +71,7 @@ object ImportEnum {
                 memberName,
                 Empty,
                 Empty,
-                MemberImpl.Custom(s"this.cast(${TsExpr.format(expr)})"),
+                ExprTree.Custom(s"this.cast(${TsExpr.format(expr)})"),
                 tpe,
                 isOverride = false,
                 memberCs,
@@ -136,7 +136,7 @@ object ImportEnum {
         val moduleTree: ModuleTree = {
           val applyMethod: Option[MethodTree] =
             if (isValue) {
-              val applyParam = ParamTree(Name.value, false, underlying, None, NoComments)
+              val applyParam = ParamTree(Name.value, false, underlying, NotImplemented, NoComments)
               Some(
                 MethodTree(
                   annotations = IArray(Annotation.JsBracketAccess),
@@ -144,7 +144,7 @@ object ImportEnum {
                   name        = Name.APPLY,
                   tparams     = Empty,
                   params      = IArray(IArray(applyParam)),
-                  impl        = MemberImpl.Native,
+                  impl        = ExprTree.native,
                   resultType  = TypeRef.Intersection(IArray(baseInterface, underlying)).withOptional(true),
                   isOverride  = false,
                   comments    = NoComments,
@@ -191,7 +191,7 @@ object ImportEnum {
                         annotations = anns,
                         name        = name,
                         tpe         = TypeRef.Intersection(IArray(memberTypeRef, underlying)),
-                        impl        = MemberImpl.Native,
+                        impl        = ExprTree.native,
                         isReadOnly  = true,
                         isOverride  = false,
                         comments    = comments,

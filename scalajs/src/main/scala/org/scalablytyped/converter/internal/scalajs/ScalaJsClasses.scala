@@ -27,12 +27,12 @@ object ScalaJsClasses {
       Empty,
       Empty,
       IArray(
-        CtorTree(ProtectionLevel.Default, IArray(ParamTree(Name("args"), isImplicit = false, TypeRef.Repeated(TypeRef.String, NoComments), None, NoComments)), NoComments),
+        CtorTree(ProtectionLevel.Default, IArray(ParamTree(Name("args"), isImplicit = false, TypeRef.Repeated(TypeRef.String, NoComments), NotImplemented, NoComments)), NoComments),
       ),
       IArray(
-        FieldTree(Empty, Name("length"), TypeRef.Int, MemberImpl.Native, isReadOnly = false, isOverride = false, NoComments, QualifiedName.Function + Name("length")),
-        MethodTree(Empty, ProtectionLevel.Default, Name("call"), Empty, IArray(IArray(ParamTree(Name("thisArg"), isImplicit = false, TypeRef.Any, None, NoComments), ParamTree(Name("argArray"), isImplicit = false, TypeRef.Repeated(TypeRef.Dynamic, NoComments), None, NoComments))), MemberImpl.Native, TypeRef.Any, isOverride = false, NoComments, QualifiedName.Function + Name("call")),
-        MethodTree(Empty, ProtectionLevel.Default, Name("bind"), Empty, IArray(IArray(ParamTree(Name("thisArg"), isImplicit = false, TypeRef.Any, None, NoComments), ParamTree(Name("argArray"), isImplicit = false, TypeRef.Repeated(TypeRef.Dynamic, NoComments), None, NoComments))), MemberImpl.Native, TypeRef.Any, isOverride = false, NoComments, QualifiedName.Function + Name("bind")),
+        FieldTree(Empty, Name("length"), TypeRef.Int, ExprTree.native, isReadOnly = false, isOverride = false, NoComments, QualifiedName.Function + Name("length")),
+        MethodTree(Empty, ProtectionLevel.Default, Name("call"), Empty, IArray(IArray(ParamTree(Name("thisArg"), isImplicit = false, TypeRef.Any, NotImplemented, NoComments), ParamTree(Name("argArray"), isImplicit = false, TypeRef.Repeated(TypeRef.Dynamic, NoComments), NotImplemented, NoComments))), ExprTree.native, TypeRef.Any, isOverride = false, NoComments, QualifiedName.Function + Name("call")),
+        MethodTree(Empty, ProtectionLevel.Default, Name("bind"), Empty, IArray(IArray(ParamTree(Name("thisArg"), isImplicit = false, TypeRef.Any, NotImplemented, NoComments), ParamTree(Name("argArray"), isImplicit = false, TypeRef.Repeated(TypeRef.Dynamic, NoComments), NotImplemented, NoComments))), ExprTree.native, TypeRef.Any, isOverride = false, NoComments, QualifiedName.Function + Name("bind")),
       ),
       ClassType.Class,
       isSealed = false,
@@ -45,9 +45,10 @@ object ScalaJsClasses {
     def T(n: Int) = Name(s"T" + n)
 
     val ThisParam: IArray[ParamTree] =
-      if (isThis) IArray(ParamTree(Name.This, false, TypeRef.ThisType(NoComments), None, NoComments)) else Empty
+      if (isThis) IArray(ParamTree(Name.This, false, TypeRef.ThisType(NoComments), NotImplemented, NoComments))
+      else Empty
 
-    val inputParams = 0 until arity map (n => ParamTree(T(n), false, TypeRef(T(n)), None, NoComments))
+    val inputParams = 0 until arity map (n => ParamTree(T(n), false, TypeRef(T(n)), NotImplemented, NoComments))
     val R           = TypeRef(Name("R"))
     val codePath    = QualifiedName.FunctionArity(isThis, arity)
 
@@ -58,7 +59,7 @@ object ScalaJsClasses {
         name        = Name.APPLY,
         tparams     = Empty,
         params      = IArray(ThisParam ++ IArray.fromTraversable(inputParams)),
-        impl        = MemberImpl.NotImplemented,
+        impl        = NotImplemented,
         resultType  = R,
         isOverride  = false,
         comments    = NoComments,

@@ -23,7 +23,7 @@ object MemberToProp {
               val tpe = TypeRef.Union(IArray(TypeRef.Int, TypeRef.Double), sort = false)
               Some(
                 Prop(
-                  ParamTree(name, isImplicit = false, tpe, Some(TypeRef.`null`), NoComments),
+                  ParamTree(name, isImplicit = false, tpe, ExprTree.`null`, NoComments),
                   Right(obj =>
                     s"""if (${name.value} != null) $obj.updateDynamic(${escapeIntoString(f.originalName)})(${name.value}$Cast)""",
                   ),
@@ -33,7 +33,7 @@ object MemberToProp {
             case Optional(tpe) if TypeRef.Primitive(TypeRef(Erasure.simplify(scope / x, tpe))) =>
               Some(
                 Prop(
-                  ParamTree(name, isImplicit = false, TypeRef.UndefOr(tpe), Some(TypeRef.undefined), NoComments),
+                  ParamTree(name, isImplicit = false, TypeRef.UndefOr(tpe), ExprTree.undefined, NoComments),
                   Right(obj =>
                     s"""if (!js.isUndefined(${name.value})) $obj.updateDynamic(${escapeIntoString(f.originalName)})(${name.value}$Cast)""",
                   ),
@@ -50,7 +50,7 @@ object MemberToProp {
                       name,
                       isImplicit = false,
                       TypeRef.ScalaFunction(paramTypes, retType, NoComments),
-                      Some(TypeRef.`null`),
+                      ExprTree.`null`,
                       NoComments,
                     ),
                     Right(obj =>
@@ -68,7 +68,7 @@ object MemberToProp {
 
               Some(
                 Prop(
-                  ParamTree(name, isImplicit = false, tpe, Some(TypeRef.`null`), NoComments),
+                  ParamTree(name, isImplicit = false, tpe, ExprTree.`null`, NoComments),
                   Right(obj =>
                     s"""if (${name.value} != null) $obj.updateDynamic(${escapeIntoString(f.originalName)})(${name.value}$Cast)""",
                   ),
@@ -86,7 +86,7 @@ object MemberToProp {
                       name,
                       isImplicit = false,
                       TypeRef.ScalaFunction(paramTypes, retType, NoComments),
-                      None,
+                      NotImplemented,
                       NoComments,
                     ),
                     if (!name.isEscaped && f.originalName === name)
@@ -99,7 +99,7 @@ object MemberToProp {
             case _ =>
               Some(
                 Prop(
-                  ParamTree(name, isImplicit = false, origTpe, None, NoComments),
+                  ParamTree(name, isImplicit = false, origTpe, NotImplemented, NoComments),
                   if (!name.isEscaped && f.originalName === name)
                     Left(s"""${name.value} = ${name.value}$Cast""")
                   else
@@ -122,7 +122,7 @@ object MemberToProp {
                   m.name,
                   isImplicit = false,
                   TypeRef.ScalaFunction(flattenedParams.map(p => p.tpe), m.resultType, NoComments),
-                  None,
+                  NotImplemented,
                   NoComments,
                 ),
                 if (!m.name.isEscaped && m.originalName === m.name)

@@ -118,19 +118,11 @@ sealed trait MemberTree extends Tree with HasCodePath {
   def renamed(newName:          Name):          MemberTree
 }
 
-sealed trait MemberImpl
-object MemberImpl {
-  case object Native extends MemberImpl
-  case object NotImplemented extends MemberImpl
-  case object Undefined extends MemberImpl
-  final case class Custom(impl: String) extends MemberImpl
-}
-
 final case class FieldTree(
     annotations: IArray[MemberAnnotation],
     name:        Name,
     tpe:         TypeRef,
-    impl:        MemberImpl,
+    impl:        ImplTree,
     isReadOnly:  Boolean,
     isOverride:  Boolean,
     comments:    Comments,
@@ -160,7 +152,7 @@ final case class MethodTree(
     name:        Name,
     tparams:     IArray[TypeParamTree],
     params:      IArray[IArray[ParamTree]],
-    impl:        MemberImpl,
+    impl:        ImplTree,
     resultType:  TypeRef,
     isOverride:  Boolean,
     comments:    Comments,
@@ -201,7 +193,7 @@ object TypeParamTree {
   implicit val TypeParamToSuffix: ToSuffix[TypeParamTree] = tp => ToSuffix(tp.name) +? tp.upperBound
 }
 
-final case class ParamTree(name: Name, isImplicit: Boolean, tpe: TypeRef, default: Option[TypeRef], comments: Comments)
+final case class ParamTree(name: Name, isImplicit: Boolean, tpe: TypeRef, default: ImplTree, comments: Comments)
     extends Tree
 
 final case class TypeRef(typeName: QualifiedName, targs: IArray[TypeRef], comments: Comments) extends Tree {
@@ -305,6 +297,16 @@ object TypeRef {
             case _    => None
           }
         case _ => None
+      }
+
+    def is(qn: QualifiedName): Boolean =
+      qn.parts match {
+        case IArray.exactlyTwo(Name.scala, f) =>
+          f.unescaped match {
+            case F(_) => true
+            case _    => false
+          }
+        case _ => false
       }
   }
 
@@ -473,4 +475,25 @@ object TypeRef {
 
   implicit val TypeRefOrdering: Ordering[TypeRef] =
     Ordering.by[TypeRef, String](Printer.formatTypeRef(0))
+}
+
+sealed trait ImplTree extends Tree {
+  override val name:     Name     = Name("ImplTree")
+  override val comments: Comments = NoComments
+}
+
+case object NotImplemented extends ImplTree
+sealed trait ExprTree extends ImplTree
+
+object ExprTree {
+  val undefined = Ref(QualifiedName.scala_js + Name("undefined"))
+  val native    = Ref(QualifiedName.scala_js + Name("native"))
+  case object `null` extends ExprTree
+  case class Custom(impl:     String) extends ExprTree
+  case class Ref(value:       QualifiedName) extends ExprTree
+  case class StringLit(value: String) extends ExprTree
+  //  case class Call(function:   ExprTree, params: List[ExprTree]) extends ExprTree
+  //  case class Unary(op:        String, expr: ExprTree) extends ExprTree
+  //  case class BinaryOp(one:    ExprTree, op: String, two: ExprTree) extends ExprTree
+  case class Cast(one: ExprTree, as: Ref) extends ExprTree
 }

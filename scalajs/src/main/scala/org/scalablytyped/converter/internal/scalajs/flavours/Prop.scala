@@ -8,7 +8,7 @@ final case class Prop(
     /* should be unaffected by `CastConversion` rewrites */
     original: Either[TypeRef, MemberTree],
 ) {
-  def isOptional = parameter.default.isDefined
+  def isOptional = parameter.default =/= NotImplemented
 }
 
 object Prop {

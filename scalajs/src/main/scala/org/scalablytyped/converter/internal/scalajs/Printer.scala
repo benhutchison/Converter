@@ -246,10 +246,10 @@ object Printer {
         )
 
         impl match {
-          case MemberImpl.NotImplemented => println()
-          case MemberImpl.Undefined      => println(" = js.undefined")
-          case MemberImpl.Native         => println(" = js.native")
-          case MemberImpl.Custom(impl)   => println(" = ", impl)
+          case NotImplemented        => println()
+          case ExprTree.undefined    => println(" = js.undefined")
+          case ExprTree.native       => println(" = js.native")
+          case ExprTree.Custom(impl) => println(" = ", impl)
         }
 
       case MethodTree(anns, level, name, tparams, params, impl, resultType, isOverride, comments, _) =>
@@ -273,10 +273,10 @@ object Printer {
           typeAnnotation(formatName(name) + tparamString + paramString.mkString, indent, resultType, name),
         )
         impl match {
-          case MemberImpl.NotImplemented => println()
-          case MemberImpl.Native         => println(" = js.native")
-          case MemberImpl.Undefined      => println(" = js.undefined")
-          case MemberImpl.Custom(impl)   => println(" = ", impl)
+          case NotImplemented        => println()
+          case ExprTree.native       => println(" = js.native")
+          case ExprTree.undefined    => println(" = js.undefined")
+          case ExprTree.Custom(impl) => println(" = ", impl)
         }
 
       case CtorTree(level, params, comments) =>
@@ -335,7 +335,7 @@ object Printer {
       Comments.format(tree.comments),
       if (tree.isImplicit) "implicit " else "",
       typeAnnotation(formatName(tree.name), indent + 2, tree.tpe, Name.WILDCARD),
-      tree.default.fold("")(d => s" = ${formatDefaultedTypeRef(indent)(d)}"),
+      formatImpl(tree.default),
     ).mkString
 
   def formatDefaultedTypeRef(indent: Int)(ref: TypeRef): String =
@@ -462,5 +462,23 @@ object Printer {
     anns map formatAnn filterNot (_.isEmpty) match {
       case Empty     => ""
       case formatted => formatted.sorted.mkString("", "\n", "\n")
+    }
+
+  def formatExpr(e: ExprTree): String =
+    e match {
+      case ExprTree.Ref(value)       => formatQN(value)
+      case ExprTree.StringLit(value) => stringUtils.quote(value)
+      case ExprTree.Cast(one, as)    => formatExpr(one) + s".asInstanceOf[${formatQN(as.value)}]"
+      case ExprTree.Custom(impl)     => impl
+      case ExprTree.`null`           => "null"
+      //      case ExprTree.Call(function, params) =>
+      //      case ExprTree.Unary(op, expr) =>
+      //      case ExprTree.BinaryOp(one, op, two) =>
+    }
+
+  def formatImpl(e: ImplTree): String =
+    e match {
+      case NotImplemented => ""
+      case e: ExprTree => " = " + formatExpr(e)
     }
 }

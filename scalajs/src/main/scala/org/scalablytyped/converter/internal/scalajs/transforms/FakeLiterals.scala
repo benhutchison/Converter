@@ -75,7 +75,7 @@ object FakeLiterals {
                   name,
                   Empty,
                   Empty,
-                  MemberImpl.Custom(s"$underlying.asInstanceOf[${name.value}]"),
+                  ExprTree.Custom(s"$underlying.asInstanceOf[${name.value}]"),
                   TypeRef(QualifiedName(IArray(name)), Empty, NoComments),
                   isOverride = false,
                   comments   = NoComments,

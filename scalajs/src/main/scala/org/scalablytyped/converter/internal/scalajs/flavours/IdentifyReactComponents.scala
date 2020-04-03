@@ -40,7 +40,7 @@ class IdentifyReactComponents(reactNames: ReactNames) {
             isOverride,
             ) =>
           maybeFieldComponent(
-            FieldTree(Empty, name, tpe, MemberImpl.Native, true, isOverride, comments, codePath),
+            FieldTree(Empty, name, tpe, ExprTree.native, true, isOverride, comments, codePath),
             p,
             scope,
           )
@@ -178,7 +178,7 @@ class IdentifyReactComponents(reactNames: ReactNames) {
               level       = ProtectionLevel.Default,
               name        = field.name,
               tparams     = Empty,
-              params      = IArray(params.map(p => ParamTree(Name.dummy, false, p, None, NoComments))),
+              params      = IArray(params.map(p => ParamTree(Name.dummy, false, p, NotImplemented, NoComments))),
               impl        = field.impl,
               resultType  = ret,
               isOverride  = false,

@@ -107,7 +107,7 @@ final class GenCompanions(memberToProp: MemberToProp, findProps: FindProps) exte
             name,
             typeTparams,
             IArray(props.map(_.parameter)),
-            MemberImpl.Custom(s"""{
+            ExprTree.Custom(s"""{
                   |  val __obj = js.Dynamic.literal(${inLiterals.mkString(", ")})
                   |${optionals.map(f => "  " + f("__obj")).mkString("\n")}
                   |  __obj.asInstanceOf[${Printer.formatTypeRef(0)(ret)}]

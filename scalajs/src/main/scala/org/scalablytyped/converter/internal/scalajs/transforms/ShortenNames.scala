@@ -13,41 +13,69 @@ object ShortenNames {
     val collectedImports = mutable.Map.empty[Name, QualifiedName]
 
     object V extends TreeTransformation {
-      override def leaveTypeRef(scope: TreeScope)(tr: TypeRef): TypeRef = {
-        val shortName = tr.name
-        val longName  = tr.typeName
-
-        lazy val isSingleton = scope.stack match {
-          case _ :: TypeRef.Singleton(_) :: _ => true
-          case _                              => false
+      override def leaveExprRefTree(scope: TreeScope)(s: ExprTree.Ref): ExprTree.Ref =
+        maybeImport(scope, longName = s.value) match {
+          case Some(rewritten) => s.copy(value = rewritten)
+          case None            => s
         }
 
-        val rewrittenOpt: Option[TypeRef] = {
+      override def leaveTypeRef(scope: TreeScope)(tr: TypeRef): TypeRef =
+        maybeImport(scope, longName = tr.typeName) match {
+          case Some(rewritten) => tr.copy(typeName = rewritten)
+          case None            => tr
+        }
+
+      override def leaveExprTree(scope: TreeScope)(s: ExprTree): ExprTree =
+        s match {
+          case ExprTree.Ref(value) =>
+            maybeImport(scope, value) match {
+              case Some(rewritten) => ExprTree.Ref(rewritten)
+              case None            => s
+            }
+          case _ => s
+        }
+
+      def maybeImport(scope: TreeScope, longName: QualifiedName): Option[QualifiedName] = {
+        lazy val methodsAreConflict = {
+          def isSingleton = scope.stack match {
+            case _ :: TypeRef.Singleton(_) :: _ => true
+            case _                              => false
+          }
+          def isRef = scope.stack.exists {
+            case _: ExprTree.Ref => true
+            case _ => false
+          }
+          isSingleton || isRef
+        }
+
+        val shortName = longName.parts.last
+
+        val rewrittenOpt: Option[QualifiedName] = {
           if (!Name.Internal(shortName) &&
               !Forbidden.contains(shortName) &&
               owner.name =/= shortName &&
-              tr.typeName.parts.length > 1 &&
+              longName.parts.length > 1 &&
               /* the printer has special logic for these */
-              tr =/= TypeRef.Nothing &&
-              TypeRef.ScalaFunction.unapply(tr).isEmpty &&
-              !tr.typeName.startsWith(QualifiedName.scala_js) &&
+              longName =/= TypeRef.Nothing.typeName &&
+              !TypeRef.ScalaFunction.is(longName) &&
+              !longName.startsWith(QualifiedName.scala_js) &&
               /* keep more expensive check last */
-              !nameCollision(scope, longName, methodsAreConflict = isSingleton)) {
+              !nameCollision(scope, longName, methodsAreConflict = methodsAreConflict)) {
 
             collectedImports.get(shortName) match {
               case Some(alreadyImported) =>
-                if (alreadyImported === tr.typeName) Some(tr.copy(typeName = QualifiedName(IArray(shortName))))
+                if (alreadyImported === longName) Some(QualifiedName(IArray(shortName)))
                 else None
               case None =>
                 val importNecessary = !inScope(scope, longName)
                 if (importNecessary)
-                  collectedImports += ((shortName, tr.typeName))
-                Some(tr.copy(typeName = QualifiedName(IArray(shortName))))
+                  collectedImports += ((shortName, longName))
+                Some(QualifiedName(IArray(shortName)))
             }
           } else None
         }
 
-        rewrittenOpt getOrElse tr
+        rewrittenOpt
       }
     }
 
@@ -127,7 +155,7 @@ object ShortenNames {
             case x: ModuleTree    => x.codePath =/= longName && methodsAreConflict
             case x: PackageTree   => x.codePath =/= longName
             case x: TypeAliasTree => x.codePath =/= longName
-            case x: FieldTree     => x.isReadOnly
+            case x: FieldTree     => x.isReadOnly || methodsAreConflict
             case _: MethodTree    => methodsAreConflict
             case _ => false
           }
